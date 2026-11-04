@@ -1,0 +1,90 @@
+//@version=5
+// Same rule as morning_scan.py: range 09:00-09:15 Paris, first bar CLOSE above the
+// high (achat) or below the low (vente), stop at the range midpoint capped at
+// "Stop max", target at 2R. A signal is a rule that matched, not a trade to take.
+indicator("Range du matin (Paris)", overlay=true, max_boxes_count=100, max_lines_count=300, max_labels_count=300)
+
+rangeSess = input.session("0900-0915", "Range d'ouverture (heure de Paris)")
+tradeSess = input.session("0915-1730", "Fenêtre de trading (heure de Paris)")
+maxStop   = input.float(1.0, "Stop max (%)", minval=0.01, step=0.1)
+rr1       = input.float(1.0, "TP1 (en R)", minval=0.5, step=0.5)
+rr        = input.float(2.0, "TP2 (en R)", minval=0.5, step=0.5)
+tz = "Europe/Paris"
+
+inRange = not na(time(timeframe.period, rangeSess, tz))
+inTrade = not na(time(timeframe.period, tradeSess, tz)) and not inRange
+
+var float hi = na
+var float lo = na
+var int   side = 0        // 0 = pas encore de cassure, 1 = achat, -1 = vente
+var float entry = na
+var float stop = na
+var float target = na
+var float tp1 = na
+var bool  tp1Hit = false
+var bool  done = false
+var box   rbox = na
+var line  lEntry = na
+var line  lStop = na
+var line  lTarget = na
+var line  lTp1 = na
+
+// a new range each morning
+if inRange and not inRange[1]
+    hi := high
+    lo := low
+    side := 0
+    done := false
+    tp1Hit := false
+    rbox := box.new(bar_index, high, bar_index, low, border_color=color.blue, bgcolor=color.new(color.blue, 85))
+else if inRange
+    hi := math.max(hi, high)
+    lo := math.min(lo, low)
+    box.set_top(rbox, hi)
+    box.set_bottom(rbox, lo)
+    box.set_right(rbox, bar_index)
+else if not inTrade
+    hi := na  // out of hours: a day without a full range gives no signal
+    lo := na
+
+pct(x) => str.tostring((x - entry) / entry * 100, "+0.00;-0.00") + " %"
+
+newLong  = inTrade and side == 0 and not na(hi) and barstate.isconfirmed and close > hi
+newShort = inTrade and side == 0 and not na(hi) and barstate.isconfirmed and close < lo
+
+if newLong or newShort
+    side := newLong ? 1 : -1
+    entry := close
+    mid = (hi + lo) / 2
+    risk = math.min(math.abs(close - mid), close * maxStop / 100)
+    stop := close - side * risk
+    target := close + side * rr * risk
+    tp1 := close + side * rr1 * risk
+    col = side == 1 ? color.green : color.red
+    lEntry := line.new(bar_index, entry, bar_index, entry, color=col, width=2)
+    lStop := line.new(bar_index, stop, bar_index, stop, color=color.red, style=line.style_dashed)
+    lTp1 := line.new(bar_index, tp1, bar_index, tp1, color=color.teal, style=line.style_dotted)
+    lTarget := line.new(bar_index, target, bar_index, target, color=color.green, style=line.style_dashed)
+    txt = (side == 1 ? "ACHAT" : "VENTE") + "\nEntrée " + str.tostring(entry, format.mintick) + "\nStop " + str.tostring(stop, format.mintick) + " (" + pct(stop) + ")" + "\nTP1 " + str.tostring(tp1, format.mintick) + " (" + pct(tp1) + ")" + "\nTP2 " + str.tostring(target, format.mintick) + " (" + pct(target) + ")"
+    label.new(bar_index, side == 1 ? low : high, txt, style=side == 1 ? label.style_label_up : label.style_label_down, color=col, textcolor=color.white, size=size.small)
+    alert(syminfo.ticker + " " + txt, alert.freq_once_per_bar_close)
+else if side != 0 and not done and inTrade and barstate.isconfirmed
+    line.set_x2(lEntry, bar_index)
+    line.set_x2(lStop, bar_index)
+    line.set_x2(lTarget, bar_index)
+    line.set_x2(lTp1, bar_index)
+    // both in one bar: count the stop (we can't see which came first inside a bar)
+    hitStop = side == 1 ? low <= stop : high >= stop
+    hitTp1 = side == 1 ? high >= tp1 : low <= tp1
+    hitTarget = side == 1 ? high >= target : low <= target
+    if hitStop or hitTarget
+        done := true
+        label.new(bar_index, hitStop ? stop : target, hitStop ? "Stop" : "TP2", style=label.style_label_left, color=hitStop ? color.red : color.green, textcolor=color.white, size=size.small)
+        alert(syminfo.ticker + (hitStop ? " stop touché " : " TP2 touché ") + str.tostring(close, format.mintick), alert.freq_once_per_bar_close)
+    if hitTp1 and not hitStop and not tp1Hit
+        tp1Hit := true
+        label.new(bar_index, tp1, "TP1", style=label.style_label_left, color=color.teal, textcolor=color.white, size=size.small)
+        alert(syminfo.ticker + " TP1 touché " + str.tostring(close, format.mintick), alert.freq_once_per_bar_close)
+
+alertcondition(newLong, "Cassure haute (achat)", "{{ticker}} : cassure haute du range du matin, clôture {{close}}")
+alertcondition(newShort, "Cassure basse (vente)", "{{ticker}} : cassure basse du range du matin, clôture {{close}}")
