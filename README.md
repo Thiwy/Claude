@@ -8,8 +8,7 @@ claude/
 │   └── chef-cuisinier/        Agent « Chef » : recettes, techniques, nutrition, sécurité alimentaire
 └── trading/
     ├── bots-tradingview/      4 agents d'analyse (or, EUR/USD, EUR/JPY, ETH) + commande /scan-marches
-    ├── scripts/               morning_scan.py, l'indicateur range_du_matin.pine et les listes de marchés
-    └── skills-trader/         les 11 skills trader-* (à ajouter depuis le PC)
+    └── scripts/               morning_scan.py, l'indicateur range_du_matin.pine et les listes de marchés
 ```
 
 ## Utiliser un agent
@@ -22,6 +21,11 @@ Deux façons de faire :
   (sous Windows : `C:\Users\<toi>\.claude\agents\` et `C:\Users\<toi>\.claude\skills\`).
 
 Puis, dans Claude Code, tape `/agents` pour vérifier qu'ils sont reconnus.
+
+## Prérequis pour le trading
+
+Les bots lisent TradingView grâce au serveur MCP open source `tradingview-mcp`, installé à part
+(sur le PC : `D:\Claude\tradingview-mcp`). Il n'est pas copié ici : voir son propre README.
 
 > Les bots de trading **analysent** seulement : ils ne passent jamais d'ordre.
 > Un signal est une règle remplie, pas un trade à prendre.
