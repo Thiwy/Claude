@@ -1,11 +1,24 @@
 # Scripts de trading
 
-À ranger ici (ils sont sur le PC, pas encore sur GitHub) :
+| Fichier | Rôle |
+|---|---|
+| `morning_scan.py` | Scan du matin : range 9h00–9h15 (heure de Paris), stop, TP1, TP2 et historique sur 60 jours |
+| `range_du_matin.pine` | Indicateur TradingView : dessine le range et les niveaux, envoie les alertes |
+| `watchlist.json` | Marchés suivis |
+| `universe.txt` | Liste des actions (symbole et nom) |
 
-| Fichier | Rôle | Emplacement sur le PC |
-|---|---|---|
-| `morning_scan.py` | Scan du matin : range 9h00–9h15, stop, TP1, TP2 et historique sur 60 jours | `C:\Users\theor\OneDrive\Documents\trading\` |
-| `range_du_matin.pine` | Indicateur TradingView : dessine le range, les niveaux et envoie les alertes | `D:\Claude\trading\tradingview\` |
-| `watchlist.json`, `universe.txt` | Listes de marchés suivis | `D:\Claude\trading\trader\` |
+Ce sont la même règle que les agents de `../bots-tradingview/`.
 
-Ne pas ajouter : le dossier `state\` (données temporaires) ni aucun fichier contenant une clé d'API.
+## Lancer le scan du matin
+
+```bash
+py -I morning_scan.py
+```
+
+Test automatique de la règle :
+
+```bash
+py -I morning_scan.py --selftest
+```
+
+Ne pas ajouter : le dossier `state\` (données temporaires) ni aucun fichier contenant une clé d'API (ce dépôt est public).

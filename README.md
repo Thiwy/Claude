@@ -8,7 +8,7 @@ claude/
 │   └── chef-cuisinier/        Agent « Chef » : recettes, techniques, nutrition, sécurité alimentaire
 └── trading/
     ├── bots-tradingview/      4 agents d'analyse (or, EUR/USD, EUR/JPY, ETH) + commande /scan-marches
-    ├── scripts/               morning_scan.py et l'indicateur range_du_matin.pine (à ajouter depuis le PC)
+    ├── scripts/               morning_scan.py, l'indicateur range_du_matin.pine et les listes de marchés
     └── skills-trader/         les 11 skills trader-* (à ajouter depuis le PC)
 ```
 
