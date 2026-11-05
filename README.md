@@ -8,7 +8,8 @@ claude/
 │   └── chef-cuisinier/        Agent « Chef » : recettes, techniques, nutrition, sécurité alimentaire
 └── trading/
     ├── bots-tradingview/      4 agents d'analyse (or, EUR/USD, EUR/JPY, ETH) + commande /scan-marches
-    └── scripts/               morning_scan.py, l'indicateur range_du_matin.pine et les listes de marchés
+    ├── scripts/               morning_scan.py, l'indicateur range_du_matin.pine et les listes de marchés
+    └── executeur-mt5/         agents qui tradent EUR/USD et EUR/JPY sur OANDA via MetaTrader 5 (/trader-mt5)
 ```
 
 ## Utiliser un agent

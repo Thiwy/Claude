@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(py -I executeur_mt5.py --etat)",
+      "Bash(py -I executeur_mt5.py --symbole EURUSD)",
+      "Bash(py -I executeur_mt5.py --symbole EURJPY)"
+    ],
+    "ask": [
+      "Bash(py -I executeur_mt5.py --symbole EURUSD --envoyer)",
+      "Bash(py -I executeur_mt5.py --symbole EURJPY --envoyer)",
+      "Bash(py -I executeur_mt5.py --fermer-tout)"
+    ],
+    "deny": [
+      "Edit(./config.json)",
+      "Write(./config.json)",
+      "Edit(./executeur_mt5.py)",
+      "Write(./executeur_mt5.py)",
+      "Write(./STOP)",
+      "Bash(py -I executeur_mt5.py --boucle*)"
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "mode": "blanc",
+  "compte_reel_autorise": false,
+
+  "symboles": {
+    "EURUSD": {"unite_minutes": 5},
+    "EURJPY": {"unite_minutes": 5}
+  },
+
+  "range_debut": "09:00",
+  "range_fin": "09:15",
+  "fin_signaux": "17:30",
+  "fermer_a_fin_signaux": true,
+  "stop_max_pct": 1.0,
+  "objectif": "TP1+TP2",
+
+  "risque_par_trade_pct": 0.5,
+  "perte_max_jour_pct": 2.0,
+  "trades_max_jour": 2,
+
+  "stop_min_pips": 5,
+  "spread_max_pct_du_stop": 25,
+  "signal_age_max_minutes": 10,
+  "ecart_entree_max_R": 0.3,
+  "glissement_max_points": 10,
+  "decalage_serveur_secours": 2
+}
