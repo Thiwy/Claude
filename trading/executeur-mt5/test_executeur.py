@@ -51,13 +51,14 @@ assert ex.taille_position(37, 0.0020, 0.00001, 1.0, 0.01, 0.01, 100) == 0.18    
 s = ex.calculer_signal(bougies, 5, jour, p(9, 26), cfg)["signal"]
 pip = 0.0001
 ok = lambda **k: ex.controles(s, k.get("prix", 1.1021), k.get("spread", 0.00002), pip, k.get("now", p(9, 26)), dict(cfg, **k.get("c", {})),
-                             k.get("deja", False), k.get("n", 0), k.get("perte", 0), 10000, k.get("reel", False))
+                             k.get("deja", False), k.get("n", 0), k.get("perte", 0), k.get("reel", False))
 assert ok() == [], ok()
 assert any("RÉEL" in x for x in ok(reel=True))
 assert ok(reel=True, c={"compte_reel_autorise": True}) == []
 assert any("déjà un trade" in x for x in ok(deja=True))
 assert any("trades_max_jour" in x for x in ok(n=2))
-assert any("perte max" in x for x in ok(perte=200))
+assert any("stop de la journée" in x for x in ok(perte=5))
+assert ok(perte=4.99) == []
 assert any("trop ancien" in x for x in ok(now=p(9, 40)))
 assert any("trop éloigné" in x for x in ok(prix=1.1030))
 assert any("spread" in x for x in ok(spread=0.0006))
@@ -68,7 +69,18 @@ try:
 finally:
     os.remove(ex.FICHIER_STOP)
 
-# 10. heure de Paris (heure d'été / d'hiver)
+# 10. budget de la journée : 5 € au total, 2,5 € max par trade, 0,5 % du solde
+c5 = dict(cfg, perte_max_jour_euros=5, risque_max_par_trade_euros=2.5, risque_par_trade_pct=0.5)
+assert ex.risque_autorise(10000, c5, 0, 0) == 2.5          # plafonné à 2,5 € par trade
+assert ex.risque_autorise(200, c5, 0, 0) == 1.0            # 0,5 % de 200 €
+assert ex.risque_autorise(10000, c5, 3, 0) == 2.0          # déjà perdu 3 € : il reste 2 €
+assert ex.risque_autorise(10000, c5, 2.5, 2.5) == 0.0      # 2,5 perdus + 2,5 en jeu : plus rien
+assert ex.risque_autorise(10000, c5, 6, 0) == 0.0
+assert ex.risque_autorise(10000, dict(c5, risque_max_par_trade_euros=None), 0, 0) == 5   # sans plafond : budget du jour
+# règles par marché
+assert ex.config_symbole(cfg, "EURJPY")["stop_min_pips"] == 6 and ex.config_symbole(cfg, "EURUSD")["stop_min_pips"] == 5
+
+# 11. heure de Paris (heure d'été / d'hiver)
 from datetime import timezone
 assert ex.paris(datetime(2026, 7, 1, 7, 0, tzinfo=timezone.utc)).hour == 9
 assert ex.paris(datetime(2026, 11, 5, 8, 0, tzinfo=timezone.utc)).hour == 9

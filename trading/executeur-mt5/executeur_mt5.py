@@ -94,6 +94,15 @@ def calculer_signal(bougies, pas, jour, maintenant, cfg):
     return out
 
 
+def risque_autorise(solde, cfg, perte_realisee, risque_ouvert):
+    """Euros qu'on peut risquer sur le prochain trade : le plus petit entre le % du solde, le maximum par trade
+    et ce qui reste du budget de la journée (limite - pertes du jour - ce que les positions ouvertes perdraient au stop)."""
+    reste = cfg["perte_max_jour_euros"] - perte_realisee - risque_ouvert
+    plafond = cfg.get("risque_max_par_trade_euros")
+    r = min(solde * cfg["risque_par_trade_pct"] / 100, plafond if plafond is not None else float("inf"), reste)
+    return max(r, 0.0)
+
+
 def taille_position(risque_argent, distance, tick_size, tick_value, vol_min, vol_pas, vol_max):
     """Volume (lots) pour perdre au plus risque_argent si le stop est touché. 0 si impossible."""
     if distance <= 0 or tick_size <= 0 or tick_value <= 0:
@@ -104,7 +113,7 @@ def taille_position(risque_argent, distance, tick_size, tick_value, vol_min, vol
     return round(vol, 8) if vol >= vol_min else 0.0
 
 
-def controles(sig, prix, spread, pip, maintenant, cfg, deja_trade, trades_jour, perte_jour, solde, compte_reel):
+def controles(sig, prix, spread, pip, maintenant, cfg, deja_trade, trades_jour, perte_jour, compte_reel):
     """Renvoie la liste des raisons de NE PAS envoyer (vide = feu vert)."""
     raisons = []
     if os.path.exists(FICHIER_STOP):
@@ -115,8 +124,8 @@ def controles(sig, prix, spread, pip, maintenant, cfg, deja_trade, trades_jour, 
         raisons.append("déjà un trade sur ce symbole aujourd'hui")
     if trades_jour >= cfg["trades_max_jour"]:
         raisons.append("trades_max_jour atteint (%d)" % cfg["trades_max_jour"])
-    if perte_jour >= solde * cfg["perte_max_jour_pct"] / 100:
-        raisons.append("perte max du jour atteinte (%.2f)" % perte_jour)
+    if perte_jour >= cfg["perte_max_jour_euros"]:
+        raisons.append("stop de la journée : %.2f € perdus (limite %s €)" % (perte_jour, cfg["perte_max_jour_euros"]))
     if sig["resultat"]:
         raisons.append("le trade est déjà fini sur le graphique (%s)" % sig["resultat"])
     age = (maintenant - sig["heure"]).total_seconds() / 60
@@ -190,7 +199,7 @@ class MT5:
         return [p for p in (self.mt5.positions_get() or []) if p.magic == MAGIC]
 
     def resume_jour(self, decalage):
-        """(symboles déjà tradés aujourd'hui, nombre de trades, perte du jour en devise du compte, >0 = perte).
+        """Bilan du jour des ordres de l'exécuteur (pertes en positif).
         Les heures de l'historique MT5 sont à l'heure du serveur : on les ramène à l'heure de Paris."""
         mt5 = self.mt5
         maintenant = datetime.now(UTC)
@@ -200,9 +209,18 @@ class MT5:
                  and paris(datetime.fromtimestamp(d.time - decalage * 3600, UTC)).date() == aujourdhui]
         entrees = [d for d in deals if d.entry == mt5.DEAL_ENTRY_IN]
         trades = {(d.symbol, d.time // 60) for d in entrees}  # un trade TP1+TP2 = 2 positions mais 1 seul trade
-        realise = sum(d.profit + d.commission + d.swap for d in deals)
-        latent = sum(p.profit + p.swap for p in self.positions())
-        return {d.symbol for d in entrees}, len(trades), -(realise + latent)
+        perte_realisee = -sum(d.profit + d.commission + d.swap for d in deals)
+        return {"symboles": {d.symbol for d in entrees}, "trades": len(trades), "perte_realisee": perte_realisee,
+                "risque_ouvert": sum(self.perte_au_stop(p) for p in self.positions()),
+                "latent": sum(p.profit + p.swap for p in self.positions())}
+
+    def perte_au_stop(self, pos):
+        """Ce que la position perdrait si son stop était touché (énorme si elle n'a pas de stop)."""
+        if not pos.sl:
+            return float("inf")
+        info = self.mt5.symbol_info(pos.symbol)
+        perte = (pos.price_open - pos.sl) * (1 if pos.type == self.mt5.POSITION_TYPE_BUY else -1)
+        return max(perte, 0) / info.trade_tick_size * info.trade_tick_value * pos.volume
 
     def remplissage(self, info):
         mt5 = self.mt5
@@ -246,9 +264,15 @@ def fmt(x, chiffres):
     return ("%." + str(chiffres) + "f") % x
 
 
+def config_symbole(cfg, symbole):
+    """Règles générales, remplacées par celles écrites pour ce symbole dans config.json."""
+    return {**cfg, **cfg["symboles"][symbole]}
+
+
 def traiter(m, symbole, cfg, envoyer):
     mt5 = m.mt5
-    pas = cfg["symboles"][symbole]["unite_minutes"]
+    cfg = config_symbole(cfg, symbole)
+    pas = cfg["unite_minutes"]
     if not mt5.symbol_select(symbole, True):
         print("%s : symbole introuvable dans MT5." % symbole)
         return
@@ -277,11 +301,13 @@ def traiter(m, symbole, cfg, envoyer):
 
     tick = mt5.symbol_info_tick(symbole)
     prix = tick.ask if sig["sens"] > 0 else tick.bid
-    deja, n_jour, perte = m.resume_jour(dec)
-    raisons = controles(sig, prix, tick.ask - tick.bid, pip, maintenant, cfg, symbole in deja, n_jour, perte,
-                        m.compte.balance, m.reel)
+    jr = m.resume_jour(dec)
+    raisons = controles(sig, prix, tick.ask - tick.bid, pip, maintenant, cfg, symbole in jr["symboles"], jr["trades"],
+                        jr["perte_realisee"], m.reel)
+    if m.compte.currency != "EUR":
+        raisons.append("le compte est en %s, pas en EUR : les limites en euros ne seraient pas justes" % m.compte.currency)
     distance = abs(prix - sig["stop"])
-    risque = m.compte.balance * cfg["risque_par_trade_pct"] / 100
+    risque = risque_autorise(m.compte.balance, cfg, jr["perte_realisee"], jr["risque_ouvert"])
     objectifs = {"TP1": [("TP1", sig["tp1"])], "TP2": [("TP2", sig["tp2"])],
                  "TP1+TP2": [("TP1", sig["tp1"]), ("TP2", sig["tp2"])]}[cfg["objectif"]]
     vol_total = taille_position(risque, distance, info.trade_tick_size, info.trade_tick_value,
@@ -293,7 +319,7 @@ def traiter(m, symbole, cfg, envoyer):
     if vol_part == 0:
         raisons.append("risque de %.2f %s trop petit pour le volume minimum" % (risque, m.compte.currency))
     ordres = [(etiquette, tp, vol_part) for etiquette, tp in objectifs]
-    for etiquette, tp, vol in ordres:
+    for etiquette, tp, vol in (ordres if vol_part else []):
         print("  Ordre prévu : %s %s lots, stop %s, %s %s (risque max %.2f %s)"
               % (nom, vol, fmt(sig["stop"], dg), etiquette, fmt(tp, dg), risque / len(ordres), m.compte.currency))
 
@@ -334,12 +360,16 @@ def fermer_tout(m, cfg, raison):
 def etat(m, cfg):
     c = m.compte
     dec = next((d for d in (m.decalage_serveur(s) for s in cfg["symboles"]) if d is not None), cfg["decalage_serveur_secours"])
-    deja, n, perte = m.resume_jour(dec)
+    jr = m.resume_jour(dec)
     print("Compte %s (%s) — %s" % (c.login, "RÉEL" if m.reel else "DÉMO", c.server))
     print("Solde %.2f %s | Fonds propres %.2f | Mode : %s%s"
           % (c.balance, c.currency, c.equity, cfg["mode"], " | ARRÊT D'URGENCE ACTIF" if os.path.exists(FICHIER_STOP) else ""))
-    print("Aujourd'hui : %d trade(s) %s | résultat %+.2f %s (limite -%.2f)"
-          % (n, sorted(deja) or "", -perte, c.currency, c.balance * cfg["perte_max_jour_pct"] / 100))
+    lim = cfg["perte_max_jour_euros"]
+    print("Aujourd'hui : %d trade(s) %s | perdu %.2f € | positions ouvertes : %.2f € en cours, %.2f € au pire (stops)"
+          % (jr["trades"], sorted(jr["symboles"]) or "", max(jr["perte_realisee"], 0), jr["latent"], jr["risque_ouvert"]))
+    print("Stop de la journée : %s € | encore risquable aujourd'hui : %.2f €%s"
+          % (lim, max(lim - jr["perte_realisee"] - jr["risque_ouvert"], 0),
+             " | STOP ATTEINT, plus de trade aujourd'hui" if jr["perte_realisee"] >= lim else ""))
     for p in m.positions():
         print("  %s %s %s lots | entrée %s | stop %s | TP %s | %+.2f"
               % (p.symbol, "ACHAT" if p.type == 0 else "VENTE", p.volume, p.price_open, p.sl, p.tp, p.profit))

@@ -4,7 +4,7 @@
 
   "symboles": {
     "EURUSD": {"unite_minutes": 5},
-    "EURJPY": {"unite_minutes": 5}
+    "EURJPY": {"unite_minutes": 5, "stop_min_pips": 6}
   },
 
   "range_debut": "09:00",
@@ -14,8 +14,9 @@
   "stop_max_pct": 1.0,
   "objectif": "TP1+TP2",
 
+  "perte_max_jour_euros": 5,
+  "risque_max_par_trade_euros": 2.5,
   "risque_par_trade_pct": 0.5,
-  "perte_max_jour_pct": 2.0,
   "trades_max_jour": 2,
 
   "stop_min_pips": 5,

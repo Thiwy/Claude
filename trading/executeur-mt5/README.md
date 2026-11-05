@@ -73,8 +73,9 @@ Les agents ne peuvent **pas** modifier ce fichier (bloqué dans `.claude/setting
 | `fermer_a_fin_signaux` | `true` | Ferme les positions encore ouvertes à 17:30. |
 | `stop_max_pct` | 1.0 | Le stop ne peut pas être à plus de 1 % de l'entrée. |
 | `objectif` | `TP1+TP2` | `TP1+TP2` : 2 demi-positions (une sort à 1R, l'autre à 2R). Ou `TP1`, ou `TP2`. |
-| `risque_par_trade_pct` | 0.5 | Perte maximale si le stop est touché, en % du solde. La taille en lots est calculée à partir de ça. |
-| `perte_max_jour_pct` | 2.0 | Au-delà de cette perte dans la journée, plus aucun ordre. |
+| `perte_max_jour_euros` | **5** | **Stop de la journée.** Dès que les pertes du jour atteignent 5 €, plus aucun trade jusqu'au lendemain. Mieux : avant chaque ordre, l'exécuteur additionne les pertes du jour et ce que les positions ouvertes perdraient à leur stop, et réduit la taille pour que le total ne puisse pas dépasser 5 €. |
+| `risque_max_par_trade_euros` | 2.5 | Perte maximale d'un seul trade si son stop est touché (`null` = pas de plafond, seulement le budget du jour). |
+| `risque_par_trade_pct` | 0.5 | Autre plafond : % du solde. C'est le plus petit des trois (ce %, le maximum par trade, ce qui reste du budget du jour) qui compte. |
 | `trades_max_jour` | 2 | Nombre maximum de trades par jour, tous marchés confondus (1 par marché au plus). |
 | `stop_min_pips` | 5 | Pas de trade si le stop est plus serré : le spread le mangerait. |
 | `spread_max_pct_du_stop` | 25 | Pas de trade si le spread dépasse 25 % de la distance du stop. |
@@ -82,6 +83,27 @@ Les agents ne peuvent **pas** modifier ce fichier (bloqué dans `.claude/setting
 | `ecart_entree_max_R` | 0.3 | Pas de trade si le prix s'est éloigné de plus de 0,3R de l'entrée prévue. |
 | `glissement_max_points` | 10 | Écart de prix toléré à l'exécution (10 points = 1 pip sur EURUSD). |
 | `decalage_serveur_secours` | 2 | Décalage horaire du serveur MT5, utilisé seulement par `--etat` si le marché est fermé. |
+
+## Des règles différentes pour chaque agent
+
+Dans `symboles`, tout paramètre écrit pour un marché remplace la règle générale pour ce marché seulement :
+
+```json
+"symboles": {
+  "EURUSD": {"unite_minutes": 5},
+  "EURJPY": {"unite_minutes": 5, "stop_min_pips": 6, "objectif": "TP1", "risque_max_par_trade_euros": 1.5}
+}
+```
+
+Pour ajouter un marché, ajoute une ligne avec son nom **exact dans MT5** (par exemple `"GBPUSD": {"unite_minutes": 5}`),
+puis copie `.claude/agents/trader-eurusd.md` en changeant le nom et le symbole.
+
+## À savoir avec un petit stop de la journée
+
+- Le plus petit ordre possible est en général **0,01 lot** : environ 0,09 € par pip sur EUR/USD.
+  Avec 2,50 € de risque max, un trade est donc possible si le stop fait moins de ~27 pips ; sinon il est sauté.
+- Avec si peu, `TP1+TP2` ne peut pas toujours être coupé en deux : l'exécuteur passe alors un seul ordre vers TP2.
+- La perte réelle peut dépasser de quelques centimes ce qui est prévu (spread, glissement, trou de cotation le lundi matin).
 
 ## Plan de démarrage conseillé
 
