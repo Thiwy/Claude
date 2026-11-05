@@ -94,12 +94,17 @@ def calculer_signal(bougies, pas, jour, maintenant, cfg):
     return out
 
 
-def risque_autorise(solde, cfg, perte_realisee, risque_ouvert):
-    """Euros qu'on peut risquer sur le prochain trade : le plus petit entre le % du solde, le maximum par trade
-    et ce qui reste du budget de la journée (limite - pertes du jour - ce que les positions ouvertes perdraient au stop)."""
-    reste = cfg["perte_max_jour_euros"] - perte_realisee - risque_ouvert
+def risque_autorise(solde, cfg, perte_realisee, risque_ouvert, perte_agent=0.0, risque_agent=0.0):
+    """Euros qu'on peut risquer sur le prochain trade : le plus petit entre
+    - le % du solde et le maximum par trade de l'agent,
+    - ce qui reste du stop de la journée du COMPTE (limite - pertes du jour - pertes possibles des positions ouvertes),
+    - ce qui reste du stop de la journée de l'AGENT, s'il en a un (mêmes calculs, sur son marché seulement)."""
+    infini = float("inf")
+    reste_compte = cfg["perte_max_jour_euros"] - perte_realisee - risque_ouvert
+    lim_agent = cfg.get("perte_max_jour_agent_euros")
+    reste_agent = lim_agent - perte_agent - risque_agent if lim_agent is not None else infini
     plafond = cfg.get("risque_max_par_trade_euros")
-    r = min(solde * cfg["risque_par_trade_pct"] / 100, plafond if plafond is not None else float("inf"), reste)
+    r = min(solde * cfg["risque_par_trade_pct"] / 100, plafond if plafond is not None else infini, reste_compte, reste_agent)
     return max(r, 0.0)
 
 
@@ -113,7 +118,7 @@ def taille_position(risque_argent, distance, tick_size, tick_value, vol_min, vol
     return round(vol, 8) if vol >= vol_min else 0.0
 
 
-def controles(sig, prix, spread, pip, maintenant, cfg, deja_trade, trades_jour, perte_jour, compte_reel):
+def controles(sig, prix, spread, pip, maintenant, cfg, deja_trade, trades_jour, perte_jour, compte_reel, perte_agent=0.0):
     """Renvoie la liste des raisons de NE PAS envoyer (vide = feu vert)."""
     raisons = []
     if os.path.exists(FICHIER_STOP):
@@ -126,6 +131,9 @@ def controles(sig, prix, spread, pip, maintenant, cfg, deja_trade, trades_jour, 
         raisons.append("trades_max_jour atteint (%d)" % cfg["trades_max_jour"])
     if perte_jour >= cfg["perte_max_jour_euros"]:
         raisons.append("stop de la journée : %.2f € perdus (limite %s €)" % (perte_jour, cfg["perte_max_jour_euros"]))
+    lim_agent = cfg.get("perte_max_jour_agent_euros")
+    if lim_agent is not None and perte_agent >= lim_agent:
+        raisons.append("stop de la journée de cet agent : %.2f € perdus (limite %s €)" % (perte_agent, lim_agent))
     if sig["resultat"]:
         raisons.append("le trade est déjà fini sur le graphique (%s)" % sig["resultat"])
     age = (maintenant - sig["heure"]).total_seconds() / 60
@@ -210,7 +218,13 @@ class MT5:
         entrees = [d for d in deals if d.entry == mt5.DEAL_ENTRY_IN]
         trades = {(d.symbol, d.time // 60) for d in entrees}  # un trade TP1+TP2 = 2 positions mais 1 seul trade
         perte_realisee = -sum(d.profit + d.commission + d.swap for d in deals)
+        perte_sym, risque_sym = {}, {}
+        for d in deals:
+            perte_sym[d.symbol] = perte_sym.get(d.symbol, 0.0) - (d.profit + d.commission + d.swap)
+        for p in self.positions():
+            risque_sym[p.symbol] = risque_sym.get(p.symbol, 0.0) + self.perte_au_stop(p)
         return {"symboles": {d.symbol for d in entrees}, "trades": len(trades), "perte_realisee": perte_realisee,
+                "perte_par_symbole": perte_sym, "risque_par_symbole": risque_sym,
                 "risque_ouvert": sum(self.perte_au_stop(p) for p in self.positions()),
                 "latent": sum(p.profit + p.swap for p in self.positions())}
 
@@ -264,9 +278,18 @@ def fmt(x, chiffres):
     return ("%." + str(chiffres) + "f") % x
 
 
+# Règles qui concernent tout le compte : un agent ne peut pas les changer pour lui seul.
+REGLES_COMPTE = ("mode", "compte_reel_autorise", "perte_max_jour_euros", "trades_max_jour", "symboles")
+
+
 def config_symbole(cfg, symbole):
-    """Règles générales, remplacées par celles écrites pour ce symbole dans config.json."""
-    return {**cfg, **cfg["symboles"][symbole]}
+    """Règles générales, remplacées par celles écrites pour ce symbole dans config.json
+    (sauf les règles du compte, qui restent communes)."""
+    propres = cfg["symboles"][symbole]
+    interdites = [k for k in propres if k in REGLES_COMPTE]
+    if interdites:
+        sys.exit("config.json, %s : %s ne peut pas être réglé par agent (règle du compte)." % (symbole, ", ".join(interdites)))
+    return {**cfg, **propres}
 
 
 def traiter(m, symbole, cfg, envoyer):
@@ -303,11 +326,12 @@ def traiter(m, symbole, cfg, envoyer):
     prix = tick.ask if sig["sens"] > 0 else tick.bid
     jr = m.resume_jour(dec)
     raisons = controles(sig, prix, tick.ask - tick.bid, pip, maintenant, cfg, symbole in jr["symboles"], jr["trades"],
-                        jr["perte_realisee"], m.reel)
+                        jr["perte_realisee"], m.reel, jr["perte_par_symbole"].get(symbole, 0.0))
     if m.compte.currency != "EUR":
         raisons.append("le compte est en %s, pas en EUR : les limites en euros ne seraient pas justes" % m.compte.currency)
     distance = abs(prix - sig["stop"])
-    risque = risque_autorise(m.compte.balance, cfg, jr["perte_realisee"], jr["risque_ouvert"])
+    risque = risque_autorise(m.compte.balance, cfg, jr["perte_realisee"], jr["risque_ouvert"],
+                             jr["perte_par_symbole"].get(symbole, 0.0), jr["risque_par_symbole"].get(symbole, 0.0))
     objectifs = {"TP1": [("TP1", sig["tp1"])], "TP2": [("TP2", sig["tp2"])],
                  "TP1+TP2": [("TP1", sig["tp1"]), ("TP2", sig["tp2"])]}[cfg["objectif"]]
     vol_total = taille_position(risque, distance, info.trade_tick_size, info.trade_tick_value,
@@ -370,6 +394,13 @@ def etat(m, cfg):
     print("Stop de la journée : %s € | encore risquable aujourd'hui : %.2f €%s"
           % (lim, max(lim - jr["perte_realisee"] - jr["risque_ouvert"], 0),
              " | STOP ATTEINT, plus de trade aujourd'hui" if jr["perte_realisee"] >= lim else ""))
+    for sym in cfg["symboles"]:
+        cs = config_symbole(cfg, sym)
+        la = cs.get("perte_max_jour_agent_euros")
+        pa = jr["perte_par_symbole"].get(sym, 0.0)
+        print("  Agent %s : perdu %.2f €%s | risque max par trade %s € | objectif %s"
+              % (sym, max(pa, 0), " / stop agent %s €%s" % (la, " ATTEINT" if pa >= la else "") if la is not None else "",
+                 cs.get("risque_max_par_trade_euros"), cs["objectif"]))
     for p in m.positions():
         print("  %s %s %s lots | entrée %s | stop %s | TP %s | %+.2f"
               % (p.symbol, "ACHAT" if p.type == 0 else "VENTE", p.volume, p.price_open, p.sl, p.tp, p.profit))

@@ -84,19 +84,36 @@ Les agents ne peuvent **pas** modifier ce fichier (bloqué dans `.claude/setting
 | `glissement_max_points` | 10 | Écart de prix toléré à l'exécution (10 points = 1 pip sur EURUSD). |
 | `decalage_serveur_secours` | 2 | Décalage horaire du serveur MT5, utilisé seulement par `--etat` si le marché est fermé. |
 
-## Des règles différentes pour chaque agent
+## Des paramètres pour chaque agent
 
-Dans `symboles`, tout paramètre écrit pour un marché remplace la règle générale pour ce marché seulement :
+Chaque agent = un marché dans `symboles`. Tout paramètre écrit dans son bloc remplace la règle générale
+**pour lui seul** ; ce qui n'y est pas écrit reprend la règle générale.
 
 ```json
 "symboles": {
-  "EURUSD": {"unite_minutes": 5},
-  "EURJPY": {"unite_minutes": 5, "stop_min_pips": 6, "objectif": "TP1", "risque_max_par_trade_euros": 1.5}
+  "EURUSD": {"unite_minutes": 5, "perte_max_jour_agent_euros": 2.5},
+  "EURJPY": {"unite_minutes": 5, "perte_max_jour_agent_euros": 2.5, "stop_min_pips": 6,
+             "objectif": "TP1", "risque_max_par_trade_euros": 1.5}
 }
 ```
 
-Pour ajouter un marché, ajoute une ligne avec son nom **exact dans MT5** (par exemple `"GBPUSD": {"unite_minutes": 5}`),
-puis copie `.claude/agents/trader-eurusd.md` en changeant le nom et le symbole.
+| Réglable par agent | Exemple |
+|---|---|
+| `perte_max_jour_agent_euros` | stop de la journée **de cet agent** : il s'arrête seul, les autres continuent |
+| `risque_max_par_trade_euros`, `risque_par_trade_pct` | taille de ses trades |
+| `objectif` | `TP1`, `TP2` ou `TP1+TP2` |
+| `stop_max_pct`, `stop_min_pips`, `spread_max_pct_du_stop` | son stop loss et ses filtres |
+| `range_debut`, `range_fin`, `fin_signaux`, `unite_minutes` | ses horaires et ses bougies |
+| `signal_age_max_minutes`, `ecart_entree_max_R`, `glissement_max_points`, `fermer_a_fin_signaux` | ses conditions d'entrée et de sortie |
+
+**Règles du compte, communes à tous** (refusées si on les met dans le bloc d'un agent) :
+`mode`, `compte_reel_autorise`, `perte_max_jour_euros` (le stop de la journée du compte, 5 €), `trades_max_jour`.
+Le stop du compte passe toujours avant : si les agents ont perdu 5 € à eux tous, tout s'arrête.
+
+`py -I executeur_mt5.py --etat` affiche une ligne par agent : ce qu'il a perdu et si son stop est atteint.
+
+Pour ajouter un agent : une ligne dans `symboles` avec le nom **exact dans MT5** (par exemple `"GBPUSD": {"unite_minutes": 5}`),
+puis copier `.claude/agents/trader-eurusd.md` en changeant le nom et le symbole, et ajouter ses deux lignes dans `.claude/settings.json`.
 
 ## À savoir avec un petit stop de la journée
 

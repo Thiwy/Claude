@@ -77,8 +77,21 @@ assert ex.risque_autorise(10000, c5, 3, 0) == 2.0          # déjà perdu 3 € 
 assert ex.risque_autorise(10000, c5, 2.5, 2.5) == 0.0      # 2,5 perdus + 2,5 en jeu : plus rien
 assert ex.risque_autorise(10000, c5, 6, 0) == 0.0
 assert ex.risque_autorise(10000, dict(c5, risque_max_par_trade_euros=None), 0, 0) == 5   # sans plafond : budget du jour
+# stop de la journée par agent : 2 € pour cet agent, compte à 5 €
+ca = dict(c5, perte_max_jour_agent_euros=2)
+assert ex.risque_autorise(10000, ca, 0, 0) == 2.0                 # le stop de l'agent est le plus petit
+assert ex.risque_autorise(10000, ca, 1, 0, 1, 0) == 1.0           # l'agent a déjà perdu 1 €
+assert ex.risque_autorise(10000, ca, 4, 0, 0, 0) == 1.0           # l'autre agent a perdu 4 € : le compte limite
+assert ex.risque_autorise(10000, ca, 0.5, 1.5, 0.5, 1.5) == 0.0   # agent : 0,5 perdu + 1,5 en jeu = 2
+assert any("de cet agent" in x for x in ex.controles(s, 1.1021, 0.00002, pip, p(9, 26), ca, False, 0, 2, False, 2))
+assert ex.controles(s, 1.1021, 0.00002, pip, p(9, 26), ca, False, 0, 1.9, False, 1.9) == []
 # règles par marché
 assert ex.config_symbole(cfg, "EURJPY")["stop_min_pips"] == 6 and ex.config_symbole(cfg, "EURUSD")["stop_min_pips"] == 5
+try:  # une règle du compte ne peut pas être changée par un agent
+    ex.config_symbole(dict(cfg, symboles={"EURUSD": {"unite_minutes": 5, "perte_max_jour_euros": 50}}), "EURUSD")
+    raise AssertionError("aurait dû refuser")
+except SystemExit as e:
+    assert "règle du compte" in str(e)
 
 # 11. heure de Paris (heure d'été / d'hiver)
 from datetime import timezone
