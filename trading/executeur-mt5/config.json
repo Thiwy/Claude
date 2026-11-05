@@ -16,7 +16,7 @@
 
   "perte_max_jour_euros": 5,
   "risque_max_par_trade_euros": 2.5,
-  "risque_par_trade_pct": 0.5,
+  "risque_par_trade_pct": 4,
   "trades_max_jour": 2,
 
   "stop_min_pips": 5,
