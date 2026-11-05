@@ -62,6 +62,21 @@ Tout est noté dans `journal.csv` (ouvrable avec Excel).
 New-Item STOP
 ```
 
+## Parler à tes agents
+
+Dans Claude Code, depuis ce dossier, écris le nom de l'agent avec `@` (la liste s'affiche quand tu tapes `@trader`) :
+
+```
+@trader-eurusd pourquoi tu n'as pas pris de trade ce matin ?
+@trader-eurjpy combien tu as gagné ou perdu cette semaine ?
+@trader-eurusd que ferais-tu si le prix cassait le range maintenant ?
+```
+
+Pour une question, l'agent est **en lecture seule** : il lit le journal, les rapports et `config.json`,
+et utilise `--analyse`, qui n'envoie **jamais** d'ordre, même en mode auto. Il ne trade que lorsque le chef (`/trader-mt5`)
+lui envoie un « TOUR DE TRADING ». L'agent n'a pas de mémoire d'une conversation à l'autre :
+sa mémoire, ce sont `journal.csv` et `rapports/`.
+
 ## Rapport de fin de journée (17h45)
 
 Dans Claude Code : `/rapport-journee`. L'agent principal écrit le rapport dans `rapports/AAAA-MM-JJ.md` :

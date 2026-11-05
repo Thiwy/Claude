@@ -20,6 +20,7 @@ Utilisation (Windows, MetaTrader 5 ouvert et connecté) :
   py -I executeur_mt5.py --etat               # compte, positions, perte du jour
   py -I executeur_mt5.py --fermer-tout        # ferme toutes les positions ouvertes par l'exécuteur
   py -I executeur_mt5.py --rapport            # bilan de la journée (trades, gains / pertes, marchés)
+  py -I executeur_mt5.py --symbole EURUSD --analyse   # lecture seule : n'envoie JAMAIS rien
 
 Arrêt d'urgence : créer un fichier nommé STOP dans ce dossier. Plus aucun ordre ne part.
 """
@@ -335,7 +336,7 @@ def config_symbole(cfg, symbole):
     return {**cfg, **propres}
 
 
-def traiter(m, symbole, cfg, envoyer):
+def traiter(m, symbole, cfg, envoyer, analyse=False):
     mt5 = m.mt5
     cfg = config_symbole(cfg, symbole)
     pas = cfg["unite_minutes"]
@@ -396,6 +397,11 @@ def traiter(m, symbole, cfg, envoyer):
         print("  Ordre prévu : %s %s lots, stop %s, %s %s (risque max %.2f %s)"
               % (nom, vol, fmt(sig["stop"], dg), etiquette, fmt(tp, dg), risque / len(ordres), m.compte.currency))
 
+    if analyse:  # question posée à un agent : on regarde, on n'envoie jamais rien
+        print("  ➜ ANALYSE SEULE, rien n'est envoyé. " + ("L'exécuteur refuserait : " + " ; ".join(raisons) if raisons
+              else "En mode %s, l'exécuteur %s." % (cfg["mode"], {"auto": "l'enverrait", "validation": "te demanderait de le valider",
+                                                                  "blanc": "le noterait sans l'envoyer"}[cfg["mode"]])))
+        return
     if raisons:
         print("  ➜ PAS D'ENVOI : " + " ; ".join(raisons))
         noter(heure_paris=maintenant, symbole=symbole, mode=cfg["mode"], action="refusé", sens=nom,
@@ -577,6 +583,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--symbole")
     ap.add_argument("--envoyer", action="store_true", help="mode validation : envoie l'ordre prévu")
+    ap.add_argument("--analyse", action="store_true", help="lecture seule : montre le signal et l'ordre prévu, n'envoie JAMAIS rien")
     ap.add_argument("--boucle", action="store_true", help="repasse chaque minute jusqu'à la fin de journée")
     ap.add_argument("--etat", action="store_true")
     ap.add_argument("--fermer-tout", action="store_true")
@@ -592,6 +599,11 @@ def main():
             return etat(m, cfg)
         if a.rapport:
             return rapport(m, cfg)
+        if a.analyse:
+            print("Compte %s — ANALYSE SEULE (rien n'est envoyé)" % ("RÉEL" if m.reel else "DÉMO"))
+            for s in symboles:
+                traiter(m, s, cfg, False, analyse=True)
+            return
         if a.fermer_tout:
             return fermer_tout(m, cfg, "demande manuelle")
         print("Compte %s — mode %s" % ("RÉEL" if m.reel else "DÉMO", cfg["mode"].upper()))

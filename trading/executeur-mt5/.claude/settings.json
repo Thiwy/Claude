@@ -6,7 +6,10 @@
       "Bash(py -I executeur_mt5.py --symbole EURUSD)",
       "Bash(py -I executeur_mt5.py --symbole EURJPY)",
       "Write(./rapports/**)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(py -I executeur_mt5.py --symbole EURUSD --analyse)",
+      "Bash(py -I executeur_mt5.py --symbole EURJPY --analyse)",
+      "Bash(py -I executeur_mt5.py --analyse)"
     ],
     "ask": [
       "Bash(py -I executeur_mt5.py --symbole EURUSD --envoyer)",
