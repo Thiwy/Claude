@@ -1,6 +1,6 @@
 {
-  "mode": "blanc",
-  "compte_reel_autorise": false,
+  "mode": "auto",
+  "compte_reel_autorise": true,
 
   "symboles": {
     "EURUSD": {"unite_minutes": 5, "perte_max_jour_agent_euros": 2.5},

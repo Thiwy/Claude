@@ -260,6 +260,16 @@ class MT5:
         perte = (pos.price_open - pos.sl) * (1 if pos.type == self.mt5.POSITION_TYPE_BUY else -1)
         return max(perte, 0) / info.trade_tick_size * info.trade_tick_value * pos.volume
 
+    def trading_autorise(self):
+        """None si MT5 laisse un programme passer des ordres, sinon la raison."""
+        term = self.mt5.terminal_info() if hasattr(self.mt5, "terminal_info") else None
+        compte = self.mt5.account_info() or self.compte
+        if term is not None and not term.trade_allowed:
+            return "Algo Trading désactivé dans MT5 (clique sur le bouton « Algo Trading » pour qu'il soit vert)"
+        if not getattr(compte, "trade_allowed", True):
+            return "OANDA n'autorise pas le trading sur ce compte"
+        return None
+
     def volume_max_marge(self, symbole, sens, prix, info):
         """Plus gros volume que la marge libre permet d'ouvrir (en gardant 10 % de côté)."""
         mt5 = self.mt5
@@ -360,6 +370,8 @@ def traiter(m, symbole, cfg, envoyer):
     jr = m.resume_jour(dec)
     raisons = controles(sig, prix, tick.ask - tick.bid, pip, maintenant, cfg, symbole in jr["symboles"], jr["trades"],
                         jr["perte_realisee"], m.reel, jr["perte_par_symbole"].get(symbole, 0.0))
+    if m.trading_autorise():
+        raisons.append(m.trading_autorise())
     if m.compte.currency != "EUR":
         raisons.append("le compte est en %s, pas en EUR : les limites en euros ne seraient pas justes" % m.compte.currency)
     distance = abs(prix - sig["stop"])
@@ -423,6 +435,8 @@ def etat(m, cfg):
     dec = next((d for d in (m.decalage_serveur(s) for s in cfg["symboles"]) if d is not None), cfg["decalage_serveur_secours"])
     jr = m.resume_jour(dec)
     print("Compte %s (%s) — %s" % (c.login, "RÉEL" if m.reel else "DÉMO", c.server))
+    print("Envoi d'ordres : %s" % (m.trading_autorise() or ("PRÊT" if cfg["mode"] != "blanc" and (cfg["compte_reel_autorise"] or not m.reel)
+                                                          else "non (mode %s%s)" % (cfg["mode"], ", compte réel pas autorisé" if m.reel and not cfg["compte_reel_autorise"] else ""))))
     print("Solde %.2f %s | Fonds propres %.2f | Mode : %s%s"
           % (c.balance, c.currency, c.equity, cfg["mode"], " | ARRÊT D'URGENCE ACTIF" if os.path.exists(FICHIER_STOP) else ""))
     lim = cfg["perte_max_jour_euros"]

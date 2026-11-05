@@ -53,7 +53,7 @@ pip = 0.0001
 ok = lambda **k: ex.controles(s, k.get("prix", 1.1021), k.get("spread", 0.00002), pip, k.get("now", p(9, 26)), dict(cfg, **k.get("c", {})),
                              k.get("deja", False), k.get("n", 0), k.get("perte", 0), k.get("reel", False))
 assert ok() == [], ok()
-assert any("RÉEL" in x for x in ok(reel=True))
+assert any("RÉEL" in x for x in ok(reel=True, c={"compte_reel_autorise": False}))
 assert ok(reel=True, c={"compte_reel_autorise": True}) == []
 assert any("déjà un trade" in x for x in ok(deja=True))
 assert any("trades_max_jour" in x for x in ok(n=2))
