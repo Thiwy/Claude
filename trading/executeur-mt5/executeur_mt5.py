@@ -260,6 +260,15 @@ class MT5:
         perte = (pos.price_open - pos.sl) * (1 if pos.type == self.mt5.POSITION_TYPE_BUY else -1)
         return max(perte, 0) / info.trade_tick_size * info.trade_tick_value * pos.volume
 
+    def volume_max_marge(self, symbole, sens, prix, info):
+        """Plus gros volume que la marge libre permet d'ouvrir (en gardant 10 % de côté)."""
+        mt5 = self.mt5
+        compte = mt5.account_info() or self.compte
+        par_lot = mt5.order_calc_margin(mt5.ORDER_TYPE_BUY if sens > 0 else mt5.ORDER_TYPE_SELL, symbole, 1.0, prix)
+        if not par_lot:
+            return info.volume_max
+        return math.floor(compte.margin_free * 0.9 / par_lot / info.volume_step + 1e-9) * info.volume_step
+
     def remplissage(self, info):
         mt5 = self.mt5
         if info.filling_mode & 1:
@@ -358,12 +367,16 @@ def traiter(m, symbole, cfg, envoyer):
                              jr["perte_par_symbole"].get(symbole, 0.0), jr["risque_par_symbole"].get(symbole, 0.0))
     objectifs = {"TP1": [("TP1", sig["tp1"])], "TP2": [("TP2", sig["tp2"])],
                  "TP1+TP2": [("TP1", sig["tp1"]), ("TP2", sig["tp2"])]}[cfg["objectif"]]
+    vol_marge = m.volume_max_marge(symbole, sig["sens"], prix, info)
+    vol_max = min(info.volume_max, vol_marge)
     vol_total = taille_position(risque, distance, info.trade_tick_size, info.trade_tick_value,
-                                info.volume_min, info.volume_step, info.volume_max)
+                                info.volume_min, info.volume_step, vol_max)
     vol_part = taille_position(risque / len(objectifs), distance, info.trade_tick_size, info.trade_tick_value,
-                               info.volume_min, info.volume_step, info.volume_max)
+                               info.volume_min, info.volume_step, vol_max / len(objectifs))
     if len(objectifs) == 2 and vol_part == 0:
         objectifs, vol_part = [("TP2", sig["tp2"])], vol_total  # trop petit pour couper en deux
+    if vol_marge < info.volume_min:
+        raisons.append("marge libre insuffisante (%.2f %s) pour le volume minimum" % (m.compte.margin_free, m.compte.currency))
     if vol_part == 0:
         raisons.append("risque de %.2f %s trop petit pour le volume minimum" % (risque, m.compte.currency))
     ordres = [(etiquette, tp, vol_part) for etiquette, tp in objectifs]
