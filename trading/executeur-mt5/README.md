@@ -1,9 +1,11 @@
 # Exécuteur MT5 : les agents qui tradent sur OANDA
 
 ```
-/trader-mt5  (agent principal : état du compte, résumé, demande ta validation)
-  ├─ trader-eurusd  → lance l'exécuteur pour EURUSD
-  └─ trader-eurjpy  → lance l'exécuteur pour EURJPY
+Agent principal « trading »  (le chef — NE TRADE JAMAIS)
+  /trader-mt5       état du compte, lance les agents, résume, te demande ta validation
+  /rapport-journee  rapport de fin de journée à 17h45 (trades, € gagnés/perdus, analyse du marché)
+  ├─ trader-eurusd  → trade l'EUR/USD
+  └─ trader-eurjpy  → trade l'EUR/JPY
                          ↓
 executeur_mt5.py  (calcule le signal, la taille, vérifie TOUS les garde-fous)
                          ↓
@@ -50,6 +52,7 @@ puis tape `/trader-mt5`. Ou sans Claude :
 | `py -I executeur_mt5.py --boucle` | repasse chaque minute jusqu'à 17:35 (à lancer toi-même) |
 | `py -I executeur_mt5.py --etat` | compte, positions, résultat du jour |
 | `py -I executeur_mt5.py --fermer-tout` | ferme les positions ouvertes par l'exécuteur |
+| `py -I executeur_mt5.py --rapport` | bilan brut de la journée (le rapport complet : `/rapport-journee` dans Claude) |
 
 Tout est noté dans `journal.csv` (ouvrable avec Excel).
 
@@ -57,6 +60,32 @@ Tout est noté dans `journal.csv` (ouvrable avec Excel).
 
 ```bash
 New-Item STOP
+```
+
+## Rapport de fin de journée (17h45)
+
+Dans Claude Code : `/rapport-journee`. L'agent principal écrit le rapport dans `rapports/AAAA-MM-JJ.md` :
+trades (entrée, sortie, stop ou TP, résultat en €), total du jour, stop de la journée atteint ou non,
+ce que la règle a donné sur chaque marché (même en mode à blanc), et une analyse du marché avec les nouvelles du jour.
+
+Les rapports restent **sur ton PC** : `rapports/` n'est pas envoyé sur GitHub (solde et numéro de compte, dépôt public).
+
+**Pour qu'il se fasse tout seul chaque jour de semaine à 17h45**, une seule fois, dans PowerShell :
+
+```bash
+schtasks /Create /TN "Rapport trading" /TR "D:\Claude\claude-repo\trading\executeur-mt5\rapport.bat" /SC WEEKLY /D MON,TUE,WED,THU,FRI /ST 17:45
+```
+
+Le PC doit être allumé et MetaTrader 5 ouvert à cette heure-là. Pour l'essayer tout de suite :
+
+```bash
+schtasks /Run /TN "Rapport trading"
+```
+
+Pour le supprimer :
+
+```bash
+schtasks /Delete /TN "Rapport trading" /F
 ```
 
 ## Les paramètres (`config.json`)

@@ -2,8 +2,11 @@
   "permissions": {
     "allow": [
       "Bash(py -I executeur_mt5.py --etat)",
+      "Bash(py -I executeur_mt5.py --rapport)",
       "Bash(py -I executeur_mt5.py --symbole EURUSD)",
-      "Bash(py -I executeur_mt5.py --symbole EURJPY)"
+      "Bash(py -I executeur_mt5.py --symbole EURJPY)",
+      "Write(./rapports/**)",
+      "WebSearch"
     ],
     "ask": [
       "Bash(py -I executeur_mt5.py --symbole EURUSD --envoyer)",

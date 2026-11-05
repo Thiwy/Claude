@@ -93,7 +93,16 @@ try:  # une règle du compte ne peut pas être changée par un agent
 except SystemExit as e:
     assert "règle du compte" in str(e)
 
-# 11. heure de Paris (heure d'été / d'hiver)
+# 11. résultat en R pour le rapport (stop -1R, TP1 +1R, TP2 +2R)
+base = {"sens": 1, "entree": 1.1020, "r": 0.0020}
+R = lambda res, t1, dernier, obj: ex.resultat_r(dict(base, resultat=res, tp1_touche=t1), dernier, obj)
+assert R("stop", False, 1.10, "TP1+TP2") == -1 and R("stop", False, 1.10, "TP1") == -1
+assert R("stop", True, 1.10, "TP1+TP2") == 0 and R("stop", True, 1.10, "TP1") == 1 and R("stop", True, 1.10, "TP2") == -1
+assert R("tp2", True, 1.11, "TP1+TP2") == 1.5 and R("tp2", True, 1.11, "TP2") == 2
+assert abs(R(None, False, 1.1030, "TP1+TP2") - 0.5) < 1e-9          # encore ouvert, +0,5R
+assert abs(R(None, True, 1.1050, "TP1+TP2") - 1.25) < 1e-9          # moitié à TP1 (+1R), moitié à +1,5R
+
+# 12. heure de Paris (heure d'été / d'hiver)
 from datetime import timezone
 assert ex.paris(datetime(2026, 7, 1, 7, 0, tzinfo=timezone.utc)).hour == 9
 assert ex.paris(datetime(2026, 11, 5, 8, 0, tzinfo=timezone.utc)).hour == 9

@@ -19,6 +19,7 @@ Utilisation (Windows, MetaTrader 5 ouvert et connecté) :
   py -I executeur_mt5.py --boucle             # repasse chaque minute jusqu'à 17:35
   py -I executeur_mt5.py --etat               # compte, positions, perte du jour
   py -I executeur_mt5.py --fermer-tout        # ferme toutes les positions ouvertes par l'exécuteur
+  py -I executeur_mt5.py --rapport            # bilan de la journée (trades, gains / pertes, marchés)
 
 Arrêt d'urgence : créer un fichier nommé STOP dans ce dossier. Plus aucun ordre ne part.
 """
@@ -92,6 +93,16 @@ def calculer_signal(bougies, pas, jour, maintenant, cfg):
         if (h >= s["tp2"]) if s["sens"] > 0 else (l <= s["tp2"]):
             s["resultat"] = "tp2"
     return out
+
+
+def resultat_r(sig, dernier, objectif):
+    """Résultat d'un trade, en R (1R = la perte au stop), si on l'avait pris.
+    dernier = dernier prix, pour un trade encore ouvert à la fin de la journée."""
+    m = (dernier - sig["entree"]) * sig["sens"] / sig["r"]
+    res = sig["resultat"]
+    jambe1 = 1.0 if sig["tp1_touche"] else (-1.0 if res == "stop" else m)
+    jambe2 = 2.0 if res == "tp2" else (-1.0 if res == "stop" else m)
+    return {"TP1": jambe1, "TP2": jambe2, "TP1+TP2": (jambe1 + jambe2) / 2}[objectif]
 
 
 def risque_autorise(solde, cfg, perte_realisee, risque_ouvert, perte_agent=0.0, risque_agent=0.0):
@@ -206,15 +217,28 @@ class MT5:
     def positions(self):
         return [p for p in (self.mt5.positions_get() or []) if p.magic == MAGIC]
 
-    def resume_jour(self, decalage):
-        """Bilan du jour des ordres de l'exécuteur (pertes en positif).
+    def deals_du_jour(self, decalage):
+        """[(heure de Paris, deal)] d'aujourd'hui pour les positions ouvertes par l'exécuteur.
+        Les sorties par stop ou TP n'ont pas toujours le magic : on les retrouve par leur position.
         Les heures de l'historique MT5 sont à l'heure du serveur : on les ramène à l'heure de Paris."""
         mt5 = self.mt5
         maintenant = datetime.now(UTC)
         aujourdhui = paris(maintenant).date()
-        brut = mt5.history_deals_get(maintenant - timedelta(days=3), maintenant + timedelta(days=2)) or []
-        deals = [d for d in brut if d.magic == MAGIC
-                 and paris(datetime.fromtimestamp(d.time - decalage * 3600, UTC)).date() == aujourdhui]
+        brut = mt5.history_deals_get(maintenant - timedelta(days=7), maintenant + timedelta(days=2)) or []
+        ids = {d.position_id for d in brut if d.magic == MAGIC and d.entry == mt5.DEAL_ENTRY_IN}
+        ids |= {p.ticket for p in self.positions()}
+        heure = lambda d: paris(datetime.fromtimestamp(d.time - decalage * 3600, UTC))
+        return [(heure(d), d) for d in brut
+                if (d.magic == MAGIC or (d.position_id and d.position_id in ids)) and heure(d).date() == aujourdhui]
+
+    def jours(self, symbole, n):
+        """n dernières bougies journalières (la dernière = aujourd'hui)."""
+        return self.mt5.copy_rates_from_pos(symbole, self.mt5.TIMEFRAME_D1, 0, n)
+
+    def resume_jour(self, decalage):
+        """Bilan du jour des ordres de l'exécuteur (pertes en positif)."""
+        mt5 = self.mt5
+        deals = [d for _, d in self.deals_du_jour(decalage)]
         entrees = [d for d in deals if d.entry == mt5.DEAL_ENTRY_IN]
         trades = {(d.symbol, d.time // 60) for d in entrees}  # un trade TP1+TP2 = 2 positions mais 1 seul trade
         perte_realisee = -sum(d.profit + d.commission + d.swap for d in deals)
@@ -406,6 +430,113 @@ def etat(m, cfg):
               % (p.symbol, "ACHAT" if p.type == 0 else "VENTE", p.volume, p.price_open, p.sl, p.tp, p.profit))
 
 
+RAISONS_SORTIE = {4: "stop loss", 5: "take profit", 6: "stop out (marge)"}
+
+
+def journal_du_jour(jour):
+    if not os.path.exists(JOURNAL):
+        return []
+    with open(JOURNAL, encoding="utf-8") as f:
+        return [l for l in csv.DictReader(f, delimiter=";") if l["heure_paris"].startswith(jour.strftime("%Y-%m-%d"))]
+
+
+def rapport(m, cfg):
+    """Tout ce qu'il faut pour le rapport de fin de journée : trades, gains / pertes, données de marché."""
+    mt5, c = m.mt5, m.compte
+    maintenant = paris(datetime.now(UTC))
+    jour = maintenant.replace(hour=0, minute=0, second=0, microsecond=0)
+    dec = next((d for d in (m.decalage_serveur(s) for s in cfg["symboles"]) if d is not None), cfg["decalage_serveur_secours"])
+    print("RAPPORT DU %s (données à %s, heure de Paris)" % (jour.strftime("%d/%m/%Y"), maintenant.strftime("%H:%M")))
+    print("Compte %s (%s) | mode %s | solde %.2f %s | fonds propres %.2f"
+          % (c.login, "RÉEL" if m.reel else "DÉMO", cfg["mode"], c.balance, c.currency, c.equity))
+
+    # --- trades réels
+    par_pos = {}
+    for h, d in m.deals_du_jour(dec):
+        par_pos.setdefault(d.position_id, []).append((h, d))
+    print("\n== TRADES RÉELS DU JOUR")
+    total = 0.0
+    if not par_pos:
+        print("Aucun trade réel aujourd'hui.")
+    for pid, ds in sorted(par_pos.items(), key=lambda x: x[1][0][0]):
+        entree = next((x for x in ds if x[1].entry == mt5.DEAL_ENTRY_IN), None)
+        sorties = [x for x in ds if x[1].entry != mt5.DEAL_ENTRY_IN]
+        res = sum(d.profit + d.commission + d.swap for _, d in ds)
+        total += res
+        if entree:
+            h, d = entree
+            ligne = "%s %s %s lots | entrée %s à %s" % (d.symbol, "ACHAT" if d.type == 0 else "VENTE", d.volume, d.price, h.strftime("%H:%M"))
+        else:
+            ligne = "%s (entrée un autre jour)" % ds[0][1].symbol
+        for h, d in sorties:
+            ligne += " | sortie %s à %s (%s)" % (d.price, h.strftime("%H:%M"), RAISONS_SORTIE.get(d.reason, "fermeture"))
+        if not sorties:
+            ligne += " | encore ouverte"
+        print("  %s | résultat %+.2f €" % (ligne, res))
+    ouvertes = m.positions()
+    latent = sum(p.profit + p.swap for p in ouvertes)
+    for p in ouvertes:
+        print("  Position ouverte : %s %s %s lots | entrée %s | stop %s | TP %s | en cours %+.2f €"
+              % (p.symbol, "ACHAT" if p.type == 0 else "VENTE", p.volume, p.price_open, p.sl, p.tp, p.profit + p.swap))
+    jr = m.resume_jour(dec)
+    lim = cfg["perte_max_jour_euros"]
+    print("Résultat réel du jour : %+.2f € (dont %+.2f € encore en cours) | stop de la journée %s € %s"
+          % (total + latent, latent, lim, "ATTEINT" if jr["perte_realisee"] >= lim else "non atteint"))
+
+    # --- marchés et trades virtuels
+    for sym in cfg["symboles"]:
+        cs = config_symbole(cfg, sym)
+        mt5.symbol_select(sym, True)
+        info = mt5.symbol_info(sym)
+        if info is None:
+            print("\n== %s : symbole introuvable" % sym)
+            continue
+        dg, pip = info.digits, info.point * (10 if info.digits in (3, 5) else 1)
+        print("\n== MARCHÉ %s (bougies de %d min)" % (sym, cs["unite_minutes"]))
+        jours = m.jours(sym, 21)
+        if jours is not None and len(jours) >= 2:
+            a = jours[-1]
+            amp = [(float(x["high"]) - float(x["low"])) / pip for x in jours[:-1]]
+            print("  Journée : ouverture %s | plus haut %s | plus bas %s | dernier %s | variation %+.2f %%"
+                  % (fmt(a["open"], dg), fmt(a["high"], dg), fmt(a["low"], dg), fmt(a["close"], dg),
+                     100 * (float(a["close"]) - float(a["open"])) / float(a["open"])))
+            print("  Amplitude du jour %.1f pips | moyenne des %d jours précédents %.1f pips"
+                  % ((float(a["high"]) - float(a["low"])) / pip, len(amp), sum(amp) / len(amp)))
+        bougies = [b for b in m.bougies(sym, cs["unite_minutes"], dec) if b[0].date() == jour.date()]
+        r = calculer_signal(bougies, cs["unite_minutes"], jour, maintenant, cs)
+        if "haut" not in r:
+            print("  Règle : %s" % r["statut"])
+            continue
+        print("  Range %s-%s : bas %s / haut %s (%.1f pips)"
+              % (cs["range_debut"], cs["range_fin"], fmt(r["bas"], dg), fmt(r["haut"], dg), (r["haut"] - r["bas"]) / pip))
+        sig = r["signal"]
+        if not sig:
+            print("  Règle : aucune cassure du range, pas de trade.")
+            continue
+        dernier = bougies[-1][3] if bougies else sig["entree"]
+        rr = resultat_r(sig, dernier, cs["objectif"])
+        risque = risque_autorise(c.balance, cs, 0, 0)
+        print("  Signal %s à %s : entrée %s | stop %s (%.1f pips) | TP1 %s | TP2 %s"
+              % ("ACHAT" if sig["sens"] > 0 else "VENTE", sig["heure"].strftime("%H:%M"), fmt(sig["entree"], dg),
+                 fmt(sig["stop"], dg), sig["r"] / pip, fmt(sig["tp1"], dg), fmt(sig["tp2"], dg)))
+        issue = {"stop": "TP1 touché puis stop" if sig["tp1_touche"] else "stop touché", "tp2": "TP2 touché"}.get(
+            sig["resultat"], "TP1 touché, TP2 pas atteint" if sig["tp1_touche"] else "ni stop ni TP1")
+        print("  Ce que la règle a donné : %s | %+.2fR, soit environ %+.2f € avec %.2f € de risque (objectif %s)"
+              % (issue, rr, rr * risque, risque, cs["objectif"]))
+
+    # --- journal
+    lignes = journal_du_jour(jour)
+    print("\n== DÉCISIONS DE L'EXÉCUTEUR AUJOURD'HUI (journal.csv)")
+    if not lignes:
+        print("Aucune.")
+    vus = set()
+    for l in lignes:
+        cle = (l["symbole"], l["action"], l["detail"])
+        if cle not in vus:
+            vus.add(cle)
+            print("  %s %s %s %s : %s" % (l["heure_paris"][11:16], l["symbole"], l["action"], l["sens"], l["detail"]))
+
+
 def cycle(m, cfg, symboles, envoyer):
     maintenant = paris(datetime.now(UTC))
     fin = maintenant.replace(hour=hm(cfg["fin_signaux"])[0], minute=hm(cfg["fin_signaux"])[1], second=0)
@@ -422,6 +553,7 @@ def main():
     ap.add_argument("--boucle", action="store_true", help="repasse chaque minute jusqu'à la fin de journée")
     ap.add_argument("--etat", action="store_true")
     ap.add_argument("--fermer-tout", action="store_true")
+    ap.add_argument("--rapport", action="store_true", help="bilan de la journée pour le rapport de fin de journée")
     a = ap.parse_args()
     cfg = charger_config()
     symboles = [a.symbole] if a.symbole else list(cfg["symboles"])
@@ -431,6 +563,8 @@ def main():
     try:
         if a.etat:
             return etat(m, cfg)
+        if a.rapport:
+            return rapport(m, cfg)
         if a.fermer_tout:
             return fermer_tout(m, cfg, "demande manuelle")
         print("Compte %s — mode %s" % ("RÉEL" if m.reel else "DÉMO", cfg["mode"].upper()))
