@@ -85,6 +85,12 @@ ce que la règle a donné sur chaque marché (même en mode à blanc), et une an
 
 Les rapports restent **sur ton PC** : `rapports/` n'est pas envoyé sur GitHub (solde et numéro de compte, dépôt public).
 
+**Où les retrouver :**
+- sur le PC : `D:\Claude\claude-repo\trading\executeur-mt5\rapports\` (un fichier `AAAA-MM-JJ.md` par jour, s'ouvre avec le Bloc-notes) ;
+- sur le téléphone : `rapport.bat` les copie aussi dans **OneDrive → Documents → trading → rapports** (app OneDrive) ;
+- en parlant au chef (sur le PC ou en Remote Control) : « montre-moi le rapport d'hier ».
+- `rapports\derniere-execution.log` dit ce qui s'est passé si un rapport manque.
+
 **Pour qu'il se fasse tout seul chaque jour de semaine à 17h45**, une seule fois, dans PowerShell :
 
 ```bash
