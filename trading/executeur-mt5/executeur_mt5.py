@@ -748,6 +748,37 @@ class Double:
         pass
 
 
+def diagnostic(m, cfg):
+    """Ce que MetaTrader 5 et OANDA autorisent vraiment, pour comprendre un refus."""
+    mt5 = m.mt5
+    c = mt5.account_info()
+    t = mt5.terminal_info() if hasattr(mt5, "terminal_info") else None
+    print("COMPTE %s — %s — %s" % (c.login, c.server, "RÉEL" if c.trade_mode == mt5.ACCOUNT_TRADE_MODE_REAL else "DÉMO"))
+    print("  Trading autorisé sur le compte (trade_allowed) : %s" % getattr(c, "trade_allowed", "?"))
+    print("    -> False = connecté en LECTURE SEULE (mot de passe investisseur) ou compte bloqué par OANDA")
+    print("  Trading par programme autorisé (trade_expert) : %s" % getattr(c, "trade_expert", "?"))
+    print("  Effet de levier : 1:%s | solde %.2f %s | marge libre %.2f" % (getattr(c, "leverage", "?"), c.balance, c.currency,
+                                                                         getattr(c, "margin_free", 0)))
+    if t is not None:
+        print("TERMINAL : connecté %s | bouton Algo Trading %s | %s"
+              % (getattr(t, "connected", "?"), "VERT" if t.trade_allowed else "ÉTEINT", getattr(t, "path", "")))
+    modes = {0: "DÉSACTIVÉ", 1: "achat seulement", 2: "vente seulement", 3: "fermeture seulement", 4: "COMPLET"}
+    for sym in cfg["symboles"]:
+        mt5.symbol_select(sym, True)
+        i, k = mt5.symbol_info(sym), mt5.symbol_info_tick(sym)
+        if i is None:
+            print("SYMBOLE %s : introuvable" % sym)
+            continue
+        pip = i.point * (10 if i.digits in (3, 5) else 1)
+        marge = mt5.order_calc_margin(mt5.ORDER_TYPE_BUY, sym, i.volume_min, k.ask) if k else None
+        print("SYMBOLE %s : trading %s | bid %s ask %s | spread %.1f pips | volume min %s | marge pour %s lot : %s"
+              % (sym, modes.get(getattr(i, "trade_mode", None), "?"), k.bid if k else "?", k.ask if k else "?",
+                 (k.ask - k.bid) / pip if k else -1, i.volume_min, i.volume_min, marge))
+        autres = [x.name for x in (mt5.symbols_get("*%s*" % sym) or []) if x.name != sym]
+        if autres:
+            print("  Autres symboles du même nom chez OANDA : %s" % ", ".join(autres[:10]))
+
+
 def boucle_active():
     """Heure du dernier passage de la boucle automatique, si elle a tourné il y a moins de 3 minutes."""
     try:
@@ -774,6 +805,7 @@ def main():
     ap.add_argument("--fermer-tout", action="store_true")
     ap.add_argument("--rapport", action="store_true", help="bilan de la journée pour le rapport de fin de journée")
     ap.add_argument("--test-notification", action="store_true", help="envoie une notification d'essai sur le téléphone")
+    ap.add_argument("--diagnostic", action="store_true", help="ce que MetaTrader 5 et OANDA autorisent vraiment")
     ap.add_argument("--notifier", metavar="MESSAGE", help="envoie ce message en notification (utilisé par rapport.bat)")
     a = ap.parse_args()
     if a.test_notification or a.notifier:
@@ -790,6 +822,8 @@ def main():
             return etat(m, cfg)
         if a.rapport:
             return rapport(m, cfg)
+        if a.diagnostic:
+            return diagnostic(m, cfg)
         if a.analyse:
             print("Compte %s — ANALYSE SEULE (rien n'est envoyé)" % ("RÉEL" if m.reel else "DÉMO"))
             for s in symboles:
