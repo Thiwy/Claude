@@ -6,6 +6,8 @@ Tout ce que Claude a créé pour moi, rangé par thème.
 claude/
 ├── cuisine/
 │   └── chef-cuisinier/        Agent « Chef » : recettes, techniques, nutrition, sécurité alimentaire
+├── sport/
+│   └── coach-trail/           Skill « Coach trail » : plans d'entraînement, conseils, préparation du 40 km de février
 └── trading/
     ├── bots-tradingview/      4 agents d'analyse (or, EUR/USD, EUR/JPY, ETH) + commande /scan-marches
     ├── scripts/               morning_scan.py, l'indicateur range_du_matin.pine et les listes de marchés
