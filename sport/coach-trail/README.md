@@ -19,3 +19,9 @@ lance `claude`, puis parle de course, par exemple :
 Le skill se déclenche tout seul dès qu'on parle de course. Pour l'appeler directement : `/coach-trail`.
 
 Sur claude.ai, tu peux aussi importer le dossier zippé dans Paramètres → Capacités → Skills.
+
+## Calendrier
+
+`calendrier/plan-40km-31-janvier.ics` contient toutes les séances du plan (avec leur description).
+Importe-le dans Google Agenda (ordinateur : Paramètres → Importer et exporter → Importer),
+dans Apple Calendrier (double-clic sur le fichier) ou dans Outlook (Fichier → Ouvrir et exporter → Importer).

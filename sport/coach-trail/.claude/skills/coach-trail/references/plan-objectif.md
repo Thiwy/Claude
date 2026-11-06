@@ -34,11 +34,11 @@ Le temps indiqué compte la course uniquement, sans le vélo (environ 2 h de vé
 | 3 | 23–29 nov | 50 min : escaliers 6 × 1 min | repos | 45 min Z2 | **1 h 45**, 400 m D+ | 3 h 20 |
 | 4 | 30 nov–6 déc | **Récup** : 40 min Z2 | repos | 40 min Z2 | **1 h 15**, 250 m D+ | 2 h 35 |
 | 5 | 7–13 déc | 55 min : escaliers 8 × 1 min | 30 min Z1 (facultatif) | 45 min Z2 | **2 h**, 500 m D+ | 3 h 40 (+30) |
-| 6 | 14–20 déc | 55 min : escaliers / tapis 5 × 3 min | repos | 40 min Z2 | **bloc** : sam 2 h, 600 m D+ + dim 45 min Z2 | 4 h 20 |
+| 6 | 14–20 déc | 55 min : escaliers / tapis 5 × 3 min | 30–35 min Z1 (facultatif) | 40 min Z2 | **bloc** : sam 2 h, 600 m D+ + dim 45 min Z2 | 4 h 20 |
 | 7 | 21–27 déc | **Fêtes, allégée** : mer 23 : 45 min Z2 | repos | ven 25 : repos | **sam 26 : 2 h 15**, 500 m D+ | 3 h 00 |
 | 8 | 28 déc–3 janv | mer 30 : 1 h, escaliers 6 × 2 min + descentes contrôlées | jeu 31 : 40 min Z2 | ven 1er : repos | **sam 2 : 2 h 45**, 700 m D+ | 4 h 25 |
-| 9 | 4–10 janv | **Pic** : 1 h, tapis / escaliers 6 × 3 min | repos | 45 min Z2 | **sam 9 : 3 h–3 h 15**, 900 m D+, répétition générale | 4 h 45–5 h |
-| 10 | 11–17 janv | 55 min dont 3 × 12 min à l'allure course | repos | 40 min Z2 | **bloc** : sam 2 h 15, 600 m D+ + dim 1 h Z2 | 4 h 50 |
+| 9 | 4–10 janv | **Pic** : 1 h, tapis / escaliers 6 × 3 min | 30–35 min Z1 (facultatif) | 45 min Z2 | **sam 9 : 3 h–3 h 15**, 900 m D+, répétition générale | 4 h 45–5 h |
+| 10 | 11–17 janv | 55 min dont 3 × 12 min à l'allure course | 30–35 min Z1 (facultatif) | 40 min Z2 | **bloc** : sam 2 h 15, 600 m D+ + dim 1 h Z2 | 4 h 50 |
 | 11 | 18–24 janv | **Affûtage** : 45 min dont 6 × 1 min vif | repos | 35 min Z2 | **1 h 30**, 300 m D+ | 2 h 50 |
 | 12 | 25–31 janv | 35 min Z2 + 4 accélérations | repos | 25 min très facile | sam 30 : repos ou 15 min de marche · **dim 31 : COURSE** | 1 h + course |
 
@@ -71,3 +71,6 @@ On affinera après la répétition générale.
 - Marcher toutes les montées raides dès le début.
 - Manger dès 30–45 min, puis toutes les 20–30 min (≈ 50–70 g/h). Boire selon la soif.
 - Descentes relâchées : c'est là que se joue la fin de course.
+
+## Calendrier
+Toutes les séances sont dans `sport/coach-trail/calendrier/plan-40km-31-janvier.ics`, en événements « journée entière » avec la description. Après un changement du plan, régénérer ce fichier avec `calendrier/generer_ics.py`.
