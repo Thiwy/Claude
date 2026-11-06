@@ -1,12 +1,12 @@
-# Plan — Trail 40 km / 1000 m D+ (1er février 2027)
+# Plan — Trail 40 km / 1000 m D+ (dimanche 31 janvier 2027)
 
 > Version 2 du 06/11/2026, calée sur l'entraînement réel : 2–3 sorties de 5–10 km par semaine, vélo lundi et mardi, renfo lundi et vendredi, côtes seulement le week-end.
-> Semaine 1 = lundi 9 novembre 2026. Course = fin de semaine 12. ⚠️ Vérifier la date exacte : le 1er février 2027 est un lundi.
+> Semaine 1 = lundi 9 novembre 2026. Course = dimanche 31 janvier 2027 (fin de semaine 12).
 > Si la pause après le marathon dure encore, ou si les jambes font encore mal, on décale le début : on ne démarre pas la semaine 1 sur des jambes douloureuses.
 
 ## Logique du plan
 1. **Ralentir.** Tous les footings et les sorties longues se font en endurance fondamentale (Z2) : tu dois pouvoir parler en phrases complètes. Marche dans les côtes si la FC s'emballe. C'est ce qui fera baisser ton cardio à allure égale.
-2. **Passer de 2–3 sorties à 3 sorties fixes**, plus une 4e facultative à partir de la semaine 5. Le vélo du lundi et du mardi est gardé : c'est de l'endurance gratuite pour le cœur, sans choc pour les jambes. Il doit rester facile.
+2. **Passer de 2–3 sorties à 3 sorties fixes.** À partir de la semaine 5, ajouter une 4e sortie le jeudi (30–40 min très facile) si les mollets vont bien. Le vélo du lundi et du mardi est gardé : c'est de l'endurance gratuite pour le cœur, sans choc pour les jambes. Il doit rester facile.
 3. **Allonger la sortie longue du week-end**, là où tu as du relief : de 1 h 15 à 3 h–3 h 15, avec le D+ et surtout le D- qui montent.
 4. **Remplacer les côtes en semaine** par des escaliers, des ponts ou un tapis incliné. On monte en courant, on redescend en contrôlant : c'est le travail excentrique des cuisses qui t'a manqué au marathon.
 5. **Renfo :** séance complète des jambes le lundi, séance légère le vendredi (gainage et mollets seulement, pour garder les jambes fraîches pour le samedi).
@@ -40,7 +40,7 @@ Le temps indiqué compte la course uniquement, sans le vélo (environ 2 h de vé
 | 9 | 4–10 janv | **Pic** : 1 h, tapis / escaliers 6 × 3 min | repos | 45 min Z2 | **sam 9 : 3 h–3 h 15**, 900 m D+, répétition générale | 4 h 45–5 h |
 | 10 | 11–17 janv | 55 min dont 3 × 12 min à l'allure course | repos | 40 min Z2 | **bloc** : sam 2 h 15, 600 m D+ + dim 1 h Z2 | 4 h 50 |
 | 11 | 18–24 janv | **Affûtage** : 45 min dont 6 × 1 min vif | repos | 35 min Z2 | **1 h 30**, 300 m D+ | 2 h 50 |
-| 12 | 25–31 janv | 35 min Z2 + 4 accélérations | repos | 25 min très facile | **COURSE** (veille : repos ou 15 min de marche) | 1 h + course |
+| 12 | 25–31 janv | 35 min Z2 + 4 accélérations | repos | 25 min très facile | sam 30 : repos ou 15 min de marche · **dim 31 : COURSE** | 1 h + course |
 
 **Renfo :** lundi complet jusqu'à la semaine 10. Pas de renfo des jambes à partir de la semaine 11 (10 derniers jours) : gainage léger seulement.
 **Vélo :** on le garde toutes les semaines, toujours facile. Pendant les semaines 11 et 12, on le raccourcit si les jambes sont lourdes.

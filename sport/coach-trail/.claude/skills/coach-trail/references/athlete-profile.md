@@ -4,7 +4,7 @@
 
 ## Objectif principal
 - **Course :** trail de 40 km, 1000 m D+
-- **Date :** 1er février 2027 (⚠️ c'est un lundi : vérifier si ce n'est pas le dimanche 31 janvier)
+- **Date :** dimanche 31 janvier 2027 (confirmé)
 - **Objectif :** finir en bon état, sans « exploser » des jambes. Objectif chrono à définir.
 - **Estimation de temps (km-effort) :** 40 + 1000/100 = 50 km-effort. Sur son 2e trail, il a couru 23 km + 700 m D+, soit 30 km-effort en 3 h, donc 10 km-effort/h. Sans fatigue, ça donne 5 h. Avec une marge de 10–20 % de fatigue (distance quasi doublée), l'estimation va de 5 h 30 à 6 h.
   - Fourchette : bonne journée ≈ 5 h, réaliste ≈ 5 h 30, prudent ≈ 6 h.
@@ -30,12 +30,13 @@
 - **Matériel :** montre connectée avec cardio.
 
 ## Infos encore à compléter
-- Date du marathon (durée de la pause) : ?
-- FC max vue en course (fin de trail ou de marathon) : ? FC de repos (au réveil) : ?
-- Douleurs actuelles (jambes encore douloureuses depuis le marathon ?) / blessures passées : ?
-- Test d'effort cardiologique déjà fait : ?
+- Date du marathon (durée de la pause) : ? (jambes OK au 06/11)
+- FC max vue en course (fin de trail ou de marathon) : ? FC de repos (au réveil) : ? Âge : ? (nécessaires pour calculer les zones)
+- Douleurs : jambes OK. **Mollets un peu douloureux de temps en temps** (léger), à surveiller.
+- Test d'effort cardiologique : **jamais fait**, recommandé de le faire rapidement.
 - Âge / poids (optionnel) : ?
 
 ## Journal (le coach ajoute les retours ici)
 - 2026-11-06 : création du profil. Objectif fixé : trail 40 km / 1000 D+ le 1er février 2027.
 - 2026-11-06 : infos d'entraînement reçues (2–3 sorties de 5–10 km, vélo lun/mar, renfo lun/ven, côtes seulement le week-end, montre cardio). Plan recalé sur un départ à environ 2 h 30 de course par semaine, 3 sorties.
+- 2026-11-06 : course confirmée le dimanche 31 janvier 2027. Footing de 8 km en 43 min (5'22/km), FC moyenne 159, pic à 180 sur du plat. C'est plus rapide que l'allure du marathon (6'00/km), donc trop vite pour de l'endurance fondamentale. Consigne : footings vers 6'30–7'00/km, au test de la parole. Mollets parfois un peu douloureux : renfo des mollets, à surveiller. Jamais fait de test d'effort.
