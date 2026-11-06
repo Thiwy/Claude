@@ -1,49 +1,73 @@
 # Plan — Trail 40 km / 1000 m D+ (1er février 2027)
 
-> **Plan PROVISOIRE.** Il est construit sur une hypothèse prudente, en attendant le volume actuel réel de l'athlète : **3 à 4 séances/semaine, environ 25–30 km/semaine aujourd'hui**. Le coach l'ajuste dès que le profil est complété.
-> Semaine 1 = lundi 9 novembre 2026. Course = semaine 12 (31 janv./1er févr.).
+> Version 2 du 06/11/2026, calée sur l'entraînement réel : 2–3 sorties de 5–10 km par semaine, vélo lundi et mardi, renfo lundi et vendredi, côtes seulement le week-end.
+> Semaine 1 = lundi 9 novembre 2026. Course = fin de semaine 12. ⚠️ Vérifier la date exacte : le 1er février 2027 est un lundi.
+> Si la pause après le marathon dure encore, ou si les jambes font encore mal, on décale le début : on ne démarre pas la semaine 1 sur des jambes douloureuses.
 
 ## Logique du plan
-1. **Ralentir pour aller plus loin.** Les footings et sorties longues se font en Z2, au test de la parole, en marchant les côtes si la FC s'emballe. Objectif : faire baisser le « cardio qui monte vite ».
-2. **Construire les jambes.** La sortie longue progresse de 1 h 45 à 3 h 45, avec du D+ et surtout du **D-** chaque semaine. Renfo excentrique 2×/semaine.
-3. **Un peu de qualité.** Une séance de côtes par semaine suffit.
-4. **Entraîner l'estomac.** Manger pendant chaque sortie de plus de 1 h 30 : 30–40 g/h au début, 50–70 g/h à partir de janvier.
+1. **Ralentir.** Tous les footings et les sorties longues se font en endurance fondamentale (Z2) : tu dois pouvoir parler en phrases complètes. Marche dans les côtes si la FC s'emballe. C'est ce qui fera baisser ton cardio à allure égale.
+2. **Passer de 2–3 sorties à 3 sorties fixes**, plus une 4e facultative à partir de la semaine 5. Le vélo du lundi et du mardi est gardé : c'est de l'endurance gratuite pour le cœur, sans choc pour les jambes. Il doit rester facile.
+3. **Allonger la sortie longue du week-end**, là où tu as du relief : de 1 h 15 à 3 h–3 h 15, avec le D+ et surtout le D- qui montent.
+4. **Remplacer les côtes en semaine** par des escaliers, des ponts ou un tapis incliné. On monte en courant, on redescend en contrôlant : c'est le travail excentrique des cuisses qui t'a manqué au marathon.
+5. **Renfo :** séance complète des jambes le lundi, séance légère le vendredi (gainage et mollets seulement, pour garder les jambes fraîches pour le samedi).
 
-## Vue d'ensemble
-| Sem. | Dates | Phase | Volume total | Sortie longue (D+) | Qualité |
-|---|---|---|---|---|---|
-| 1 | 9–15 nov | Base | ~3 h 30 | 1 h 45 (300 m) | côtes courtes 6×30 s |
-| 2 | 16–22 nov | Base | ~4 h | 2 h (400 m) | côtes courtes 8×30 s |
-| 3 | 23–29 nov | Base | ~4 h 30 | 2 h 15 (500 m) | côtes courtes 10×30 s |
-| 4 | 30 nov–6 déc | Récup | ~3 h | 1 h 30 (300 m) | fartlek léger |
-| 5 | 7–13 déc | Développement | ~4 h 45 | 2 h 30 (600 m) | côtes longues 4×3 min |
-| 6 | 14–20 déc | Développement | ~5 h 15 | sam 2 h 30 (600 m) + dim 1 h (bloc) | côtes longues 5×3 min |
-| 7 | 21–27 déc | Fêtes / allégée | ~4 h | 2 h (500 m), pas le 25 | footings + renfo |
-| 8 | 28 déc–3 janv | Spécifique | ~5 h | 3 h (700 m), pas le 1er | côtes longues 5×4 min |
-| 9 | 4–10 janv | **Pic** | ~5 h 45 | **3 h 30–3 h 45 (900–1000 m)**, répétition générale | côtes 6×3 min + descentes |
-| 10 | 11–17 janv | Spécifique | ~4 h 45 | sam 2 h 30 (700 m) + dim 1 h (bloc) | allure course 3×15 min |
-| 11 | 18–24 janv | Affûtage | ~3 h 30 | 1 h 45 (400 m) | 6×1 min vif |
-| 12 | 25–31 janv | Course | ~2 h + course | **COURSE** | 4–5 accélérations mardi |
+## Semaine type
+| Jour | Séance | Intensité | Objectif |
+|---|---|---|---|
+| Lundi | Vélo 20 km + renfo complet 25–30 min | vélo Z1–Z2 | force, cuisses en excentrique |
+| Mardi | Vélo 20 km | Z1–Z2 | endurance sans choc |
+| Mercredi | **Séance de qualité** (escaliers, tapis, fartlek) | Z4–Z5 sur les efforts | puissance en montée, descente |
+| Jeudi | Repos (footing facultatif à partir de la semaine 5) | Z1–Z2 | récupération |
+| Vendredi | Footing Z2 + renfo léger 15 min | Z2, on parle | endurance |
+| Samedi | **Sortie longue avec D+** | Z2, marche dans les montées raides | endurance des jambes, descente, nutrition |
+| Dimanche | Repos (ou 2e sortie les semaines « bloc ») | Z1–Z2 | récupération |
 
-## Semaine type (4 séances)
-| Jour | Séance | Détail |
-|---|---|---|
-| Lundi | Repos ou renfo 25 min | step-down, squat bulgare, mollets, gainage |
-| Mardi | Footing Z2 45–60 min | test de la parole, + 4 lignes droites à la fin |
-| Mercredi | Repos | — |
-| Jeudi | Qualité côtes | 15 min échauffement + côtes, récup en descente trottinée (travail de descente) + 10 min retour au calme |
-| Vendredi | Renfo 25 min ou repos | idem lundi, version légère |
-| Samedi | **Sortie longue trail** | Z2, marcher les montées raides, descentes relâchées, manger/boire |
-| Dimanche | Footing récup 30–45 min ou vélo | très facile (Z1) |
+Samedi et dimanche peuvent être inversés si le relief est plus accessible le dimanche.
 
-> 3 séances seulement possibles ? On garde : côtes (jeudi), footing Z2 (mardi), sortie longue (samedi). Le renfo se fait à la maison 2×15 min.
+## Plan détaillé
+Le temps indiqué compte la course uniquement, sans le vélo (environ 2 h de vélo en plus chaque semaine).
 
-## Répétition générale (semaine 9)
-Sortie longue de 3 h 30–3 h 45 avec 900–1000 m de D+, faite **exactement comme le jour J** : chaussures, sac, tenue, petit-déjeuner, gels/boisson (50–70 g de glucides/h), allure prudente. On note : FC, sensations dans les jambes en fin de sortie, tolérance digestive.
+| Sem. | Dates | Mercredi (qualité) | Jeudi | Vendredi | Week-end (sortie longue) | Course/sem. |
+|---|---|---|---|---|---|---|
+| 1 | 9–15 nov | 40 min Z2 + 4 lignes droites | repos | 40 min Z2 | **1 h 15**, 200 m D+ | 2 h 35 |
+| 2 | 16–22 nov | 45 min : fartlek 6 × 1 min vite / 2 min lent | repos | 45 min Z2 | **1 h 30**, 300 m D+ | 3 h 00 |
+| 3 | 23–29 nov | 50 min : escaliers 6 × 1 min | repos | 45 min Z2 | **1 h 45**, 400 m D+ | 3 h 20 |
+| 4 | 30 nov–6 déc | **Récup** : 40 min Z2 | repos | 40 min Z2 | **1 h 15**, 250 m D+ | 2 h 35 |
+| 5 | 7–13 déc | 55 min : escaliers 8 × 1 min | 30 min Z1 (facultatif) | 45 min Z2 | **2 h**, 500 m D+ | 3 h 40 (+30) |
+| 6 | 14–20 déc | 55 min : escaliers / tapis 5 × 3 min | repos | 40 min Z2 | **bloc** : sam 2 h, 600 m D+ + dim 45 min Z2 | 4 h 20 |
+| 7 | 21–27 déc | **Fêtes, allégée** : mer 23 : 45 min Z2 | repos | ven 25 : repos | **sam 26 : 2 h 15**, 500 m D+ | 3 h 00 |
+| 8 | 28 déc–3 janv | mer 30 : 1 h, escaliers 6 × 2 min + descentes contrôlées | jeu 31 : 40 min Z2 | ven 1er : repos | **sam 2 : 2 h 45**, 700 m D+ | 4 h 25 |
+| 9 | 4–10 janv | **Pic** : 1 h, tapis / escaliers 6 × 3 min | repos | 45 min Z2 | **sam 9 : 3 h–3 h 15**, 900 m D+, répétition générale | 4 h 45–5 h |
+| 10 | 11–17 janv | 55 min dont 3 × 12 min à l'allure course | repos | 40 min Z2 | **bloc** : sam 2 h 15, 600 m D+ + dim 1 h Z2 | 4 h 50 |
+| 11 | 18–24 janv | **Affûtage** : 45 min dont 6 × 1 min vif | repos | 35 min Z2 | **1 h 30**, 300 m D+ | 2 h 50 |
+| 12 | 25–31 janv | 35 min Z2 + 4 accélérations | repos | 25 min très facile | **COURSE** (veille : repos ou 15 min de marche) | 1 h + course |
+
+**Renfo :** lundi complet jusqu'à la semaine 10. Pas de renfo des jambes à partir de la semaine 11 (10 derniers jours) : gainage léger seulement.
+**Vélo :** on le garde toutes les semaines, toujours facile. Pendant les semaines 11 et 12, on le raccourcit si les jambes sont lourdes.
+
+## Séances de qualité sans côtes
+- **Escaliers / ponts / parkings :** 15 min d'échauffement. Puis tu montes en courant, à un effort dur (Z4–Z5), et tu redescends **en marchant ou en trottinant, de façon contrôlée** : c'est ta récupération et ton travail de descente. 10 min de retour au calme.
+- **Tapis de salle :** inclinaison de 8–12 %, efforts de 1 à 3 min, récupération à plat en trottinant.
+- **Fartlek à plat :** alternance vite/lent au feeling, si aucun relief n'est disponible.
+
+## Sorties longues du week-end
+- **Z2 du début à la fin.** Marche dans les montées raides dès le début, même si tu te sens bien.
+- **Descentes :** relâché, pas courts et rapides. Au début, ne freine pas fort ; augmente l'engagement de semaine en semaine.
+- **Manger à chaque sortie de plus de 1 h 30 :** environ 30–40 g de glucides par heure en novembre-décembre, puis 50–70 g par heure en janvier (1 gel ≈ 20–25 g, 1 compote ≈ 15–20 g, 1 banane ≈ 25 g).
+- **Note dans ta montre :** la FC moyenne, la FC dans la dernière heure (dérive ?) et l'état des jambes dans les 30 dernières minutes.
+
+## Répétition générale (samedi 9 janvier)
+3 h–3 h 15 avec environ 900 m de D+, faite **comme le jour J** : chaussures, sac, tenue, petit-déjeuner, ravitaillement (50–70 g/h), allure prudente.
+
+## Estimation de temps
+50 km-effort (40 + 1000/100). Sur ton 2e trail, tu as couru à 10 km-effort/h. Avec 10–20 % de marge pour la fatigue :
+- bonne journée ≈ 5 h ;
+- réaliste ≈ 5 h 30 ;
+- prudent ≈ 6 h.
+On affinera après la répétition générale.
 
 ## Stratégie de course (à affiner semaine 11)
-- Partir **plus lentement que tu ne le voudrais** : les 10 premiers km doivent paraître faciles.
+- Les 10 premiers km doivent paraître faciles.
 - Marcher toutes les montées raides dès le début.
-- Manger dès 30–45 min puis toutes les 20–30 min (≈ 50–70 g/h). Boire selon la soif (≈ 500 ml/h, plus s'il fait doux).
-- Descentes relâchées sans freiner fort : c'est là que se joue la fin de course.
-- Objectif : finir en relançant sur les 10 derniers km, pas en survivant.
+- Manger dès 30–45 min, puis toutes les 20–30 min (≈ 50–70 g/h). Boire selon la soif.
+- Descentes relâchées : c'est là que se joue la fin de course.

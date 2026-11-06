@@ -21,17 +21,21 @@
 - **Jambes qui lâchent en fin d'effort long.** Ça indique un manque de volume en endurance, de sorties longues et de travail en descente / renfo excentrique des quadriceps.
 - Première course au-delà de 23 km en trail : la distance est presque doublée.
 
-## Infos à compléter
-- Date du marathon : ?
-- Âge / poids (optionnel) : ?
-- Séances par semaine actuellement : ?
-- Km/semaine actuels : ?
-- Jours disponibles et durée possible par jour : ?
-- Accès aux côtes / sentiers / escaliers : ?
-- Montre cardio : ? FC max connue : ? FC de repos : ?
-- Renforcement musculaire ou autres sports : ?
-- Blessures passées / douleurs actuelles : ?
+## Entraînement actuel (au 06/11/2026)
+- **Course à pied :** 2 à 3 sorties/semaine, de 5 à 10 km chacune, soit environ 15–25 km/semaine. **Petite pause en ce moment après le marathon.**
+- **Vélo :** 20 km le lundi et le mardi. C'est du volume aérobie facile, sans choc pour les jambes.
+- **Renfo :** un peu le lundi et le vendredi.
+- **Disponibilités :** pas de jour interdit.
+- **Terrain :** pas de côtes près de chez lui en semaine, relief accessible le week-end. En semaine, il peut utiliser des escaliers, des ponts, des parkings ou un tapis incliné.
+- **Matériel :** montre connectée avec cardio.
+
+## Infos encore à compléter
+- Date du marathon (durée de la pause) : ?
+- FC max vue en course (fin de trail ou de marathon) : ? FC de repos (au réveil) : ?
+- Douleurs actuelles (jambes encore douloureuses depuis le marathon ?) / blessures passées : ?
 - Test d'effort cardiologique déjà fait : ?
+- Âge / poids (optionnel) : ?
 
 ## Journal (le coach ajoute les retours ici)
 - 2026-11-06 : création du profil. Objectif fixé : trail 40 km / 1000 D+ le 1er février 2027.
+- 2026-11-06 : infos d'entraînement reçues (2–3 sorties de 5–10 km, vélo lun/mar, renfo lun/ven, côtes seulement le week-end, montre cardio). Plan recalé sur un départ à environ 2 h 30 de course par semaine, 3 sorties.
