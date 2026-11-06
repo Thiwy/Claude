@@ -730,6 +730,24 @@ def boucle(m, cfg, symboles):
             os.remove(BATTEMENT)
 
 
+class Double:
+    """Écrit à l'écran ET dans un fichier (journal de la boucle)."""
+    def __init__(self, ecran, fichier):
+        self.ecran, self.fichier = ecran, fichier
+
+    def write(self, texte):
+        for f in (self.ecran, self.fichier):
+            try:
+                f.write(texte)
+                f.flush()
+            except (OSError, ValueError):
+                pass
+        return len(texte)
+
+    def flush(self):
+        pass
+
+
 def boucle_active():
     """Heure du dernier passage de la boucle automatique, si elle a tourné il y a moins de 3 minutes."""
     try:
@@ -782,6 +800,10 @@ def main():
         print("Compte %s — mode %s" % ("RÉEL" if m.reel else "DÉMO", cfg["mode"].upper()))
         if not a.boucle:
             return cycle(m, cfg, symboles, a.envoyer)
+        os.makedirs(os.path.join(ICI, "rapports"), exist_ok=True)
+        log = open(os.path.join(ICI, "rapports", "boucle.log"), "a", encoding="utf-8")
+        sys.stdout, sys.stderr = Double(sys.stdout, log), Double(sys.stderr, log)
+        print("Agents de trading en marche. NE FERME PAS cette fenêtre (Ctrl+C pour arrêter).")
         return boucle(m, cfg, symboles)
     finally:
         m.mt5.shutdown()
