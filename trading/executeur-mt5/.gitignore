@@ -4,3 +4,4 @@ __pycache__/
 rapports/
 notification.txt
 notifications_envoyees.json
+boucle_en_cours.txt

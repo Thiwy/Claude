@@ -41,6 +41,29 @@ assert "incomplet" in ex.calculer_signal(bougies[1:], 5, jour, p(9, 30), cfg)["s
 calme = bougies[:4] + [(p(17, 30), 1.1050, 1.1000, 1.1040)]
 assert ex.calculer_signal(calme, 5, jour, p(17, 45), cfg)["statut"] == "aucune cassure"
 
+# 7b. plusieurs trades dans la journée : retour dans le range obligatoire avant une nouvelle cassure
+un = dict(cfg, trades_max_par_marche=1)
+trois = dict(cfg, trades_max_par_marche=3)
+journee = bougies[:5] + [(p(9, 25), 1.1031, 1.0995, 1.1000),   # ACHAT à 09:25 puis stop (1.1000) touché
+                         (p(9, 30), 1.1015, 1.1002, 1.1012),   # clôture au-dessus du range : PAS de nouveau signal (pas revenu dedans)
+                         (p(9, 35), 1.1012, 1.0998, 1.1005),   # clôture dans le range : réarmé
+                         (p(9, 40), 1.1001, 1.0980, 1.0985)]   # clôture sous le bas : VENTE
+r1 = ex.calculer_signal(journee, 5, jour, p(10, 0), un)
+assert len(r1["signaux"]) == 1 and r1["signal"]["resultat"] == "stop"          # réglage 1 : un seul trade
+r3 = ex.calculer_signal(journee, 5, jour, p(10, 0), trois)
+assert len(r3["signaux"]) == 2, r3["signaux"]
+assert r3["signaux"][0]["resultat"] == "stop" and r3["signal"]["sens"] == -1 and r3["signal"]["heure"] == p(9, 45)
+# sans retour dans le range, pas de 2e signal
+sans_retour = journee[:7] + [(p(9, 35), 1.1020, 1.1011, 1.1015), (p(9, 40), 1.1001, 1.0980, 1.0985)]
+assert len(ex.calculer_signal(sans_retour, 5, jour, p(10, 0), trois)["signaux"]) == 1
+# un trade en cours bloque toute nouvelle cassure
+encours = bougies[:5] + [(p(9, 25), 1.1031, 1.1015, 1.1028), (p(9, 30), 1.1012, 1.1003, 1.1005), (p(9, 35), 1.1025, 1.1004, 1.1022)]
+r = ex.calculer_signal(encours, 5, jour, p(9, 45), trois)
+assert len(r["signaux"]) == 1 and r["signal"]["resultat"] is None
+# objectif TP1 : le trade est fini dès TP1
+r = ex.calculer_signal(bougies, 5, jour, p(9, 40), dict(trois, objectif="TP1"))
+assert r["signaux"][0]["resultat"] == "tp1"
+
 # 8. taille de position : EURUSD, 1 lot = 10 USD par pip (tick 0.00001 = 1 USD), stop 20 pips, risque 50 -> 0.25 lot
 assert ex.taille_position(50, 0.0020, 0.00001, 1.0, 0.01, 0.01, 100) == 0.25
 assert ex.taille_position(1, 0.0020, 0.00001, 1.0, 0.01, 0.01, 100) == 0.0      # trop petit
@@ -55,8 +78,8 @@ ok = lambda **k: ex.controles(s, k.get("prix", 1.1021), k.get("spread", 0.00002)
 assert ok() == [], ok()
 assert any("RÉEL" in x for x in ok(reel=True, c={"compte_reel_autorise": False}))
 assert ok(reel=True, c={"compte_reel_autorise": True}) == []
-assert any("déjà un trade" in x for x in ok(deja=True))
-assert any("trades_max_jour" in x for x in ok(n=2))
+assert any("déjà une position" in x for x in ok(deja=True))
+assert any("trades_max_jour" in x for x in ok(n=2, c={"trades_max_jour": 2}))
 assert any("stop de la journée" in x for x in ok(perte=5))
 assert ok(perte=4.99) == []
 assert any("trop ancien" in x for x in ok(now=p(9, 40)))

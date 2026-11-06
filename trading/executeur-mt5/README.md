@@ -62,6 +62,33 @@ Tout est noté dans `journal.csv` (ouvrable avec Excel).
 New-Item STOP
 ```
 
+## Trading automatique, sans rien relancer
+
+`lancer-trading.bat` lance `executeur_mt5.py --boucle` : il repasse **chaque minute** de 8h55 à 17h35,
+prend les trades de chaque marché, ferme à 17h30, et continue même si MetaTrader 5 ou internet coupe un moment
+(il réessaie chaque minute et te prévient). Un changement de `config.json` est pris en compte sans relancer.
+Tout ce qu'il fait est noté dans `rapports\boucle.log`.
+
+Pour qu'il démarre tout seul du lundi au vendredi à 8h55 (une seule fois, dans PowerShell) :
+
+```bash
+schtasks /Create /TN "Trading agents" /TR "D:\Claude\claude-repo\trading\executeur-mt5\lancer-trading.bat" /SC WEEKLY /D MON,TUE,WED,THU,FRI /ST 08:55
+```
+
+Pour le lancer tout de suite (par exemple si le PC était éteint à 8h55) :
+
+```bash
+schtasks /Run /TN "Trading agents"
+```
+
+Conditions : PC allumé, session Windows ouverte, pas de mise en veille, MetaTrader 5 ouvert avec Algo Trading au vert.
+`py -I executeur_mt5.py --etat` affiche « Boucle automatique : ACTIVE » quand elle tourne.
+Pour l'arrêter : fichier `STOP` (elle s'arrête à la minute suivante).
+
+**Plusieurs trades par jour.** Après un trade (gagné ou perdu), l'agent attend que le prix **revienne dans le range**,
+puis en ressorte : c'est un nouveau signal. Au plus `trades_max_par_marche` (3) par marché et `trades_max_jour` (6) au total,
+et toujours dans la limite des stops de la journée (compte et agent).
+
 ## Notifications sur le téléphone
 
 Avec l'app gratuite **ntfy** (Android / iPhone, sans compte), tu es prévenu quand :
@@ -154,7 +181,8 @@ Les agents ne peuvent **pas** modifier ce fichier (bloqué dans `.claude/setting
 | `perte_max_jour_euros` | **5** | **Stop de la journée.** Dès que les pertes du jour atteignent 5 €, plus aucun trade jusqu'au lendemain. Mieux : avant chaque ordre, l'exécuteur additionne les pertes du jour et ce que les positions ouvertes perdraient à leur stop, et réduit la taille pour que le total ne puisse pas dépasser 5 €. |
 | `risque_max_par_trade_euros` | 2.5 | Perte maximale d'un seul trade si son stop est touché (`null` = pas de plafond, seulement le budget du jour). |
 | `risque_par_trade_pct` | 0.5 | Autre plafond : % du solde. C'est le plus petit des trois (ce %, le maximum par trade, ce qui reste du budget du jour) qui compte. |
-| `trades_max_jour` | 2 | Nombre maximum de trades par jour, tous marchés confondus (1 par marché au plus). |
+| `trades_max_jour` | 6 | Nombre maximum de trades par jour, tous marchés confondus. |
+| `trades_max_par_marche` | 3 | Trades maximum par marché et par jour. Après un trade, il faut un retour dans le range puis une nouvelle cassure. |
 | `stop_min_pips` | 5 | Pas de trade si le stop est plus serré : le spread le mangerait. |
 | `spread_max_pct_du_stop` | 25 | Pas de trade si le spread dépasse 25 % de la distance du stop. |
 | `signal_age_max_minutes` | 10 | Pas de trade si le signal date de plus de 10 min. |

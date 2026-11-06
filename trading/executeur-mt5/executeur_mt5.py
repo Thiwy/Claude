@@ -33,6 +33,7 @@ JOURNAL = os.path.join(ICI, "journal.csv")
 MAGIC = 915900  # identifie les ordres passés par cet exécuteur
 FICHIER_NOTIF = os.path.join(ICI, "notification.txt")          # sujet ntfy (secret, jamais sur GitHub)
 DEJA_NOTIFIE = os.path.join(ICI, "notifications_envoyees.json")
+BATTEMENT = os.path.join(ICI, "boucle_en_cours.txt")              # écrit à chaque passage de la boucle automatique
 UTC = timezone.utc
 
 
@@ -70,31 +71,43 @@ def calculer_signal(bougies, pas, jour, maintenant, cfg):
         return {"statut": "range incomplet (%d bougies sur %d)" % (len(rng), attendu)}
     haut, bas = max(b[1] for b in rng), min(b[2] for b in rng)
     coupe = min(maintenant, fin)
-    out = {"statut": "aucune cassure", "haut": haut, "bas": bas, "signal": None}
+    out = {"statut": "aucune cassure", "haut": haut, "bas": bas, "signal": None, "signaux": []}
+    final = "tp1" if cfg.get("objectif") == "TP1" else "tp2"
+    max_signaux = cfg.get("trades_max_par_marche", 1)
+    arme = True  # prêt pour une cassure ; après un trade, il faut d'abord un retour dans le range
     for t, h, l, c in sorted(bougies):
         if t < t1 or t + timedelta(minutes=pas) > coupe:
             continue  # avant la fin du range, ou bougie pas encore clôturée
         s = out["signal"]
-        if s is None:
-            sens = 1 if c > haut else -1 if c < bas else 0
-            if sens:
-                milieu = (haut + bas) / 2
-                r = min(abs(c - milieu), c * cfg["stop_max_pct"] / 100)
-                out["signal"] = {"sens": sens, "heure": t + timedelta(minutes=pas), "entree": c, "r": r,
-                                 "stop": c - sens * r, "tp1": c + sens * r, "tp2": c + 2 * sens * r,
-                                 "plafonne": r < abs(c - milieu), "tp1_touche": False, "resultat": None}
-                out["statut"] = "signal"
+        if s is not None and not s["resultat"]:
+            # suivi du trade en cours ; stop et objectif dans la même bougie : on compte le stop (cas prudent)
+            if (l <= s["stop"]) if s["sens"] > 0 else (h >= s["stop"]):
+                s["resultat"] = "stop"
+                continue
+            if (h >= s["tp1"]) if s["sens"] > 0 else (l <= s["tp1"]):
+                s["tp1_touche"] = True
+            if (h >= s["tp2"]) if s["sens"] > 0 else (l <= s["tp2"]):
+                s["resultat"] = "tp2"
+            elif final == "tp1" and s["tp1_touche"]:
+                s["resultat"] = "tp1"
             continue
-        if s["resultat"]:
+        if not arme:
+            if bas <= c <= haut:
+                arme = True  # le prix est revenu dans le range : une nouvelle cassure comptera
             continue
-        # stop et objectif dans la même bougie : on compte le stop (cas prudent)
-        if (l <= s["stop"]) if s["sens"] > 0 else (h >= s["stop"]):
-            s["resultat"] = "stop"
+        if len(out["signaux"]) >= max_signaux:
             continue
-        if (h >= s["tp1"]) if s["sens"] > 0 else (l <= s["tp1"]):
-            s["tp1_touche"] = True
-        if (h >= s["tp2"]) if s["sens"] > 0 else (l <= s["tp2"]):
-            s["resultat"] = "tp2"
+        sens = 1 if c > haut else -1 if c < bas else 0
+        if sens:
+            milieu = (haut + bas) / 2
+            r = min(abs(c - milieu), c * cfg["stop_max_pct"] / 100)
+            sig = {"sens": sens, "heure": t + timedelta(minutes=pas), "entree": c, "r": r,
+                   "stop": c - sens * r, "tp1": c + sens * r, "tp2": c + 2 * sens * r,
+                   "plafonne": r < abs(c - milieu), "tp1_touche": False, "resultat": None}
+            out["signal"] = sig
+            out["signaux"].append(sig)
+            out["statut"] = "signal"
+            arme = False
     return out
 
 
@@ -140,7 +153,7 @@ def controles(sig, prix, spread, pip, maintenant, cfg, deja_trade, trades_jour, 
     if compte_reel and not cfg["compte_reel_autorise"]:
         raisons.append("compte RÉEL et compte_reel_autorise = false dans config.json")
     if deja_trade:
-        raisons.append("déjà un trade sur ce symbole aujourd'hui")
+        raisons.append("déjà une position ouverte sur ce marché, ou ce signal a déjà été pris")
     if trades_jour >= cfg["trades_max_jour"]:
         raisons.append("trades_max_jour atteint (%d)" % cfg["trades_max_jour"])
     if perte_jour >= cfg["perte_max_jour_euros"]:
@@ -280,8 +293,13 @@ class MT5:
     def resume_jour(self, decalage):
         """Bilan du jour des ordres de l'exécuteur (pertes en positif)."""
         mt5 = self.mt5
-        deals = [d for _, d in self.deals_du_jour(decalage)]
+        avec_heure = self.deals_du_jour(decalage)
+        deals = [d for _, d in avec_heure]
         entrees = [d for d in deals if d.entry == mt5.DEAL_ENTRY_IN]
+        heures = {}
+        for h, d in avec_heure:  # un trade TP1+TP2 = 2 entrées à la même minute = 1 trade
+            if d.entry == mt5.DEAL_ENTRY_IN:
+                heures.setdefault(d.symbol, set()).add(h.replace(second=0, microsecond=0))
         trades = {(d.symbol, d.time // 60) for d in entrees}  # un trade TP1+TP2 = 2 positions mais 1 seul trade
         perte_realisee = -sum(d.profit + d.commission + d.swap for d in deals)
         perte_sym, risque_sym = {}, {}
@@ -290,6 +308,7 @@ class MT5:
         for p in self.positions():
             risque_sym[p.symbol] = risque_sym.get(p.symbol, 0.0) + self.perte_au_stop(p)
         return {"symboles": {d.symbol for d in entrees}, "trades": len(trades), "perte_realisee": perte_realisee,
+                "entrees": {k: sorted(v) for k, v in heures.items()},
                 "perte_par_symbole": perte_sym, "risque_par_symbole": risque_sym,
                 "risque_ouvert": sum(self.perte_au_stop(p) for p in self.positions()),
                 "latent": sum(p.profit + p.swap for p in self.positions())}
@@ -398,9 +417,16 @@ def traiter(m, symbole, cfg, envoyer, analyse=False):
     print("\n%s (%d min) — %s" % (symbole, pas, maintenant.strftime("%d/%m %H:%M")))
     if "haut" in res:
         print("  Range %s-%s : bas %s / haut %s" % (cfg["range_debut"], cfg["range_fin"], fmt(res["bas"], dg), fmt(res["haut"], dg)))
+    for ancien in res.get("signaux", [])[:-1]:
+        print("  Trade précédent : %s à %s, fini (%s)" % ("ACHAT" if ancien["sens"] > 0 else "VENTE",
+                                                       ancien["heure"].strftime("%H:%M"), ancien["resultat"]))
     sig = res.get("signal")
     if not sig:
         print("  Statut : %s" % res["statut"])
+        return
+    if sig["resultat"]:
+        print("  Dernier signal (%s à %s) fini : %s. En attente d'un retour dans le range puis d'une nouvelle cassure."
+              % ("ACHAT" if sig["sens"] > 0 else "VENTE", sig["heure"].strftime("%H:%M"), sig["resultat"]))
         return
     nom = "ACHAT" if sig["sens"] > 0 else "VENTE"
     print("  Signal %s à %s : entrée %s | stop %s%s | TP1 %s | TP2 %s"
@@ -410,8 +436,13 @@ def traiter(m, symbole, cfg, envoyer, analyse=False):
     tick = mt5.symbol_info_tick(symbole)
     prix = tick.ask if sig["sens"] > 0 else tick.bid
     jr = m.resume_jour(dec)
-    raisons = controles(sig, prix, tick.ask - tick.bid, pip, maintenant, cfg, symbole in jr["symboles"], jr["trades"],
+    entrees_sym = jr["entrees"].get(symbole, [])
+    deja = any(p.symbol == symbole for p in m.positions()) or \
+        any(t >= sig["heure"] - timedelta(minutes=pas) for t in entrees_sym)
+    raisons = controles(sig, prix, tick.ask - tick.bid, pip, maintenant, cfg, deja, jr["trades"],
                         jr["perte_realisee"], m.reel, jr["perte_par_symbole"].get(symbole, 0.0))
+    if len(entrees_sym) >= cfg["trades_max_par_marche"]:
+        raisons.append("trades_max_par_marche atteint (%d)" % cfg["trades_max_par_marche"])
     if m.trading_autorise():
         raisons.append(m.trading_autorise())
     if m.compte.currency != "EUR":
@@ -490,6 +521,8 @@ def etat(m, cfg):
     dec = next((d for d in (m.decalage_serveur(s) for s in cfg["symboles"]) if d is not None), cfg["decalage_serveur_secours"])
     jr = m.resume_jour(dec)
     print("Compte %s (%s) — %s" % (c.login, "RÉEL" if m.reel else "DÉMO", c.server))
+    b = boucle_active()
+    print("Boucle automatique : %s" % ("ACTIVE (dernier passage %s)" % b.strftime("%H:%M") if b else "arrêtée"))
     print("Envoi d'ordres : %s" % (m.trading_autorise() or ("PRÊT" if cfg["mode"] != "blanc" and (cfg["compte_reel_autorise"] or not m.reel)
                                                           else "non (mode %s%s)" % (cfg["mode"], ", compte réel pas autorisé" if m.reel and not cfg["compte_reel_autorise"] else ""))))
     print("Solde %.2f %s | Fonds propres %.2f | Mode : %s%s"
@@ -591,20 +624,24 @@ def rapport(m, cfg):
             continue
         print("  Range %s-%s : bas %s / haut %s (%.1f pips)"
               % (cs["range_debut"], cs["range_fin"], fmt(r["bas"], dg), fmt(r["haut"], dg), (r["haut"] - r["bas"]) / pip))
-        sig = r["signal"]
-        if not sig:
+        if not r["signaux"]:
             print("  Règle : aucune cassure du range, pas de trade.")
             continue
-        dernier = bougies[-1][3] if bougies else sig["entree"]
-        rr = resultat_r(sig, dernier, cs["objectif"])
+        dernier = bougies[-1][3] if bougies else r["signaux"][-1]["entree"]
         risque = risque_autorise(c.balance, cs, 0, 0)
-        print("  Signal %s à %s : entrée %s | stop %s (%.1f pips) | TP1 %s | TP2 %s"
-              % ("ACHAT" if sig["sens"] > 0 else "VENTE", sig["heure"].strftime("%H:%M"), fmt(sig["entree"], dg),
-                 fmt(sig["stop"], dg), sig["r"] / pip, fmt(sig["tp1"], dg), fmt(sig["tp2"], dg)))
-        issue = {"stop": "TP1 touché puis stop" if sig["tp1_touche"] else "stop touché", "tp2": "TP2 touché"}.get(
-            sig["resultat"], "TP1 touché, TP2 pas atteint" if sig["tp1_touche"] else "ni stop ni TP1")
-        print("  Ce que la règle a donné : %s | %+.2fR, soit environ %+.2f € avec %.2f € de risque (objectif %s)"
-              % (issue, rr, rr * risque, risque, cs["objectif"]))
+        total_r = 0.0
+        for n, sig in enumerate(r["signaux"], 1):
+            rr = resultat_r(sig, dernier, cs["objectif"])
+            total_r += rr
+            print("  Signal %d : %s à %s | entrée %s | stop %s (%.1f pips) | TP1 %s | TP2 %s"
+                  % (n, "ACHAT" if sig["sens"] > 0 else "VENTE", sig["heure"].strftime("%H:%M"), fmt(sig["entree"], dg),
+                     fmt(sig["stop"], dg), sig["r"] / pip, fmt(sig["tp1"], dg), fmt(sig["tp2"], dg)))
+            issue = {"stop": "TP1 touché puis stop" if sig["tp1_touche"] else "stop touché", "tp2": "TP2 touché",
+                     "tp1": "TP1 touché"}.get(sig["resultat"], "TP1 touché, TP2 pas atteint" if sig["tp1_touche"] else "ni stop ni TP1")
+            print("    Ce que la règle a donné : %s | %+.2fR, soit environ %+.2f € avec %.2f € de risque (objectif %s)"
+                  % (issue, rr, rr * risque, risque, cs["objectif"]))
+        if len(r["signaux"]) > 1:
+            print("  Total de la règle sur %d signaux : %+.2fR, environ %+.2f €" % (len(r["signaux"]), total_r, total_r * risque))
 
     # --- journal
     lignes = journal_du_jour(jour)
@@ -645,6 +682,7 @@ def suivre_fermetures(m, cfg):
 
 
 def cycle(m, cfg, symboles, envoyer):
+    m.compte = m.mt5.account_info() or m.compte  # solde à jour pour le calcul du risque
     maintenant = paris(datetime.now(UTC))
     fin = maintenant.replace(hour=hm(cfg["fin_signaux"])[0], minute=hm(cfg["fin_signaux"])[1], second=0)
     if cfg["fermer_a_fin_signaux"] and maintenant >= fin and m.positions():
@@ -655,7 +693,57 @@ def cycle(m, cfg, symboles, envoyer):
         traiter(m, s, cfg, envoyer)
 
 
+def boucle(m, cfg, symboles):
+    """Repasse chaque minute jusqu'à fin_signaux + 5 min. Survit aux coupures de MT5 ou d'internet."""
+    notifier("Agents de trading démarrés", "Compte %s, mode %s. Je repasse chaque minute jusqu'à %s."
+             % ("RÉEL" if m.reel else "DÉMO", cfg["mode"], cfg["fin_signaux"]), 2)
+    derniere_alerte = 0.0
+    try:
+        while True:
+            p = paris(datetime.now(UTC))
+            print("\n===== %s" % p.strftime("%d/%m %H:%M:%S"))
+            try:
+                cfg = charger_config()  # un changement de config.json est pris en compte sans relancer
+                cycle(m, cfg, symboles, False)
+                with open(BATTEMENT, "w", encoding="utf-8") as f:
+                    f.write(p.strftime("%Y-%m-%d %H:%M:%S"))
+            except Exception as e:
+                print("ERREUR : %r — nouvelle tentative dans 1 minute" % (e,))
+                if time.time() - derniere_alerte > 1800:
+                    notifier("Problème avec les agents de trading",
+                             "%s. Je réessaie chaque minute. Vérifie MetaTrader 5 et internet." % e, 4)
+                    derniere_alerte = time.time()
+                m.mt5.shutdown()
+                if m.mt5.initialize():
+                    m.compte = m.mt5.account_info() or m.compte
+            fin = p.replace(hour=hm(cfg["fin_signaux"])[0], minute=hm(cfg["fin_signaux"])[1], second=0) + timedelta(minutes=5)
+            if os.path.exists(FICHIER_STOP) or p >= fin:
+                print("Fin de la boucle.")
+                notifier("Agents de trading arrêtés", "Fin de journée." if p >= fin else "Fichier STOP trouvé.", 2)
+                return
+            time.sleep(60)
+    finally:
+        if os.path.exists(BATTEMENT):
+            os.remove(BATTEMENT)
+
+
+def boucle_active():
+    """Heure du dernier passage de la boucle automatique, si elle a tourné il y a moins de 3 minutes."""
+    try:
+        with open(BATTEMENT, encoding="utf-8") as f:
+            t = datetime.strptime(f.read().strip(), "%Y-%m-%d %H:%M:%S")
+    except (OSError, ValueError):
+        return None
+    return t if paris(datetime.now(UTC)) - t < timedelta(minutes=3) else None
+
+
 def main():
+    # Sous Windows, une sortie redirigée (Claude, fichier .log) est en cp1252 : « ➜ » ferait planter Python.
+    for flux in (sys.stdout, sys.stderr):
+        try:
+            flux.reconfigure(encoding="utf-8", errors="replace")
+        except (AttributeError, ValueError):
+            pass
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--symbole")
     ap.add_argument("--envoyer", action="store_true", help="mode validation : envoie l'ordre prévu")
@@ -691,14 +779,7 @@ def main():
         print("Compte %s — mode %s" % ("RÉEL" if m.reel else "DÉMO", cfg["mode"].upper()))
         if not a.boucle:
             return cycle(m, cfg, symboles, a.envoyer)
-        while True:
-            cycle(m, cfg, symboles, a.envoyer)
-            p = paris(datetime.now(UTC))
-            fin = p.replace(hour=hm(cfg["fin_signaux"])[0], minute=hm(cfg["fin_signaux"])[1], second=0) + timedelta(minutes=5)
-            if os.path.exists(FICHIER_STOP) or p >= fin:
-                print("Fin de la boucle.")
-                return
-            time.sleep(60)
+        return boucle(m, cfg, symboles)
     finally:
         m.mt5.shutdown()
 
