@@ -183,6 +183,7 @@ Les agents ne peuvent **pas** modifier ce fichier (bloqué dans `.claude/setting
 | `risque_par_trade_pct` | 0.5 | Autre plafond : % du solde. C'est le plus petit des trois (ce %, le maximum par trade, ce qui reste du budget du jour) qui compte. |
 | `trades_max_jour` | 6 | Nombre maximum de trades par jour, tous marchés confondus. |
 | `trades_max_par_marche` | 3 | Trades maximum par marché et par jour. Après un trade, il faut un retour dans le range puis une nouvelle cassure. |
+| `stop_max_pips` | EURUSD 18, EURJPY 30 | Stop au plus à X pips de l'entrée : si le milieu du range est plus loin, le stop est rapproché (et TP1 / TP2 avec lui, à 1R et 2R). Permet de trader avec un petit compte. Par agent. |
 | `stop_min_pips` | 5 | Pas de trade si le stop est plus serré : le spread le mangerait. |
 | `spread_max_pct_du_stop` | 25 | Pas de trade si le spread dépasse 25 % de la distance du stop. |
 | `signal_age_max_minutes` | 10 | Pas de trade si le signal date de plus de 10 min. |

@@ -3,8 +3,8 @@
   "compte_reel_autorise": true,
 
   "symboles": {
-    "EURUSD": {"unite_minutes": 5, "perte_max_jour_agent_euros": 2.5},
-    "EURJPY": {"unite_minutes": 5, "perte_max_jour_agent_euros": 2.5, "stop_min_pips": 6}
+    "EURUSD": {"unite_minutes": 5, "perte_max_jour_agent_euros": 2.5, "stop_max_pips": 18},
+    "EURJPY": {"unite_minutes": 5, "perte_max_jour_agent_euros": 2.5, "stop_min_pips": 6, "stop_max_pips": 30}
   },
 
   "range_debut": "09:00",

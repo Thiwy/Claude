@@ -41,6 +41,17 @@ assert "incomplet" in ex.calculer_signal(bougies[1:], 5, jour, p(9, 30), cfg)["s
 calme = bougies[:4] + [(p(17, 30), 1.1050, 1.1000, 1.1040)]
 assert ex.calculer_signal(calme, 5, jour, p(17, 45), cfg)["statut"] == "aucune cassure"
 
+# 7a. plafond du stop en pips : range de 40 pips, milieu à 20 pips -> stop rapproché à 15 pips
+grand = [(p(9, 0), 1.1020, 1.0980, 1.1000), (p(9, 5), 1.1010, 1.0990, 1.1000), (p(9, 10), 1.1010, 1.0990, 1.1000),
+         (p(9, 15), 1.1025, 1.1005, 1.1022)]
+s15 = ex.calculer_signal(grand, 5, jour, p(9, 25), dict(cfg, stop_max_pips=15), 0.0001)["signal"]
+assert abs(s15["r"] - 0.0015) < 1e-9 and abs(s15["stop"] - 1.1007) < 1e-9 and abs(s15["tp2"] - 1.1052) < 1e-9 and s15["plafonne"]
+s_sans = ex.calculer_signal(grand, 5, jour, p(9, 25), dict(cfg, stop_max_pips=None), 0.0001)["signal"]
+assert abs(s_sans["r"] - 0.0022) < 1e-9                       # sans plafond : milieu du range (1.1000)
+s_large = ex.calculer_signal(grand, 5, jour, p(9, 25), dict(cfg, stop_max_pips=50), 0.0001)["signal"]
+assert abs(s_large["r"] - 0.0022) < 1e-9                      # plafond plus large que le range : rien ne change
+assert abs(ex.calculer_signal(grand, 5, jour, p(9, 25), dict(cfg, stop_max_pips=15))["signal"]["r"] - 0.0022) < 1e-9  # sans pip : ignoré
+
 # 7b. plusieurs trades dans la journée : retour dans le range obligatoire avant une nouvelle cassure
 un = dict(cfg, trades_max_par_marche=1)
 trois = dict(cfg, trades_max_par_marche=3)

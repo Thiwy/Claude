@@ -57,8 +57,9 @@ def hm(texte):
 
 
 # ---------------------------------------------------------------- logique pure (testée)
-def calculer_signal(bougies, pas, jour, maintenant, cfg):
+def calculer_signal(bougies, pas, jour, maintenant, cfg, pip=None):
     """bougies : [(ouverture heure de Paris, haut, bas, clôture)] du jour, pas en minutes.
+    pip : taille d'un pip (0.0001, ou 0.01 pour le yen), pour le plafond stop_max_pips.
     Renvoie un dict avec statut, range et éventuellement le signal et son suivi."""
     t0 = jour.replace(hour=hm(cfg["range_debut"])[0], minute=hm(cfg["range_debut"])[1], second=0, microsecond=0)
     t1 = jour.replace(hour=hm(cfg["range_fin"])[0], minute=hm(cfg["range_fin"])[1], second=0, microsecond=0)
@@ -101,6 +102,8 @@ def calculer_signal(bougies, pas, jour, maintenant, cfg):
         if sens:
             milieu = (haut + bas) / 2
             r = min(abs(c - milieu), c * cfg["stop_max_pct"] / 100)
+            if cfg.get("stop_max_pips") and pip:
+                r = min(r, cfg["stop_max_pips"] * pip)  # stop rapproché pour rester dans le budget
             sig = {"sens": sens, "heure": t + timedelta(minutes=pas), "entree": c, "r": r,
                    "stop": c - sens * r, "tp1": c + sens * r, "tp2": c + 2 * sens * r,
                    "plafonne": r < abs(c - milieu), "tp1_touche": False, "resultat": None}
@@ -413,7 +416,7 @@ def traiter(m, symbole, cfg, envoyer, analyse=False):
         return
     jour = maintenant.replace(hour=0, minute=0, second=0, microsecond=0)
     bougies = [b for b in m.bougies(symbole, pas, dec) if b[0].date() == jour.date()]
-    res = calculer_signal(bougies, pas, jour, maintenant, cfg)
+    res = calculer_signal(bougies, pas, jour, maintenant, cfg, pip)
     print("\n%s (%d min) — %s" % (symbole, pas, maintenant.strftime("%d/%m %H:%M")))
     if "haut" in res:
         print("  Range %s-%s : bas %s / haut %s" % (cfg["range_debut"], cfg["range_fin"], fmt(res["bas"], dg), fmt(res["haut"], dg)))
@@ -618,7 +621,7 @@ def rapport(m, cfg):
             print("  Amplitude du jour %.1f pips | moyenne des %d jours précédents %.1f pips"
                   % ((float(a["high"]) - float(a["low"])) / pip, len(amp), sum(amp) / len(amp)))
         bougies = [b for b in m.bougies(sym, cs["unite_minutes"], dec) if b[0].date() == jour.date()]
-        r = calculer_signal(bougies, cs["unite_minutes"], jour, maintenant, cs)
+        r = calculer_signal(bougies, cs["unite_minutes"], jour, maintenant, cs, pip)
         if "haut" not in r:
             print("  Règle : %s" % r["statut"])
             continue
