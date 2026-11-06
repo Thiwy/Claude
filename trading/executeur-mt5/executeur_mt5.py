@@ -31,6 +31,8 @@ ICI = os.path.dirname(os.path.abspath(__file__))
 FICHIER_STOP = os.path.join(ICI, "STOP")
 JOURNAL = os.path.join(ICI, "journal.csv")
 MAGIC = 915900  # identifie les ordres passés par cet exécuteur
+FICHIER_NOTIF = os.path.join(ICI, "notification.txt")          # sujet ntfy (secret, jamais sur GitHub)
+DEJA_NOTIFIE = os.path.join(ICI, "notifications_envoyees.json")
 UTC = timezone.utc
 
 
@@ -161,6 +163,45 @@ def controles(sig, prix, spread, pip, maintenant, cfg, deja_trade, trades_jour, 
     if spread > sig["r"] * cfg["spread_max_pct_du_stop"] / 100:
         raisons.append("spread trop large (%.0f %% du stop > %s %%)" % (100 * spread / sig["r"], cfg["spread_max_pct_du_stop"]))
     return raisons
+
+
+# ---------------------------------------------------------------- notifications (app ntfy)
+def notifier(titre, message, priorite=3, envoi=None):
+    """Notification sur le téléphone via ntfy.sh. Ne fait rien sans notification.txt.
+    Ne lève jamais d'erreur : une notification ratée ne doit pas gêner le trading."""
+    try:
+        with open(FICHIER_NOTIF, encoding="utf-8-sig") as f:
+            sujet = f.read().strip()
+    except OSError:
+        return False
+    if not sujet:
+        return False
+    corps = json.dumps({"topic": sujet, "title": titre, "message": message, "priority": priorite}).encode("utf-8")
+    try:
+        if envoi:
+            return envoi(corps)
+        import urllib.request
+        req = urllib.request.Request("https://ntfy.sh/", data=corps, headers={"Content-Type": "application/json"})
+        urllib.request.urlopen(req, timeout=5).read()
+        return True
+    except Exception as e:  # pas d'internet, ntfy indisponible...
+        print("  (notification non envoyée : %s)" % e)
+        return False
+
+
+def deja_notifies(jour):
+    try:
+        with open(DEJA_NOTIFIE, encoding="utf-8") as f:
+            d = json.load(f)
+        return d if d.get("jour") == jour else {"jour": jour, "cles": []}
+    except (OSError, ValueError):
+        return {"jour": jour, "cles": []}
+
+
+def marquer_notifie(etat_notif, cle):
+    etat_notif["cles"].append(cle)
+    with open(DEJA_NOTIFIE, "w", encoding="utf-8") as f:
+        json.dump(etat_notif, f)
 
 
 # ---------------------------------------------------------------- journal
@@ -420,6 +461,12 @@ def traiter(m, symbole, cfg, envoyer, analyse=False):
         print("  ➜ %s %s : %s" % ("ENVOYÉ" if ok else "ÉCHEC", etiquette, detail))
         noter(heure_paris=maintenant, symbole=symbole, mode=cfg["mode"], action="envoyé" if ok else "échec",
               sens=nom, volume=vol, entree=prix, stop=sig["stop"], tp=tp, detail=detail)
+        if ok:
+            notifier("%s %s ouvert" % (nom, symbole),
+                     "%s lot, %s\nStop %s | %s %s\nRisque max %.2f €"
+                     % (vol, detail, fmt(sig["stop"], dg), etiquette, fmt(tp, dg), risque / len(ordres)), 4)
+        else:
+            notifier("Ordre %s refusé" % symbole, detail, 4)
 
 
 def fermer_tout(m, cfg, raison):
@@ -432,6 +479,8 @@ def fermer_tout(m, cfg, raison):
             continue
         ok, detail = m.fermer(p, cfg)
         print("%s ticket %s : %s" % (p.symbol, p.ticket, detail))
+        if not ok:
+            notifier("Fermeture %s ratée" % p.symbol, "%s — ferme la position à la main dans MetaTrader 5." % detail, 5)
         noter(heure_paris=paris(datetime.now(UTC)), symbole=p.symbol, mode=cfg["mode"], action="fermeture",
               volume=p.volume, detail="%s ; %s" % (raison, detail))
 
@@ -570,11 +619,38 @@ def rapport(m, cfg):
             print("  %s %s %s %s : %s" % (l["heure_paris"][11:16], l["symbole"], l["action"], l["sens"], l["detail"]))
 
 
+def suivre_fermetures(m, cfg):
+    """Notifie une seule fois chaque position fermée aujourd'hui (stop, TP, 17h30) et le stop de la journée."""
+    mt5 = m.mt5
+    dec = next((d for d in (m.decalage_serveur(s) for s in cfg["symboles"]) if d is not None), cfg["decalage_serveur_secours"])
+    jour = paris(datetime.now(UTC)).strftime("%Y-%m-%d")
+    etat_notif = deja_notifies(jour)
+    par_pos = {}
+    for h, d in m.deals_du_jour(dec):
+        par_pos.setdefault(d.position_id, []).append(d)
+    for pid, ds in par_pos.items():
+        sorties = [d for d in ds if d.entry != mt5.DEAL_ENTRY_IN]
+        if not sorties or ("fermee-%s" % pid) in etat_notif["cles"]:
+            continue
+        res = sum(d.profit + d.commission + d.swap for d in ds)
+        raison = RAISONS_SORTIE.get(sorties[-1].reason, "fermeture")
+        notifier("%s fermé (%s) : %+.2f €" % (sorties[-1].symbol, raison, res),
+                 "Sortie à %s. Résultat du trade : %+.2f €." % (sorties[-1].price, res), 4)
+        marquer_notifie(etat_notif, "fermee-%s" % pid)
+    jr = m.resume_jour(dec)
+    if jr["perte_realisee"] >= cfg["perte_max_jour_euros"] and "stop-jour" not in etat_notif["cles"]:
+        notifier("Stop de la journée atteint", "%.2f € perdus aujourd'hui : plus aucun trade jusqu'à demain."
+                 % jr["perte_realisee"], 5)
+        marquer_notifie(etat_notif, "stop-jour")
+
+
 def cycle(m, cfg, symboles, envoyer):
     maintenant = paris(datetime.now(UTC))
     fin = maintenant.replace(hour=hm(cfg["fin_signaux"])[0], minute=hm(cfg["fin_signaux"])[1], second=0)
     if cfg["fermer_a_fin_signaux"] and maintenant >= fin and m.positions():
         fermer_tout(m, cfg, "fermeture de fin de journée")
+    if cfg["mode"] != "blanc":
+        suivre_fermetures(m, cfg)
     for s in symboles:
         traiter(m, s, cfg, envoyer)
 
@@ -588,7 +664,13 @@ def main():
     ap.add_argument("--etat", action="store_true")
     ap.add_argument("--fermer-tout", action="store_true")
     ap.add_argument("--rapport", action="store_true", help="bilan de la journée pour le rapport de fin de journée")
+    ap.add_argument("--test-notification", action="store_true", help="envoie une notification d'essai sur le téléphone")
+    ap.add_argument("--notifier", metavar="MESSAGE", help="envoie ce message en notification (utilisé par rapport.bat)")
     a = ap.parse_args()
+    if a.test_notification or a.notifier:
+        ok = notifier("Agents de trading", a.notifier or "Notification d'essai : tout marche !")
+        print("Notification envoyée." if ok else "Pas envoyée : crée d'abord notification.txt (voir README).")
+        return
     cfg = charger_config()
     symboles = [a.symbole] if a.symbole else list(cfg["symboles"])
     if a.symbole and a.symbole not in cfg["symboles"]:

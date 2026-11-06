@@ -62,6 +62,34 @@ Tout est noté dans `journal.csv` (ouvrable avec Excel).
 New-Item STOP
 ```
 
+## Notifications sur le téléphone
+
+Avec l'app gratuite **ntfy** (Android / iPhone, sans compte), tu es prévenu quand :
+un agent **ouvre** une position, une position est **fermée** (stop, TP, 17h30) avec le gain ou la perte,
+OANDA **refuse** un ordre, le **stop de la journée** est atteint, et quand le **rapport du soir** est prêt.
+
+Installation (une fois) :
+1. Crée ton sujet secret (un nom au hasard, que personne ne peut deviner) :
+
+```bash
+"trading-" + [guid]::NewGuid().ToString("N").Substring(0,16) | Out-File -Encoding ascii notification.txt
+```
+
+```bash
+Get-Content notification.txt
+```
+
+2. Dans l'app ntfy : **+** → « Subscribe to topic » → recopie exactement ce nom.
+3. Essai :
+
+```bash
+py -I executeur_mt5.py --test-notification
+```
+
+`notification.txt` n'est jamais envoyé sur GitHub : quiconque connaît ce nom peut lire tes notifications.
+Une notification ratée (pas d'internet) ne bloque jamais le trading.
+Les fermetures par stop ou TP sont signalées au tour suivant du chef (dans les 5 minutes).
+
 ## Parler à tes agents
 
 Dans Claude Code, depuis ce dossier, écris le nom de l'agent avec `@` (la liste s'affiche quand tu tapes `@trader`) :

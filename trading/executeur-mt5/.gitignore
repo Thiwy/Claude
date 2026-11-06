@@ -2,3 +2,5 @@ journal.csv
 STOP
 __pycache__/
 rapports/
+notification.txt
+notifications_envoyees.json
