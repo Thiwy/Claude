@@ -23,8 +23,8 @@
 
 ## Entraînement actuel (au 06/11/2026)
 - **Course à pied :** 2 à 3 sorties/semaine, de 5 à 10 km chacune, soit environ 15–25 km/semaine. **Petite pause en ce moment après le marathon.**
-- **Vélo :** 20 km le lundi et le mardi. C'est du volume aérobie facile, sans choc pour les jambes.
-- **Renfo :** un peu le lundi et le vendredi.
+- **Vélo :** 20 km le lundi seulement (depuis le 11/11 ; avant, lundi et mardi). C'est du volume aérobie facile, sans choc pour les jambes.
+- **Renfo :** complet le mercredi, léger le lundi (plan v3 ; avant : un peu le lundi et le vendredi).
 - **Disponibilités :** pas de jour interdit.
 - **Terrain :** pas de côtes près de chez lui en semaine, relief accessible le week-end. En semaine, il peut utiliser des escaliers, des ponts, des parkings ou un tapis incliné.
 - **Matériel :** montre connectée avec cardio.
@@ -41,3 +41,4 @@
 - 2026-11-06 : infos d'entraînement reçues (2–3 sorties de 5–10 km, vélo lun/mar, renfo lun/ven, côtes seulement le week-end, montre cardio). Plan recalé sur un départ à environ 2 h 30 de course par semaine, 3 sorties.
 - 2026-11-06 : course confirmée le dimanche 31 janvier 2027. Footing de 8 km en 43 min (5'22/km), FC moyenne 159, pic à 180 sur du plat. C'est plus rapide que l'allure du marathon (6'00/km), donc trop vite pour de l'endurance fondamentale. Consigne : footings vers 6'30–7'00/km, au test de la parole. Mollets parfois un peu douloureux : renfo des mollets, à surveiller. Jamais fait de test d'effort.
 - 2026-11-11 : retour sur le plan : il manquait des explications et des allures, et mer-ven-sam était trop rapproché. Plan v3 : 4 sorties (mar qualité, jeu Z2, sam SL, dim récup), renfo complet le mercredi et léger le lundi, vendredi repos. VMA estimée à ≈ 13 km/h. Allures : Z1 7'00–7'40, Z2 6'30–7'00, Z3 5'55–6'15, Z4 5'10–5'25, Z5 4'35–4'50/km.
+- 2026-11-11 : vélo une seule fois par semaine, le lundi (plus de vélo le mardi). Plan et calendrier mis à jour.

@@ -7,13 +7,13 @@
 - **4 sorties espacées** : mardi, jeudi, samedi, dimanche. Il y a 48 h entre la séance dure du mardi et le footing du jeudi, puis 48 h avant la sortie longue du samedi. Le dimanche est un petit footing de récupération (sauf les week-ends « bloc »). Plus de fréquence, sans plus de fatigue.
 - **Une seule séance dure par semaine** (le mardi). Tout le reste est facile : c'est ce qui fera baisser ton cardio.
 - **Renfo complet le mercredi**, le lendemain de la séance dure. On garde les jours durs groupés et les jours faciles vraiment faciles, et il reste 3 jours avant la sortie longue.
-- **Vélo lundi et mardi conservé**, toujours facile.
+- **Vélo le lundi seulement** (20 km), toujours facile : récupération active après le week-end.
 
 ## Semaine type
 | Jour | Séance | Pourquoi |
 |---|---|---|
 | Lundi | Vélo 20 km facile + renfo léger 15 min (gainage, mollets) | récupération active après le week-end, mollets solides |
-| Mardi | Vélo 20 km facile + **séance de qualité** (le soir) | puissance en montée, vitesse, travail de descente |
+| Mardi | **Séance de qualité** | puissance en montée, vitesse, travail de descente |
 | Mercredi | **Renfo complet 25–30 min** (pas de course) | cuisses et mollets plus forts pour la descente |
 | Jeudi | **Footing endurance** 40–50 min | développer le « moteur » aérobie sans fatigue |
 | Vendredi | Repos complet | arriver frais à la sortie longue |
@@ -37,7 +37,7 @@ Estimées à partir de ton marathon (4 h 13, soit 6'00/km) et de ton footing du 
 - **En trail, oublie l'allure** : avec le dénivelé, elle ne veut plus rien dire. Pilote à la sensation (effort /10), au test de la parole et à la FC.
 - **Si ta FC s'emballe** alors que tu es dans l'allure : ralentis encore. C'est la sensation et la respiration qui commandent, pas l'allure.
 
-## Plan détaillé (course à pied uniquement, sans le vélo)
+## Plan détaillé (course à pied uniquement, sans le vélo du lundi)
 | Sem. | Dates | Mardi (qualité) | Jeudi | Samedi (sortie longue) | Dimanche | Total |
 |---|---|---|---|---|---|---|
 | 1 | 9–15 nov | (semaine en cours) | 40 min Z2 | 1 h 15 · 200 m D+ | repos | ~2 h |

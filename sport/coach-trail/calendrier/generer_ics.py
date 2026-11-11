@@ -91,7 +91,6 @@ for w in range(1, 13):
     lun = start + dt.timedelta(weeks=w - 1)
     tard = w >= 11
     add(lun, "🚴 Vélo 20 km + gainage léger", DESC["VELO"] + "\n\n" + DESC["RLEGER"])
-    add(lun + dt.timedelta(1), "🚴 Vélo 20 km facile", DESC["VELO"])
     if not tard and w not in (7,):
         add(lun + dt.timedelta(2), "💪 Renfo complet 30 min", DESC["RENFO"])
     if w in SEM:
