@@ -779,6 +779,42 @@ def diagnostic(m, cfg):
             print("  Autres symboles du même nom chez OANDA : %s" % ", ".join(autres[:10]))
 
 
+def symboles_tradables(m, cfg):
+    """Liste les symboles où le compte peut OUVRIR des positions, avec ce que coûte le plus petit ordre."""
+    mt5 = m.mt5
+    c = mt5.account_info()
+    tous = mt5.symbols_get() or []
+    modes = {}
+    for x in tous:
+        modes[getattr(x, "trade_mode", None)] = modes.get(getattr(x, "trade_mode", None), 0) + 1
+    noms = {0: "désactivés", 1: "achat seulement", 2: "vente seulement", 3: "fermeture seulement", 4: "tradables"}
+    print("%d symboles chez OANDA sur ce compte : %s" % (len(tous), ", ".join(
+        "%d %s" % (n, noms.get(k, k)) for k, n in sorted(modes.items(), key=lambda kv: str(kv[0])))))
+    lignes = []
+    for x in tous:
+        if getattr(x, "trade_mode", None) != 4:
+            continue
+        mt5.symbol_select(x.name, True)
+        k = mt5.symbol_info_tick(x.name)
+        if not k or not k.ask or not k.bid:
+            continue
+        pip = x.point * (10 if x.digits in (3, 5) else 1)
+        marge = mt5.order_calc_margin(mt5.ORDER_TYPE_BUY, x.name, x.volume_min, k.ask)
+        valeur_pip = x.trade_tick_value * pip / x.trade_tick_size * x.volume_min if x.trade_tick_size else 0
+        lignes.append((marge if marge is not None else 1e18, x.name, (k.ask - k.bid) / pip, x.volume_min, valeur_pip,
+                       getattr(x, "description", "")))
+    if not lignes:
+        print("AUCUN symbole ne permet d'ouvrir une position : le compte entier est bloqué. Il faut voir avec OANDA.")
+        return
+    print("Symboles où tu peux ouvrir une position (les moins chers en marge d'abord) :")
+    print("  %-14s %9s %10s %12s %14s  %s" % ("symbole", "spread", "vol. min", "marge min", "valeur 1 pip", "description"))
+    for marge, nom, spread, vmin, vpip, desc in sorted(lignes)[:40]:
+        print("  %-14s %7.1f p %10s %10.2f %s %12.3f %s  %s"
+              % (nom, spread, vmin, marge, c.currency, vpip, c.currency, desc[:40]))
+    print("Marge libre : %.2f %s. Un symbole convient si sa marge min est bien en dessous et son spread petit."
+          % (c.margin_free, c.currency))
+
+
 def boucle_active():
     """Heure du dernier passage de la boucle automatique, si elle a tourné il y a moins de 3 minutes."""
     try:
@@ -806,6 +842,7 @@ def main():
     ap.add_argument("--rapport", action="store_true", help="bilan de la journée pour le rapport de fin de journée")
     ap.add_argument("--test-notification", action="store_true", help="envoie une notification d'essai sur le téléphone")
     ap.add_argument("--diagnostic", action="store_true", help="ce que MetaTrader 5 et OANDA autorisent vraiment")
+    ap.add_argument("--symboles-tradables", action="store_true", help="liste les symboles où le compte peut ouvrir une position")
     ap.add_argument("--notifier", metavar="MESSAGE", help="envoie ce message en notification (utilisé par rapport.bat)")
     a = ap.parse_args()
     if a.test_notification or a.notifier:
@@ -824,6 +861,8 @@ def main():
             return rapport(m, cfg)
         if a.diagnostic:
             return diagnostic(m, cfg)
+        if a.symboles_tradables:
+            return symboles_tradables(m, cfg)
         if a.analyse:
             print("Compte %s — ANALYSE SEULE (rien n'est envoyé)" % ("RÉEL" if m.reel else "DÉMO"))
             for s in symboles:
