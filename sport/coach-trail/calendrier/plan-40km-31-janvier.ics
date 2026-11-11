@@ -4,803 +4,1421 @@ PRODID:-//coach-trail//FR
 CALSCALE:GREGORIAN
 X-WR-CALNAME:Coach trail – 40 km du 31 janvier
 BEGIN:VEVENT
-UID:coach-trail-2026-11-09-0@coach-trail
-DTSTAMP:20261106T215805Z
-DTSTART;VALUE=DATE:20261109
-DTEND;VALUE=DATE:20261110
-SUMMARY:🚴 Vélo 20 km + renfo complet
-DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : c'est de l'endurance pour le c
- œur sans choc pour les jambes.\n\nRenfo complet 25–30 min : step-down 
- lent (3–4 s en descente) 3×10/jambe\, squat bulgare 3×10\, fente arri
- ère 3×10\, chaise 3×40 s\, montées sur pointes jambes tendues 3×12 p
- uis genoux fléchis 3×12\, descente lente sur 1 jambe 3×10\, pont fessi
- er 1 jambe 3×12\, planche 3×40 s\, planche latérale 3×30 s.
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:coach-trail-2026-11-10-1@coach-trail
-DTSTAMP:20261106T215805Z
-DTSTART;VALUE=DATE:20261110
-DTEND;VALUE=DATE:20261111
-SUMMARY:🚴 Vélo 20 km facile
-DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : c'est de l'endurance pour le c
- œur sans choc pour les jambes.
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:coach-trail-2026-11-11-2@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-11-11-0@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261111
 DTEND;VALUE=DATE:20261112
-SUMMARY:🏃 40 min Z2 + 4 lignes droites
-DESCRIPTION:Endurance fondamentale : tu dois pouvoir parler en phrases co
- mplètes. Allure indicative 6'30–7'00/km\, plus lent si la FC s'emballe
- . Marche si besoin.
+SUMMARY:💪 Renfo complet 30 min
+DESCRIPTION:POURQUOI : des cuisses et des mollets plus forts encaissent m
+ ieux les descentes et la fin de course.\n3 SÉRIES DE : step-down lent (3
+ –4 s en descente) 10 par jambe · squat bulgare 10 par jambe · fente a
+ rrière 10 par jambe · chaise contre le mur 40 s · montées sur pointes
+  jambes tendues 12 puis genoux fléchis 12 · descente lente sur 1 jambe 
+ (mollet) 10 par jambe · pont fessier sur 1 jambe 12 par jambe · planche
+  40 s.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endu
+ rance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25
+  · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation et au souffle\,
+  pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-11-13-3@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-11-12-1@coach-trail
+DTSTAMP:20261111T151739Z
+DTSTART;VALUE=DATE:20261112
+DTEND;VALUE=DATE:20261113
+SUMMARY:🏃 40 min Z2 endurance
+DESCRIPTION:POURQUOI : construire le moteur aérobie. Le cœur devient pl
+ us efficace et la FC baisse à allure égale.\nCOMMENT : 6'30–7'00/km s
+ ur le plat\, effort 3–4/10. Tu dois pouvoir parler en phrases complète
+ s du début à la fin. Si la FC s'emballe\, marche 30 s puis repars plus 
+ lentement.\nÀ NOTER : ta FC moyenne (elle doit baisser de semaine en sem
+ aine).\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endu
+ rance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25
+  · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation et au souffle\,
+  pas à l'allure.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:coach-trail-v3-2026-11-13-2@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261113
 DTEND;VALUE=DATE:20261114
-SUMMARY:🏃 40 min Z2 + renfo léger
-DESCRIPTION:Endurance fondamentale : tu dois pouvoir parler en phrases co
- mplètes. Allure indicative 6'30–7'00/km\, plus lent si la FC s'emballe
- . Marche si besoin.\n\nRenfo léger 15 min : gainage (planche\, planche l
- atérale\, dead bug) + mollets. Pas de travail lourd des jambes avant la 
- sortie longue.
+SUMMARY:😴 Repos
+DESCRIPTION:Repos complet. Le corps progresse pendant la récupération\,
+  pas pendant l'effort.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'
+ 40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 s
+ euil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation
+  et au souffle\, pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-11-14-4@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-11-14-3@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261114
 DTEND;VALUE=DATE:20261115
 SUMMARY:⛰️ Sortie longue 1 h 15 · 200 m D+
-DESCRIPTION:Sortie longue Z2 du début à la fin. Marche dans les montée
- s raides dès le début. Descentes relâchées\, pas courts. Manger dès 
- 1 h 30 de sortie (nov.–déc. : 30–40 g de glucides/h \; janv. : 50–
- 70 g/h). Note : FC moyenne\, FC dernière heure\, état des jambes en fin
-  de sortie.
+DESCRIPTION:POURQUOI : c'est la séance n°1. Les jambes apprennent à du
+ rer\, tu travailles la descente et ton estomac s'habitue à manger en cou
+ rant.\nCOMMENT : Z2 du début à la fin (6'45–7'30/km sur le plat\, eff
+ ort 3–4/10\, phrases complètes). MARCHE DANS TOUTES LES MONTÉES RAIDE
+ S dès le début. En descente : relâché\, petits pas rapides\, regard 3
+ –4 m devant.\nMANGER : dès 1 h 30 de sortie. 30–40 g de glucides par
+  heure en novembre-décembre\, 50–70 g par heure en janvier (1 gel ≈ 
+ 20–25 g\, 1 compote ≈ 15–20 g\, 1 banane ≈ 25 g).\nÀ NOTER : FC 
+ moyenne\, FC sur la dernière heure\, état des jambes dans les 30 derni
+ ères minutes.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km ·
+  Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'1
+ 0–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation et au s
+ ouffle\, pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-11-16-5@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-11-16-4@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261116
 DTEND;VALUE=DATE:20261117
-SUMMARY:🚴 Vélo 20 km + renfo complet
-DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : c'est de l'endurance pour le c
- œur sans choc pour les jambes.\n\nRenfo complet 25–30 min : step-down 
- lent (3–4 s en descente) 3×10/jambe\, squat bulgare 3×10\, fente arri
- ère 3×10\, chaise 3×40 s\, montées sur pointes jambes tendues 3×12 p
- uis genoux fléchis 3×12\, descente lente sur 1 jambe 3×10\, pont fessi
- er 1 jambe 3×12\, planche 3×40 s\, planche latérale 3×30 s.
+SUMMARY:🚴 Vélo 20 km + gainage léger
+DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : de l'endurance pour le cœur s
+ ans choc pour les jambes. Ne force pas.\n\n15 min : planche 3 × 40 s · 
+ planche latérale 3 × 30 s par côté · dead bug 3 × 10 · montées su
+ r pointes 3 × 12 · descente lente sur 1 jambe 3 × 10 par jambe.\n\nTes
+  allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endurance 6'30–
+ 7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'
+ 35–4'50. En trail\, pilote à la sensation et au souffle\, pas à l'all
+ ure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-11-17-6@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-11-17-5@coach-trail
+DTSTAMP:20261111T151739Z
+DTSTART;VALUE=DATE:20261117
+DTEND;VALUE=DATE:20261118
+SUMMARY:🏃 45 min fartlek 6 × 1 min
+DESCRIPTION:POURQUOI : réveiller la vitesse en douceur.\nCOMMENT : 15 mi
+ n en Z2 (6'30–7'00/km)\, puis 6 × (1 min à 5'10–5'25/km\, effort 7/
+ 10\, et 2 min de trot très lent)\, puis 10 min en Z1.\n⚠️ Séance du
+ re : à faire après le feu vert du cardiologue. Sinon\, remplace-la par 
+ 45 min en Z2.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km · 
+ Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10
+ –5'25 · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation et au so
+ uffle\, pas à l'allure.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:coach-trail-v3-2026-11-17-6@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261117
 DTEND;VALUE=DATE:20261118
 SUMMARY:🚴 Vélo 20 km facile
-DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : c'est de l'endurance pour le c
- œur sans choc pour les jambes.
+DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : de l'endurance pour le cœur s
+ ans choc pour les jambes. Ne force pas.\n\nTes allures (sur le plat) : Z1
+  récup 7'00–7'40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'
+ 55–6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilot
+ e à la sensation et au souffle\, pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-11-18-7@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-11-18-7@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261119
-SUMMARY:🏃 45 min fartlek : 6 × (1 min vite / 2 min lent)
-DESCRIPTION:Fartlek à plat : après 15 min Z2\, 6 × (1 min vite / 2 min
-  lent)\, puis 10 min calmes. Endurance fondamentale : tu dois pouvoir par
- ler en phrases complètes. Allure indicative 6'30–7'00/km\, plus lent s
- i la FC s'emballe. Marche si besoin.
+SUMMARY:💪 Renfo complet 30 min
+DESCRIPTION:POURQUOI : des cuisses et des mollets plus forts encaissent m
+ ieux les descentes et la fin de course.\n3 SÉRIES DE : step-down lent (3
+ –4 s en descente) 10 par jambe · squat bulgare 10 par jambe · fente a
+ rrière 10 par jambe · chaise contre le mur 40 s · montées sur pointes
+  jambes tendues 12 puis genoux fléchis 12 · descente lente sur 1 jambe 
+ (mollet) 10 par jambe · pont fessier sur 1 jambe 12 par jambe · planche
+  40 s.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endu
+ rance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25
+  · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation et au souffle\,
+  pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-11-20-8@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-11-19-8@coach-trail
+DTSTAMP:20261111T151739Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261120
+SUMMARY:🏃 40 min Z2 endurance
+DESCRIPTION:POURQUOI : construire le moteur aérobie. Le cœur devient pl
+ us efficace et la FC baisse à allure égale.\nCOMMENT : 6'30–7'00/km s
+ ur le plat\, effort 3–4/10. Tu dois pouvoir parler en phrases complète
+ s du début à la fin. Si la FC s'emballe\, marche 30 s puis repars plus 
+ lentement.\nÀ NOTER : ta FC moyenne (elle doit baisser de semaine en sem
+ aine).\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endu
+ rance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25
+  · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation et au souffle\,
+  pas à l'allure.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:coach-trail-v3-2026-11-20-9@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261120
 DTEND;VALUE=DATE:20261121
-SUMMARY:🏃 45 min Z2 + renfo léger
-DESCRIPTION:Endurance fondamentale : tu dois pouvoir parler en phrases co
- mplètes. Allure indicative 6'30–7'00/km\, plus lent si la FC s'emballe
- . Marche si besoin.\n\nRenfo léger 15 min : gainage (planche\, planche l
- atérale\, dead bug) + mollets. Pas de travail lourd des jambes avant la 
- sortie longue.
+SUMMARY:😴 Repos
+DESCRIPTION:Repos complet. Le corps progresse pendant la récupération\,
+  pas pendant l'effort.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'
+ 40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 s
+ euil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation
+  et au souffle\, pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-11-21-9@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-11-21-10@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261121
 DTEND;VALUE=DATE:20261122
 SUMMARY:⛰️ Sortie longue 1 h 30 · 300 m D+
-DESCRIPTION:Sortie longue Z2 du début à la fin. Marche dans les montée
- s raides dès le début. Descentes relâchées\, pas courts. Manger dès 
- 1 h 30 de sortie (nov.–déc. : 30–40 g de glucides/h \; janv. : 50–
- 70 g/h). Note : FC moyenne\, FC dernière heure\, état des jambes en fin
-  de sortie.
+DESCRIPTION:POURQUOI : c'est la séance n°1. Les jambes apprennent à du
+ rer\, tu travailles la descente et ton estomac s'habitue à manger en cou
+ rant.\nCOMMENT : Z2 du début à la fin (6'45–7'30/km sur le plat\, eff
+ ort 3–4/10\, phrases complètes). MARCHE DANS TOUTES LES MONTÉES RAIDE
+ S dès le début. En descente : relâché\, petits pas rapides\, regard 3
+ –4 m devant.\nMANGER : dès 1 h 30 de sortie. 30–40 g de glucides par
+  heure en novembre-décembre\, 50–70 g par heure en janvier (1 gel ≈ 
+ 20–25 g\, 1 compote ≈ 15–20 g\, 1 banane ≈ 25 g).\nÀ NOTER : FC 
+ moyenne\, FC sur la dernière heure\, état des jambes dans les 30 derni
+ ères minutes.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km ·
+  Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'1
+ 0–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation et au s
+ ouffle\, pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-11-23-10@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-11-22-11@coach-trail
+DTSTAMP:20261111T151739Z
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261123
+SUMMARY:🏃 30 min Z1 récup
+DESCRIPTION:POURQUOI : relâcher les jambes après la sortie longue et aj
+ outer de la fréquence sans fatigue.\nCOMMENT : 7'00–7'40/km\, effort 2
+ /10\, plutôt sur du plat. Ça doit te paraître trop lent : c'est le but
+ .\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endurance
+  6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25 · Z
+ 5 VMA 4'35–4'50. En trail\, pilote à la sensation et au souffle\, pas 
+ à l'allure.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:coach-trail-v3-2026-11-23-12@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261123
 DTEND;VALUE=DATE:20261124
-SUMMARY:🚴 Vélo 20 km + renfo complet
-DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : c'est de l'endurance pour le c
- œur sans choc pour les jambes.\n\nRenfo complet 25–30 min : step-down 
- lent (3–4 s en descente) 3×10/jambe\, squat bulgare 3×10\, fente arri
- ère 3×10\, chaise 3×40 s\, montées sur pointes jambes tendues 3×12 p
- uis genoux fléchis 3×12\, descente lente sur 1 jambe 3×10\, pont fessi
- er 1 jambe 3×12\, planche 3×40 s\, planche latérale 3×30 s.
+SUMMARY:🚴 Vélo 20 km + gainage léger
+DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : de l'endurance pour le cœur s
+ ans choc pour les jambes. Ne force pas.\n\n15 min : planche 3 × 40 s · 
+ planche latérale 3 × 30 s par côté · dead bug 3 × 10 · montées su
+ r pointes 3 × 12 · descente lente sur 1 jambe 3 × 10 par jambe.\n\nTes
+  allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endurance 6'30–
+ 7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'
+ 35–4'50. En trail\, pilote à la sensation et au souffle\, pas à l'all
+ ure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-11-24-11@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-11-24-13@coach-trail
+DTSTAMP:20261111T151739Z
+DTSTART;VALUE=DATE:20261124
+DTEND;VALUE=DATE:20261125
+SUMMARY:🏃 50 min escaliers 6 × 1 min
+DESCRIPTION:POURQUOI : force et puissance en montée. La redescente contr
+ ôlée travaille les cuisses en freinant : c'est ce qui t'a manqué au ma
+ rathon.\nCOMMENT : 15 min en Z2. Monte des escaliers (ou un pont\, une ra
+ mpe de parking) en courant\, effort 8–9/10\, petites foulées dynamique
+ s\, buste penché en avant. Redescends en marchant ou en trottinant\, de 
+ façon contrôlée (c'est ta récup). 10 min en Z1 pour finir.\n⚠️ S
+ éance dure : à faire après le feu vert du cardiologue. Sinon\, remplac
+ e-la par 45 min en Z2.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'
+ 40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 s
+ euil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation
+  et au souffle\, pas à l'allure.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:coach-trail-v3-2026-11-24-14@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261124
 DTEND;VALUE=DATE:20261125
 SUMMARY:🚴 Vélo 20 km facile
-DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : c'est de l'endurance pour le c
- œur sans choc pour les jambes.
+DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : de l'endurance pour le cœur s
+ ans choc pour les jambes. Ne force pas.\n\nTes allures (sur le plat) : Z1
+  récup 7'00–7'40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'
+ 55–6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilot
+ e à la sensation et au souffle\, pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-11-25-12@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-11-25-15@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261125
 DTEND;VALUE=DATE:20261126
-SUMMARY:🏃 50 min : escaliers 6 × 1 min
-DESCRIPTION:Échauffement 15 min Z2. Efforts en montée à un effort dur 
- (Z4–Z5)\, redescente en marchant/trottinant de façon contrôlée (= tr
- avail de descente). Retour au calme 10 min. Pas de côtes ? Escaliers\, p
- ont\, parking ou tapis incliné 8–12 %. ⚠️ Séance dure : à faire 
- après le feu vert du cardiologue (sinon remplacer par un footing Z2).
+SUMMARY:💪 Renfo complet 30 min
+DESCRIPTION:POURQUOI : des cuisses et des mollets plus forts encaissent m
+ ieux les descentes et la fin de course.\n3 SÉRIES DE : step-down lent (3
+ –4 s en descente) 10 par jambe · squat bulgare 10 par jambe · fente a
+ rrière 10 par jambe · chaise contre le mur 40 s · montées sur pointes
+  jambes tendues 12 puis genoux fléchis 12 · descente lente sur 1 jambe 
+ (mollet) 10 par jambe · pont fessier sur 1 jambe 12 par jambe · planche
+  40 s.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endu
+ rance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25
+  · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation et au souffle\,
+  pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-11-27-13@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-11-26-16@coach-trail
+DTSTAMP:20261111T151739Z
+DTSTART;VALUE=DATE:20261126
+DTEND;VALUE=DATE:20261127
+SUMMARY:🏃 45 min Z2 endurance
+DESCRIPTION:POURQUOI : construire le moteur aérobie. Le cœur devient pl
+ us efficace et la FC baisse à allure égale.\nCOMMENT : 6'30–7'00/km s
+ ur le plat\, effort 3–4/10. Tu dois pouvoir parler en phrases complète
+ s du début à la fin. Si la FC s'emballe\, marche 30 s puis repars plus 
+ lentement.\nÀ NOTER : ta FC moyenne (elle doit baisser de semaine en sem
+ aine).\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endu
+ rance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25
+  · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation et au souffle\,
+  pas à l'allure.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:coach-trail-v3-2026-11-27-17@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
-SUMMARY:🏃 45 min Z2 + renfo léger
-DESCRIPTION:Endurance fondamentale : tu dois pouvoir parler en phrases co
- mplètes. Allure indicative 6'30–7'00/km\, plus lent si la FC s'emballe
- . Marche si besoin.\n\nRenfo léger 15 min : gainage (planche\, planche l
- atérale\, dead bug) + mollets. Pas de travail lourd des jambes avant la 
- sortie longue.
+SUMMARY:😴 Repos
+DESCRIPTION:Repos complet. Le corps progresse pendant la récupération\,
+  pas pendant l'effort.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'
+ 40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 s
+ euil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation
+  et au souffle\, pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-11-28-14@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-11-28-18@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261129
 SUMMARY:⛰️ Sortie longue 1 h 45 · 400 m D+
-DESCRIPTION:Sortie longue Z2 du début à la fin. Marche dans les montée
- s raides dès le début. Descentes relâchées\, pas courts. Manger dès 
- 1 h 30 de sortie (nov.–déc. : 30–40 g de glucides/h \; janv. : 50–
- 70 g/h). Note : FC moyenne\, FC dernière heure\, état des jambes en fin
-  de sortie.
+DESCRIPTION:POURQUOI : c'est la séance n°1. Les jambes apprennent à du
+ rer\, tu travailles la descente et ton estomac s'habitue à manger en cou
+ rant.\nCOMMENT : Z2 du début à la fin (6'45–7'30/km sur le plat\, eff
+ ort 3–4/10\, phrases complètes). MARCHE DANS TOUTES LES MONTÉES RAIDE
+ S dès le début. En descente : relâché\, petits pas rapides\, regard 3
+ –4 m devant.\nMANGER : dès 1 h 30 de sortie. 30–40 g de glucides par
+  heure en novembre-décembre\, 50–70 g par heure en janvier (1 gel ≈ 
+ 20–25 g\, 1 compote ≈ 15–20 g\, 1 banane ≈ 25 g).\nÀ NOTER : FC 
+ moyenne\, FC sur la dernière heure\, état des jambes dans les 30 derni
+ ères minutes.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km ·
+  Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'1
+ 0–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation et au s
+ ouffle\, pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-11-30-15@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-11-29-19@coach-trail
+DTSTAMP:20261111T151739Z
+DTSTART;VALUE=DATE:20261129
+DTEND;VALUE=DATE:20261130
+SUMMARY:🏃 30 min Z1 récup
+DESCRIPTION:POURQUOI : relâcher les jambes après la sortie longue et aj
+ outer de la fréquence sans fatigue.\nCOMMENT : 7'00–7'40/km\, effort 2
+ /10\, plutôt sur du plat. Ça doit te paraître trop lent : c'est le but
+ .\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endurance
+  6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25 · Z
+ 5 VMA 4'35–4'50. En trail\, pilote à la sensation et au souffle\, pas 
+ à l'allure.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:coach-trail-v3-2026-11-30-20@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261130
 DTEND;VALUE=DATE:20261201
-SUMMARY:🚴 Vélo 20 km + renfo complet
-DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : c'est de l'endurance pour le c
- œur sans choc pour les jambes.\n\nRenfo complet 25–30 min : step-down 
- lent (3–4 s en descente) 3×10/jambe\, squat bulgare 3×10\, fente arri
- ère 3×10\, chaise 3×40 s\, montées sur pointes jambes tendues 3×12 p
- uis genoux fléchis 3×12\, descente lente sur 1 jambe 3×10\, pont fessi
- er 1 jambe 3×12\, planche 3×40 s\, planche latérale 3×30 s.
+SUMMARY:🚴 Vélo 20 km + gainage léger
+DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : de l'endurance pour le cœur s
+ ans choc pour les jambes. Ne force pas.\n\n15 min : planche 3 × 40 s · 
+ planche latérale 3 × 30 s par côté · dead bug 3 × 10 · montées su
+ r pointes 3 × 12 · descente lente sur 1 jambe 3 × 10 par jambe.\n\nTes
+  allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endurance 6'30–
+ 7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'
+ 35–4'50. En trail\, pilote à la sensation et au souffle\, pas à l'all
+ ure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-12-01-16@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-12-01-21@coach-trail
+DTSTAMP:20261111T151739Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:🏃 RÉCUP 40 min Z2 + 4 lignes droites
+DESCRIPTION:POURQUOI : construire le moteur aérobie. Le cœur devient pl
+ us efficace et la FC baisse à allure égale.\nCOMMENT : 6'30–7'00/km s
+ ur le plat\, effort 3–4/10. Tu dois pouvoir parler en phrases complète
+ s du début à la fin. Si la FC s'emballe\, marche 30 s puis repars plus 
+ lentement.\nÀ NOTER : ta FC moyenne (elle doit baisser de semaine en sem
+ aine).\nLIGNES DROITES : à la fin du footing\, 15–20 s en accélérant
+  progressivement jusqu'à ≈ 4'45/km. Ce n'est pas un sprint\, reste rel
+ âché. Récupère en marchant 1 min.\nSemaine allégée : le corps assim
+ ile le travail.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km 
+ · Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5
+ '10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation et au
+  souffle\, pas à l'allure.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:coach-trail-v3-2026-12-01-22@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:🚴 Vélo 20 km facile
-DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : c'est de l'endurance pour le c
- œur sans choc pour les jambes.
+DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : de l'endurance pour le cœur s
+ ans choc pour les jambes. Ne force pas.\n\nTes allures (sur le plat) : Z1
+  récup 7'00–7'40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'
+ 55–6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilot
+ e à la sensation et au souffle\, pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-12-02-17@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-12-02-23@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261202
 DTEND;VALUE=DATE:20261203
-SUMMARY:🏃 RÉCUP 40 min Z2
-DESCRIPTION:Endurance fondamentale : tu dois pouvoir parler en phrases co
- mplètes. Allure indicative 6'30–7'00/km\, plus lent si la FC s'emballe
- . Marche si besoin.
+SUMMARY:💪 Renfo complet 30 min
+DESCRIPTION:POURQUOI : des cuisses et des mollets plus forts encaissent m
+ ieux les descentes et la fin de course.\n3 SÉRIES DE : step-down lent (3
+ –4 s en descente) 10 par jambe · squat bulgare 10 par jambe · fente a
+ rrière 10 par jambe · chaise contre le mur 40 s · montées sur pointes
+  jambes tendues 12 puis genoux fléchis 12 · descente lente sur 1 jambe 
+ (mollet) 10 par jambe · pont fessier sur 1 jambe 12 par jambe · planche
+  40 s.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endu
+ rance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25
+  · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation et au souffle\,
+  pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-12-04-18@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-12-03-24@coach-trail
+DTSTAMP:20261111T151739Z
+DTSTART;VALUE=DATE:20261203
+DTEND;VALUE=DATE:20261204
+SUMMARY:🏃 40 min Z2 endurance
+DESCRIPTION:POURQUOI : construire le moteur aérobie. Le cœur devient pl
+ us efficace et la FC baisse à allure égale.\nCOMMENT : 6'30–7'00/km s
+ ur le plat\, effort 3–4/10. Tu dois pouvoir parler en phrases complète
+ s du début à la fin. Si la FC s'emballe\, marche 30 s puis repars plus 
+ lentement.\nÀ NOTER : ta FC moyenne (elle doit baisser de semaine en sem
+ aine).\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endu
+ rance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25
+  · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation et au souffle\,
+  pas à l'allure.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:coach-trail-v3-2026-12-04-25@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261204
 DTEND;VALUE=DATE:20261205
-SUMMARY:🏃 40 min Z2 + renfo léger
-DESCRIPTION:Endurance fondamentale : tu dois pouvoir parler en phrases co
- mplètes. Allure indicative 6'30–7'00/km\, plus lent si la FC s'emballe
- . Marche si besoin.\n\nRenfo léger 15 min : gainage (planche\, planche l
- atérale\, dead bug) + mollets. Pas de travail lourd des jambes avant la 
- sortie longue.
+SUMMARY:😴 Repos
+DESCRIPTION:Repos complet. Le corps progresse pendant la récupération\,
+  pas pendant l'effort.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'
+ 40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 s
+ euil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation
+  et au souffle\, pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-12-05-19@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-12-05-26@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261206
 SUMMARY:⛰️ Sortie longue 1 h 15 · 250 m D+
-DESCRIPTION:Sortie longue Z2 du début à la fin. Marche dans les montée
- s raides dès le début. Descentes relâchées\, pas courts. Manger dès 
- 1 h 30 de sortie (nov.–déc. : 30–40 g de glucides/h \; janv. : 50–
- 70 g/h). Note : FC moyenne\, FC dernière heure\, état des jambes en fin
-  de sortie.
+DESCRIPTION:POURQUOI : c'est la séance n°1. Les jambes apprennent à du
+ rer\, tu travailles la descente et ton estomac s'habitue à manger en cou
+ rant.\nCOMMENT : Z2 du début à la fin (6'45–7'30/km sur le plat\, eff
+ ort 3–4/10\, phrases complètes). MARCHE DANS TOUTES LES MONTÉES RAIDE
+ S dès le début. En descente : relâché\, petits pas rapides\, regard 3
+ –4 m devant.\nMANGER : dès 1 h 30 de sortie. 30–40 g de glucides par
+  heure en novembre-décembre\, 50–70 g par heure en janvier (1 gel ≈ 
+ 20–25 g\, 1 compote ≈ 15–20 g\, 1 banane ≈ 25 g).\nÀ NOTER : FC 
+ moyenne\, FC sur la dernière heure\, état des jambes dans les 30 derni
+ ères minutes.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km ·
+  Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'1
+ 0–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation et au s
+ ouffle\, pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-12-07-20@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-12-07-27@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261207
 DTEND;VALUE=DATE:20261208
-SUMMARY:🚴 Vélo 20 km + renfo complet
-DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : c'est de l'endurance pour le c
- œur sans choc pour les jambes.\n\nRenfo complet 25–30 min : step-down 
- lent (3–4 s en descente) 3×10/jambe\, squat bulgare 3×10\, fente arri
- ère 3×10\, chaise 3×40 s\, montées sur pointes jambes tendues 3×12 p
- uis genoux fléchis 3×12\, descente lente sur 1 jambe 3×10\, pont fessi
- er 1 jambe 3×12\, planche 3×40 s\, planche latérale 3×30 s.
+SUMMARY:🚴 Vélo 20 km + gainage léger
+DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : de l'endurance pour le cœur s
+ ans choc pour les jambes. Ne force pas.\n\n15 min : planche 3 × 40 s · 
+ planche latérale 3 × 30 s par côté · dead bug 3 × 10 · montées su
+ r pointes 3 × 12 · descente lente sur 1 jambe 3 × 10 par jambe.\n\nTes
+  allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endurance 6'30–
+ 7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'
+ 35–4'50. En trail\, pilote à la sensation et au souffle\, pas à l'all
+ ure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-12-08-21@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-12-08-28@coach-trail
+DTSTAMP:20261111T151739Z
+DTSTART;VALUE=DATE:20261208
+DTEND;VALUE=DATE:20261209
+SUMMARY:🏃 55 min escaliers 8 × 1 min
+DESCRIPTION:POURQUOI : force et puissance en montée. La redescente contr
+ ôlée travaille les cuisses en freinant : c'est ce qui t'a manqué au ma
+ rathon.\nCOMMENT : 15 min en Z2. Monte des escaliers (ou un pont\, une ra
+ mpe de parking) en courant\, effort 8–9/10\, petites foulées dynamique
+ s\, buste penché en avant. Redescends en marchant ou en trottinant\, de 
+ façon contrôlée (c'est ta récup). 10 min en Z1 pour finir.\n⚠️ S
+ éance dure : à faire après le feu vert du cardiologue. Sinon\, remplac
+ e-la par 45 min en Z2.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'
+ 40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 s
+ euil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation
+  et au souffle\, pas à l'allure.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:coach-trail-v3-2026-12-08-29@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261208
 DTEND;VALUE=DATE:20261209
 SUMMARY:🚴 Vélo 20 km facile
-DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : c'est de l'endurance pour le c
- œur sans choc pour les jambes.
+DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : de l'endurance pour le cœur s
+ ans choc pour les jambes. Ne force pas.\n\nTes allures (sur le plat) : Z1
+  récup 7'00–7'40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'
+ 55–6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilot
+ e à la sensation et au souffle\, pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-12-09-22@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-12-09-30@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261209
 DTEND;VALUE=DATE:20261210
-SUMMARY:🏃 55 min : escaliers 8 × 1 min
-DESCRIPTION:Échauffement 15 min Z2. Efforts en montée à un effort dur 
- (Z4–Z5)\, redescente en marchant/trottinant de façon contrôlée (= tr
- avail de descente). Retour au calme 10 min. Pas de côtes ? Escaliers\, p
- ont\, parking ou tapis incliné 8–12 %. ⚠️ Séance dure : à faire 
- après le feu vert du cardiologue (sinon remplacer par un footing Z2).
+SUMMARY:💪 Renfo complet 30 min
+DESCRIPTION:POURQUOI : des cuisses et des mollets plus forts encaissent m
+ ieux les descentes et la fin de course.\n3 SÉRIES DE : step-down lent (3
+ –4 s en descente) 10 par jambe · squat bulgare 10 par jambe · fente a
+ rrière 10 par jambe · chaise contre le mur 40 s · montées sur pointes
+  jambes tendues 12 puis genoux fléchis 12 · descente lente sur 1 jambe 
+ (mollet) 10 par jambe · pont fessier sur 1 jambe 12 par jambe · planche
+  40 s.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endu
+ rance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25
+  · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation et au souffle\,
+  pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-12-10-23@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-12-10-31@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261210
 DTEND;VALUE=DATE:20261211
-SUMMARY:🏃 30–35 min Z1 (facultatif\, si mollets OK)
-DESCRIPTION:Endurance fondamentale : tu dois pouvoir parler en phrases co
- mplètes. Allure indicative 6'30–7'00/km\, plus lent si la FC s'emballe
- . Marche si besoin.
+SUMMARY:🏃 45 min Z2 endurance
+DESCRIPTION:POURQUOI : construire le moteur aérobie. Le cœur devient pl
+ us efficace et la FC baisse à allure égale.\nCOMMENT : 6'30–7'00/km s
+ ur le plat\, effort 3–4/10. Tu dois pouvoir parler en phrases complète
+ s du début à la fin. Si la FC s'emballe\, marche 30 s puis repars plus 
+ lentement.\nÀ NOTER : ta FC moyenne (elle doit baisser de semaine en sem
+ aine).\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endu
+ rance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25
+  · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation et au souffle\,
+  pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-12-11-24@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-12-11-32@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261211
 DTEND;VALUE=DATE:20261212
-SUMMARY:🏃 45 min Z2 + renfo léger
-DESCRIPTION:Endurance fondamentale : tu dois pouvoir parler en phrases co
- mplètes. Allure indicative 6'30–7'00/km\, plus lent si la FC s'emballe
- . Marche si besoin.\n\nRenfo léger 15 min : gainage (planche\, planche l
- atérale\, dead bug) + mollets. Pas de travail lourd des jambes avant la 
- sortie longue.
+SUMMARY:😴 Repos
+DESCRIPTION:Repos complet. Le corps progresse pendant la récupération\,
+  pas pendant l'effort.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'
+ 40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 s
+ euil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation
+  et au souffle\, pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-12-12-25@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-12-12-33@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261212
 DTEND;VALUE=DATE:20261213
 SUMMARY:⛰️ Sortie longue 2 h · 500 m D+
-DESCRIPTION:Sortie longue Z2 du début à la fin. Marche dans les montée
- s raides dès le début. Descentes relâchées\, pas courts. Manger dès 
- 1 h 30 de sortie (nov.–déc. : 30–40 g de glucides/h \; janv. : 50–
- 70 g/h). Note : FC moyenne\, FC dernière heure\, état des jambes en fin
-  de sortie.
+DESCRIPTION:POURQUOI : c'est la séance n°1. Les jambes apprennent à du
+ rer\, tu travailles la descente et ton estomac s'habitue à manger en cou
+ rant.\nCOMMENT : Z2 du début à la fin (6'45–7'30/km sur le plat\, eff
+ ort 3–4/10\, phrases complètes). MARCHE DANS TOUTES LES MONTÉES RAIDE
+ S dès le début. En descente : relâché\, petits pas rapides\, regard 3
+ –4 m devant.\nMANGER : dès 1 h 30 de sortie. 30–40 g de glucides par
+  heure en novembre-décembre\, 50–70 g par heure en janvier (1 gel ≈ 
+ 20–25 g\, 1 compote ≈ 15–20 g\, 1 banane ≈ 25 g).\nÀ NOTER : FC 
+ moyenne\, FC sur la dernière heure\, état des jambes dans les 30 derni
+ ères minutes.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km ·
+  Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'1
+ 0–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation et au s
+ ouffle\, pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-12-14-26@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-12-13-34@coach-trail
+DTSTAMP:20261111T151739Z
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20261214
+SUMMARY:🏃 35 min Z1 récup
+DESCRIPTION:POURQUOI : relâcher les jambes après la sortie longue et aj
+ outer de la fréquence sans fatigue.\nCOMMENT : 7'00–7'40/km\, effort 2
+ /10\, plutôt sur du plat. Ça doit te paraître trop lent : c'est le but
+ .\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endurance
+  6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25 · Z
+ 5 VMA 4'35–4'50. En trail\, pilote à la sensation et au souffle\, pas 
+ à l'allure.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:coach-trail-v3-2026-12-14-35@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261214
 DTEND;VALUE=DATE:20261215
-SUMMARY:🚴 Vélo 20 km + renfo complet
-DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : c'est de l'endurance pour le c
- œur sans choc pour les jambes.\n\nRenfo complet 25–30 min : step-down 
- lent (3–4 s en descente) 3×10/jambe\, squat bulgare 3×10\, fente arri
- ère 3×10\, chaise 3×40 s\, montées sur pointes jambes tendues 3×12 p
- uis genoux fléchis 3×12\, descente lente sur 1 jambe 3×10\, pont fessi
- er 1 jambe 3×12\, planche 3×40 s\, planche latérale 3×30 s.
+SUMMARY:🚴 Vélo 20 km + gainage léger
+DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : de l'endurance pour le cœur s
+ ans choc pour les jambes. Ne force pas.\n\n15 min : planche 3 × 40 s · 
+ planche latérale 3 × 30 s par côté · dead bug 3 × 10 · montées su
+ r pointes 3 × 12 · descente lente sur 1 jambe 3 × 10 par jambe.\n\nTes
+  allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endurance 6'30–
+ 7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'
+ 35–4'50. En trail\, pilote à la sensation et au souffle\, pas à l'all
+ ure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-12-15-27@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-12-15-36@coach-trail
+DTSTAMP:20261111T151739Z
+DTSTART;VALUE=DATE:20261215
+DTEND;VALUE=DATE:20261216
+SUMMARY:🏃 55 min tapis/escaliers 5 × 3 min Z4
+DESCRIPTION:POURQUOI : repousser ton seuil\, l'allure que tu tiens longte
+ mps sans exploser.\nCOMMENT : idéalement sur tapis incliné à 6–10 %\
+ , sinon en enchaînant des montées d'escaliers ou de pont. 15 min en Z2\
+ , puis les efforts de 3 min à effort 7–8/10 (tu ne peux dire que 2–3
+  mots \; ≈ 5'10–5'25/km si c'est à plat)\, avec 2 min de trot entre 
+ chaque. 10 min en Z1.\n⚠️ Séance dure : à faire après le feu vert 
+ du cardiologue. Sinon\, remplace-la par 45 min en Z2.\n\nTes allures (sur
+  le plat) : Z1 récup 7'00–7'40/km · Z2 endurance 6'30–7'00 · Z3 al
+ lure course 5'55–6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'35–4'50. En
+  trail\, pilote à la sensation et au souffle\, pas à l'allure.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:coach-trail-v3-2026-12-15-37@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261215
 DTEND;VALUE=DATE:20261216
 SUMMARY:🚴 Vélo 20 km facile
-DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : c'est de l'endurance pour le c
- œur sans choc pour les jambes.
+DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : de l'endurance pour le cœur s
+ ans choc pour les jambes. Ne force pas.\n\nTes allures (sur le plat) : Z1
+  récup 7'00–7'40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'
+ 55–6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilot
+ e à la sensation et au souffle\, pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-12-16-28@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-12-16-38@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261216
 DTEND;VALUE=DATE:20261217
-SUMMARY:🏃 55 min : escaliers/tapis 5 × 3 min
-DESCRIPTION:Échauffement 15 min Z2. Efforts en montée à un effort dur 
- (Z4–Z5)\, redescente en marchant/trottinant de façon contrôlée (= tr
- avail de descente). Retour au calme 10 min. Pas de côtes ? Escaliers\, p
- ont\, parking ou tapis incliné 8–12 %. ⚠️ Séance dure : à faire 
- après le feu vert du cardiologue (sinon remplacer par un footing Z2).
+SUMMARY:💪 Renfo complet 30 min
+DESCRIPTION:POURQUOI : des cuisses et des mollets plus forts encaissent m
+ ieux les descentes et la fin de course.\n3 SÉRIES DE : step-down lent (3
+ –4 s en descente) 10 par jambe · squat bulgare 10 par jambe · fente a
+ rrière 10 par jambe · chaise contre le mur 40 s · montées sur pointes
+  jambes tendues 12 puis genoux fléchis 12 · descente lente sur 1 jambe 
+ (mollet) 10 par jambe · pont fessier sur 1 jambe 12 par jambe · planche
+  40 s.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endu
+ rance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25
+  · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation et au souffle\,
+  pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-12-17-29@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-12-17-39@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261217
 DTEND;VALUE=DATE:20261218
-SUMMARY:🏃 30–35 min Z1 (facultatif\, si mollets OK)
-DESCRIPTION:Endurance fondamentale : tu dois pouvoir parler en phrases co
- mplètes. Allure indicative 6'30–7'00/km\, plus lent si la FC s'emballe
- . Marche si besoin.
+SUMMARY:🏃 45 min Z2 endurance
+DESCRIPTION:POURQUOI : construire le moteur aérobie. Le cœur devient pl
+ us efficace et la FC baisse à allure égale.\nCOMMENT : 6'30–7'00/km s
+ ur le plat\, effort 3–4/10. Tu dois pouvoir parler en phrases complète
+ s du début à la fin. Si la FC s'emballe\, marche 30 s puis repars plus 
+ lentement.\nÀ NOTER : ta FC moyenne (elle doit baisser de semaine en sem
+ aine).\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endu
+ rance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25
+  · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation et au souffle\,
+  pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-12-18-30@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-12-18-40@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261218
 DTEND;VALUE=DATE:20261219
-SUMMARY:🏃 40 min Z2 + renfo léger
-DESCRIPTION:Endurance fondamentale : tu dois pouvoir parler en phrases co
- mplètes. Allure indicative 6'30–7'00/km\, plus lent si la FC s'emballe
- . Marche si besoin.\n\nRenfo léger 15 min : gainage (planche\, planche l
- atérale\, dead bug) + mollets. Pas de travail lourd des jambes avant la 
- sortie longue.
+SUMMARY:😴 Repos
+DESCRIPTION:Repos complet. Le corps progresse pendant la récupération\,
+  pas pendant l'effort.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'
+ 40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 s
+ euil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation
+  et au souffle\, pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-12-19-31@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-12-19-41@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261219
 DTEND;VALUE=DATE:20261220
-SUMMARY:⛰️ Sortie longue 2 h · 600 m D+
-DESCRIPTION:Sortie longue Z2 du début à la fin. Marche dans les montée
- s raides dès le début. Descentes relâchées\, pas courts. Manger dès 
- 1 h 30 de sortie (nov.–déc. : 30–40 g de glucides/h \; janv. : 50–
- 70 g/h). Note : FC moyenne\, FC dernière heure\, état des jambes en fin
-  de sortie.
+SUMMARY:⛰️ Sortie longue 2 h 15 · 600 m D+ (bloc)
+DESCRIPTION:POURQUOI : c'est la séance n°1. Les jambes apprennent à du
+ rer\, tu travailles la descente et ton estomac s'habitue à manger en cou
+ rant.\nCOMMENT : Z2 du début à la fin (6'45–7'30/km sur le plat\, eff
+ ort 3–4/10\, phrases complètes). MARCHE DANS TOUTES LES MONTÉES RAIDE
+ S dès le début. En descente : relâché\, petits pas rapides\, regard 3
+ –4 m devant.\nMANGER : dès 1 h 30 de sortie. 30–40 g de glucides par
+  heure en novembre-décembre\, 50–70 g par heure en janvier (1 gel ≈ 
+ 20–25 g\, 1 compote ≈ 15–20 g\, 1 banane ≈ 25 g).\nÀ NOTER : FC 
+ moyenne\, FC sur la dernière heure\, état des jambes dans les 30 derni
+ ères minutes.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km ·
+  Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'1
+ 0–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation et au s
+ ouffle\, pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-12-20-32@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-12-20-42@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261220
 DTEND;VALUE=DATE:20261221
-SUMMARY:🏃 45 min Z2 (bloc : jambes fatiguées de la veille)
-DESCRIPTION:Endurance fondamentale : tu dois pouvoir parler en phrases co
- mplètes. Allure indicative 6'30–7'00/km\, plus lent si la FC s'emballe
- . Marche si besoin. Objectif : courir sur des jambes fatiguées de la vei
- lle.
+SUMMARY:🏃 45 min Z2 (bloc)
+DESCRIPTION:WEEK-END BLOC : tu cours sur les jambes fatiguées de la veil
+ le\, comme en fin de course.\nPOURQUOI : construire le moteur aérobie. L
+ e cœur devient plus efficace et la FC baisse à allure égale.\nCOMMENT 
+ : 6'30–7'00/km sur le plat\, effort 3–4/10. Tu dois pouvoir parler en
+  phrases complètes du début à la fin. Si la FC s'emballe\, marche 30 s
+  puis repars plus lentement.\nÀ NOTER : ta FC moyenne (elle doit baisser
+  de semaine en semaine).\n\nTes allures (sur le plat) : Z1 récup 7'00–
+ 7'40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4
+  seuil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote à la sensati
+ on et au souffle\, pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-12-21-33@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-12-21-43@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261221
 DTEND;VALUE=DATE:20261222
-SUMMARY:🚴 Vélo 20 km + renfo complet
-DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : c'est de l'endurance pour le c
- œur sans choc pour les jambes.\n\nRenfo complet 25–30 min : step-down 
- lent (3–4 s en descente) 3×10/jambe\, squat bulgare 3×10\, fente arri
- ère 3×10\, chaise 3×40 s\, montées sur pointes jambes tendues 3×12 p
- uis genoux fléchis 3×12\, descente lente sur 1 jambe 3×10\, pont fessi
- er 1 jambe 3×12\, planche 3×40 s\, planche latérale 3×30 s.
+SUMMARY:🚴 Vélo 20 km + gainage léger
+DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : de l'endurance pour le cœur s
+ ans choc pour les jambes. Ne force pas.\n\n15 min : planche 3 × 40 s · 
+ planche latérale 3 × 30 s par côté · dead bug 3 × 10 · montées su
+ r pointes 3 × 12 · descente lente sur 1 jambe 3 × 10 par jambe.\n\nTes
+  allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endurance 6'30–
+ 7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'
+ 35–4'50. En trail\, pilote à la sensation et au souffle\, pas à l'all
+ ure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-12-22-34@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-12-22-44@coach-trail
+DTSTAMP:20261111T151739Z
+DTSTART;VALUE=DATE:20261222
+DTEND;VALUE=DATE:20261223
+SUMMARY:🏃 45 min Z2 + 6 lignes droites (fêtes)
+DESCRIPTION:POURQUOI : construire le moteur aérobie. Le cœur devient pl
+ us efficace et la FC baisse à allure égale.\nCOMMENT : 6'30–7'00/km s
+ ur le plat\, effort 3–4/10. Tu dois pouvoir parler en phrases complète
+ s du début à la fin. Si la FC s'emballe\, marche 30 s puis repars plus 
+ lentement.\nÀ NOTER : ta FC moyenne (elle doit baisser de semaine en sem
+ aine).\nLIGNES DROITES : à la fin du footing\, 15–20 s en accélérant
+  progressivement jusqu'à ≈ 4'45/km. Ce n'est pas un sprint\, reste rel
+ âché. Récupère en marchant 1 min.\nSemaine allégée des fêtes.\n\nT
+ es allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endurance 6'30
+ –7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25 · Z5 VMA
+  4'35–4'50. En trail\, pilote à la sensation et au souffle\, pas à l'
+ allure.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:coach-trail-v3-2026-12-22-45@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261222
 DTEND;VALUE=DATE:20261223
 SUMMARY:🚴 Vélo 20 km facile
-DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : c'est de l'endurance pour le c
- œur sans choc pour les jambes.
+DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : de l'endurance pour le cœur s
+ ans choc pour les jambes. Ne force pas.\n\nTes allures (sur le plat) : Z1
+  récup 7'00–7'40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'
+ 55–6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilot
+ e à la sensation et au souffle\, pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-12-23-35@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-12-23-46@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261223
 DTEND;VALUE=DATE:20261224
-SUMMARY:🏃 45 min Z2 (semaine des fêtes)
-DESCRIPTION:Endurance fondamentale : tu dois pouvoir parler en phrases co
- mplètes. Allure indicative 6'30–7'00/km\, plus lent si la FC s'emballe
- . Marche si besoin.
+SUMMARY:💪 Renfo complet 30 min
+DESCRIPTION:POURQUOI : des cuisses et des mollets plus forts encaissent m
+ ieux les descentes et la fin de course.\n3 SÉRIES DE : step-down lent (3
+ –4 s en descente) 10 par jambe · squat bulgare 10 par jambe · fente a
+ rrière 10 par jambe · chaise contre le mur 40 s · montées sur pointes
+  jambes tendues 12 puis genoux fléchis 12 · descente lente sur 1 jambe 
+ (mollet) 10 par jambe · pont fessier sur 1 jambe 12 par jambe · planche
+  40 s.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endu
+ rance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25
+  · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation et au souffle\,
+  pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-12-26-36@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-12-24-47@coach-trail
+DTSTAMP:20261111T151739Z
+DTSTART;VALUE=DATE:20261224
+DTEND;VALUE=DATE:20261225
+SUMMARY:🏃 30 min Z1 récup
+DESCRIPTION:POURQUOI : relâcher les jambes après la sortie longue et aj
+ outer de la fréquence sans fatigue.\nCOMMENT : 7'00–7'40/km\, effort 2
+ /10\, plutôt sur du plat. Ça doit te paraître trop lent : c'est le but
+ .\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endurance
+  6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25 · Z
+ 5 VMA 4'35–4'50. En trail\, pilote à la sensation et au souffle\, pas 
+ à l'allure.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:coach-trail-v3-2026-12-25-48@coach-trail
+DTSTAMP:20261111T151739Z
+DTSTART;VALUE=DATE:20261225
+DTEND;VALUE=DATE:20261226
+SUMMARY:😴 Repos
+DESCRIPTION:Repos complet. Le corps progresse pendant la récupération\,
+  pas pendant l'effort.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'
+ 40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 s
+ euil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation
+  et au souffle\, pas à l'allure.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:coach-trail-v3-2026-12-26-49@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261226
 DTEND;VALUE=DATE:20261227
 SUMMARY:⛰️ Sortie longue 2 h 15 · 500 m D+
-DESCRIPTION:Sortie longue Z2 du début à la fin. Marche dans les montée
- s raides dès le début. Descentes relâchées\, pas courts. Manger dès 
- 1 h 30 de sortie (nov.–déc. : 30–40 g de glucides/h \; janv. : 50–
- 70 g/h). Note : FC moyenne\, FC dernière heure\, état des jambes en fin
-  de sortie.
+DESCRIPTION:POURQUOI : c'est la séance n°1. Les jambes apprennent à du
+ rer\, tu travailles la descente et ton estomac s'habitue à manger en cou
+ rant.\nCOMMENT : Z2 du début à la fin (6'45–7'30/km sur le plat\, eff
+ ort 3–4/10\, phrases complètes). MARCHE DANS TOUTES LES MONTÉES RAIDE
+ S dès le début. En descente : relâché\, petits pas rapides\, regard 3
+ –4 m devant.\nMANGER : dès 1 h 30 de sortie. 30–40 g de glucides par
+  heure en novembre-décembre\, 50–70 g par heure en janvier (1 gel ≈ 
+ 20–25 g\, 1 compote ≈ 15–20 g\, 1 banane ≈ 25 g).\nÀ NOTER : FC 
+ moyenne\, FC sur la dernière heure\, état des jambes dans les 30 derni
+ ères minutes.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km ·
+  Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'1
+ 0–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation et au s
+ ouffle\, pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-12-28-37@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-12-28-50@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261228
 DTEND;VALUE=DATE:20261229
-SUMMARY:🚴 Vélo 20 km + renfo complet
-DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : c'est de l'endurance pour le c
- œur sans choc pour les jambes.\n\nRenfo complet 25–30 min : step-down 
- lent (3–4 s en descente) 3×10/jambe\, squat bulgare 3×10\, fente arri
- ère 3×10\, chaise 3×40 s\, montées sur pointes jambes tendues 3×12 p
- uis genoux fléchis 3×12\, descente lente sur 1 jambe 3×10\, pont fessi
- er 1 jambe 3×12\, planche 3×40 s\, planche latérale 3×30 s.
+SUMMARY:🚴 Vélo 20 km + gainage léger
+DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : de l'endurance pour le cœur s
+ ans choc pour les jambes. Ne force pas.\n\n15 min : planche 3 × 40 s · 
+ planche latérale 3 × 30 s par côté · dead bug 3 × 10 · montées su
+ r pointes 3 × 12 · descente lente sur 1 jambe 3 × 10 par jambe.\n\nTes
+  allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endurance 6'30–
+ 7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'
+ 35–4'50. En trail\, pilote à la sensation et au souffle\, pas à l'all
+ ure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-12-29-38@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-12-29-51@coach-trail
+DTSTAMP:20261111T151739Z
+DTSTART;VALUE=DATE:20261229
+DTEND;VALUE=DATE:20261230
+SUMMARY:🏃 1 h escaliers 6 × 2 min
+DESCRIPTION:POURQUOI : force et puissance en montée. La redescente contr
+ ôlée travaille les cuisses en freinant : c'est ce qui t'a manqué au ma
+ rathon.\nCOMMENT : 15 min en Z2. Monte des escaliers (ou un pont\, une ra
+ mpe de parking) en courant\, effort 8–9/10\, petites foulées dynamique
+ s\, buste penché en avant. Redescends en marchant ou en trottinant\, de 
+ façon contrôlée (c'est ta récup). 10 min en Z1 pour finir.\n⚠️ S
+ éance dure : à faire après le feu vert du cardiologue. Sinon\, remplac
+ e-la par 45 min en Z2.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'
+ 40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 s
+ euil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation
+  et au souffle\, pas à l'allure.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:coach-trail-v3-2026-12-29-52@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261229
 DTEND;VALUE=DATE:20261230
 SUMMARY:🚴 Vélo 20 km facile
-DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : c'est de l'endurance pour le c
- œur sans choc pour les jambes.
+DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : de l'endurance pour le cœur s
+ ans choc pour les jambes. Ne force pas.\n\nTes allures (sur le plat) : Z1
+  récup 7'00–7'40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'
+ 55–6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilot
+ e à la sensation et au souffle\, pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-12-30-39@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-12-30-53@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261230
 DTEND;VALUE=DATE:20261231
-SUMMARY:🏃 1 h : escaliers 6 × 2 min + descentes contrôlées
-DESCRIPTION:Échauffement 15 min Z2. Efforts en montée à un effort dur 
- (Z4–Z5)\, redescente en marchant/trottinant de façon contrôlée (= tr
- avail de descente). Retour au calme 10 min. Pas de côtes ? Escaliers\, p
- ont\, parking ou tapis incliné 8–12 %. ⚠️ Séance dure : à faire 
- après le feu vert du cardiologue (sinon remplacer par un footing Z2).
+SUMMARY:💪 Renfo complet 30 min
+DESCRIPTION:POURQUOI : des cuisses et des mollets plus forts encaissent m
+ ieux les descentes et la fin de course.\n3 SÉRIES DE : step-down lent (3
+ –4 s en descente) 10 par jambe · squat bulgare 10 par jambe · fente a
+ rrière 10 par jambe · chaise contre le mur 40 s · montées sur pointes
+  jambes tendues 12 puis genoux fléchis 12 · descente lente sur 1 jambe 
+ (mollet) 10 par jambe · pont fessier sur 1 jambe 12 par jambe · planche
+  40 s.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endu
+ rance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25
+  · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation et au souffle\,
+  pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2026-12-31-40@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2026-12-31-54@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
-SUMMARY:🏃 40 min Z2
-DESCRIPTION:Endurance fondamentale : tu dois pouvoir parler en phrases co
- mplètes. Allure indicative 6'30–7'00/km\, plus lent si la FC s'emballe
- . Marche si besoin.
+SUMMARY:🏃 45 min Z2 endurance
+DESCRIPTION:POURQUOI : construire le moteur aérobie. Le cœur devient pl
+ us efficace et la FC baisse à allure égale.\nCOMMENT : 6'30–7'00/km s
+ ur le plat\, effort 3–4/10. Tu dois pouvoir parler en phrases complète
+ s du début à la fin. Si la FC s'emballe\, marche 30 s puis repars plus 
+ lentement.\nÀ NOTER : ta FC moyenne (elle doit baisser de semaine en sem
+ aine).\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endu
+ rance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25
+  · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation et au souffle\,
+  pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2027-01-02-41@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2027-01-01-55@coach-trail
+DTSTAMP:20261111T151739Z
+DTSTART;VALUE=DATE:20270101
+DTEND;VALUE=DATE:20270102
+SUMMARY:😴 Repos
+DESCRIPTION:Repos complet. Le corps progresse pendant la récupération\,
+  pas pendant l'effort.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'
+ 40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 s
+ euil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation
+  et au souffle\, pas à l'allure.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:coach-trail-v3-2027-01-02-56@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20270102
 DTEND;VALUE=DATE:20270103
 SUMMARY:⛰️ Sortie longue 2 h 45 · 700 m D+
-DESCRIPTION:Sortie longue Z2 du début à la fin. Marche dans les montée
- s raides dès le début. Descentes relâchées\, pas courts. Manger dès 
- 1 h 30 de sortie (nov.–déc. : 30–40 g de glucides/h \; janv. : 50–
- 70 g/h). Note : FC moyenne\, FC dernière heure\, état des jambes en fin
-  de sortie.
+DESCRIPTION:POURQUOI : c'est la séance n°1. Les jambes apprennent à du
+ rer\, tu travailles la descente et ton estomac s'habitue à manger en cou
+ rant.\nCOMMENT : Z2 du début à la fin (6'45–7'30/km sur le plat\, eff
+ ort 3–4/10\, phrases complètes). MARCHE DANS TOUTES LES MONTÉES RAIDE
+ S dès le début. En descente : relâché\, petits pas rapides\, regard 3
+ –4 m devant.\nMANGER : dès 1 h 30 de sortie. 30–40 g de glucides par
+  heure en novembre-décembre\, 50–70 g par heure en janvier (1 gel ≈ 
+ 20–25 g\, 1 compote ≈ 15–20 g\, 1 banane ≈ 25 g).\nÀ NOTER : FC 
+ moyenne\, FC sur la dernière heure\, état des jambes dans les 30 derni
+ ères minutes.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km ·
+  Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'1
+ 0–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation et au s
+ ouffle\, pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2027-01-04-42@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2027-01-03-57@coach-trail
+DTSTAMP:20261111T151739Z
+DTSTART;VALUE=DATE:20270103
+DTEND;VALUE=DATE:20270104
+SUMMARY:🏃 35 min Z1 récup
+DESCRIPTION:POURQUOI : relâcher les jambes après la sortie longue et aj
+ outer de la fréquence sans fatigue.\nCOMMENT : 7'00–7'40/km\, effort 2
+ /10\, plutôt sur du plat. Ça doit te paraître trop lent : c'est le but
+ .\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endurance
+  6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25 · Z
+ 5 VMA 4'35–4'50. En trail\, pilote à la sensation et au souffle\, pas 
+ à l'allure.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:coach-trail-v3-2027-01-04-58@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20270104
 DTEND;VALUE=DATE:20270105
-SUMMARY:🚴 Vélo 20 km + renfo complet
-DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : c'est de l'endurance pour le c
- œur sans choc pour les jambes.\n\nRenfo complet 25–30 min : step-down 
- lent (3–4 s en descente) 3×10/jambe\, squat bulgare 3×10\, fente arri
- ère 3×10\, chaise 3×40 s\, montées sur pointes jambes tendues 3×12 p
- uis genoux fléchis 3×12\, descente lente sur 1 jambe 3×10\, pont fessi
- er 1 jambe 3×12\, planche 3×40 s\, planche latérale 3×30 s.
+SUMMARY:🚴 Vélo 20 km + gainage léger
+DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : de l'endurance pour le cœur s
+ ans choc pour les jambes. Ne force pas.\n\n15 min : planche 3 × 40 s · 
+ planche latérale 3 × 30 s par côté · dead bug 3 × 10 · montées su
+ r pointes 3 × 12 · descente lente sur 1 jambe 3 × 10 par jambe.\n\nTes
+  allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endurance 6'30–
+ 7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'
+ 35–4'50. En trail\, pilote à la sensation et au souffle\, pas à l'all
+ ure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2027-01-05-43@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2027-01-05-59@coach-trail
+DTSTAMP:20261111T151739Z
+DTSTART;VALUE=DATE:20270105
+DTEND;VALUE=DATE:20270106
+SUMMARY:🏃 PIC 1 h tapis/escaliers 6 × 3 min Z4
+DESCRIPTION:POURQUOI : repousser ton seuil\, l'allure que tu tiens longte
+ mps sans exploser.\nCOMMENT : idéalement sur tapis incliné à 6–10 %\
+ , sinon en enchaînant des montées d'escaliers ou de pont. 15 min en Z2\
+ , puis les efforts de 3 min à effort 7–8/10 (tu ne peux dire que 2–3
+  mots \; ≈ 5'10–5'25/km si c'est à plat)\, avec 2 min de trot entre 
+ chaque. 10 min en Z1.\n⚠️ Séance dure : à faire après le feu vert 
+ du cardiologue. Sinon\, remplace-la par 45 min en Z2.\n\nTes allures (sur
+  le plat) : Z1 récup 7'00–7'40/km · Z2 endurance 6'30–7'00 · Z3 al
+ lure course 5'55–6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'35–4'50. En
+  trail\, pilote à la sensation et au souffle\, pas à l'allure.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:coach-trail-v3-2027-01-05-60@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20270105
 DTEND;VALUE=DATE:20270106
 SUMMARY:🚴 Vélo 20 km facile
-DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : c'est de l'endurance pour le c
- œur sans choc pour les jambes.
+DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : de l'endurance pour le cœur s
+ ans choc pour les jambes. Ne force pas.\n\nTes allures (sur le plat) : Z1
+  récup 7'00–7'40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'
+ 55–6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilot
+ e à la sensation et au souffle\, pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2027-01-06-44@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2027-01-06-61@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20270106
 DTEND;VALUE=DATE:20270107
-SUMMARY:🏃 PIC 1 h : tapis/escaliers 6 × 3 min
-DESCRIPTION:Échauffement 15 min Z2. Efforts en montée à un effort dur 
- (Z4–Z5)\, redescente en marchant/trottinant de façon contrôlée (= tr
- avail de descente). Retour au calme 10 min. Pas de côtes ? Escaliers\, p
- ont\, parking ou tapis incliné 8–12 %. ⚠️ Séance dure : à faire 
- après le feu vert du cardiologue (sinon remplacer par un footing Z2).
+SUMMARY:💪 Renfo complet 30 min
+DESCRIPTION:POURQUOI : des cuisses et des mollets plus forts encaissent m
+ ieux les descentes et la fin de course.\n3 SÉRIES DE : step-down lent (3
+ –4 s en descente) 10 par jambe · squat bulgare 10 par jambe · fente a
+ rrière 10 par jambe · chaise contre le mur 40 s · montées sur pointes
+  jambes tendues 12 puis genoux fléchis 12 · descente lente sur 1 jambe 
+ (mollet) 10 par jambe · pont fessier sur 1 jambe 12 par jambe · planche
+  40 s.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endu
+ rance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25
+  · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation et au souffle\,
+  pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2027-01-07-45@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2027-01-07-62@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20270107
 DTEND;VALUE=DATE:20270108
-SUMMARY:🏃 30–35 min Z1 (facultatif\, si mollets OK)
-DESCRIPTION:Endurance fondamentale : tu dois pouvoir parler en phrases co
- mplètes. Allure indicative 6'30–7'00/km\, plus lent si la FC s'emballe
- . Marche si besoin.
+SUMMARY:🏃 50 min Z2 endurance
+DESCRIPTION:POURQUOI : construire le moteur aérobie. Le cœur devient pl
+ us efficace et la FC baisse à allure égale.\nCOMMENT : 6'30–7'00/km s
+ ur le plat\, effort 3–4/10. Tu dois pouvoir parler en phrases complète
+ s du début à la fin. Si la FC s'emballe\, marche 30 s puis repars plus 
+ lentement.\nÀ NOTER : ta FC moyenne (elle doit baisser de semaine en sem
+ aine).\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endu
+ rance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25
+  · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation et au souffle\,
+  pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2027-01-08-46@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2027-01-08-63@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20270108
 DTEND;VALUE=DATE:20270109
-SUMMARY:🏃 45 min Z2 + renfo léger
-DESCRIPTION:Endurance fondamentale : tu dois pouvoir parler en phrases co
- mplètes. Allure indicative 6'30–7'00/km\, plus lent si la FC s'emballe
- . Marche si besoin.\n\nRenfo léger 15 min : gainage (planche\, planche l
- atérale\, dead bug) + mollets. Pas de travail lourd des jambes avant la 
- sortie longue.
+SUMMARY:😴 Repos
+DESCRIPTION:Repos complet. Le corps progresse pendant la récupération\,
+  pas pendant l'effort.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'
+ 40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 s
+ euil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation
+  et au souffle\, pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2027-01-09-47@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2027-01-09-64@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20270109
 DTEND;VALUE=DATE:20270110
 SUMMARY:⛰️ Sortie longue 3 h–3 h 15 · 900 m D+ · RÉPÉTITION GÉ
  NÉRALE
-DESCRIPTION:Sortie longue Z2 du début à la fin. Marche dans les montée
- s raides dès le début. Descentes relâchées\, pas courts. Manger dès 
- 1 h 30 de sortie (nov.–déc. : 30–40 g de glucides/h \; janv. : 50–
- 70 g/h). Note : FC moyenne\, FC dernière heure\, état des jambes en fin
-  de sortie.\n\nRÉPÉTITION GÉNÉRALE : comme le jour J (chaussures\, sa
- c\, tenue\, petit-déjeuner\, ravitaillement 50–70 g/h\, allure prudent
- e).
+DESCRIPTION:POURQUOI : c'est la séance n°1. Les jambes apprennent à du
+ rer\, tu travailles la descente et ton estomac s'habitue à manger en cou
+ rant.\nCOMMENT : Z2 du début à la fin (6'45–7'30/km sur le plat\, eff
+ ort 3–4/10\, phrases complètes). MARCHE DANS TOUTES LES MONTÉES RAIDE
+ S dès le début. En descente : relâché\, petits pas rapides\, regard 3
+ –4 m devant.\nMANGER : dès 1 h 30 de sortie. 30–40 g de glucides par
+  heure en novembre-décembre\, 50–70 g par heure en janvier (1 gel ≈ 
+ 20–25 g\, 1 compote ≈ 15–20 g\, 1 banane ≈ 25 g).\nÀ NOTER : FC 
+ moyenne\, FC sur la dernière heure\, état des jambes dans les 30 derni
+ ères minutes.\n\nRÉPÉTITION GÉNÉRALE : fais tout comme le jour J (ch
+ aussures\, sac\, tenue\, petit-déjeuner\, ravitaillement 50–70 g/h\, a
+ llure prudente).\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km 
+ · Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5
+ '10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation et au
+  souffle\, pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2027-01-11-48@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2027-01-10-65@coach-trail
+DTSTAMP:20261111T151739Z
+DTSTART;VALUE=DATE:20270110
+DTEND;VALUE=DATE:20270111
+SUMMARY:🏃 30 min Z1 récup
+DESCRIPTION:POURQUOI : relâcher les jambes après la sortie longue et aj
+ outer de la fréquence sans fatigue.\nCOMMENT : 7'00–7'40/km\, effort 2
+ /10\, plutôt sur du plat. Ça doit te paraître trop lent : c'est le but
+ .\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endurance
+  6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25 · Z
+ 5 VMA 4'35–4'50. En trail\, pilote à la sensation et au souffle\, pas 
+ à l'allure.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:coach-trail-v3-2027-01-11-66@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20270111
 DTEND;VALUE=DATE:20270112
-SUMMARY:🚴 Vélo 20 km + renfo complet
-DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : c'est de l'endurance pour le c
- œur sans choc pour les jambes.\n\nRenfo complet 25–30 min : step-down 
- lent (3–4 s en descente) 3×10/jambe\, squat bulgare 3×10\, fente arri
- ère 3×10\, chaise 3×40 s\, montées sur pointes jambes tendues 3×12 p
- uis genoux fléchis 3×12\, descente lente sur 1 jambe 3×10\, pont fessi
- er 1 jambe 3×12\, planche 3×40 s\, planche latérale 3×30 s.
+SUMMARY:🚴 Vélo 20 km + gainage léger
+DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : de l'endurance pour le cœur s
+ ans choc pour les jambes. Ne force pas.\n\n15 min : planche 3 × 40 s · 
+ planche latérale 3 × 30 s par côté · dead bug 3 × 10 · montées su
+ r pointes 3 × 12 · descente lente sur 1 jambe 3 × 10 par jambe.\n\nTes
+  allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endurance 6'30–
+ 7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'
+ 35–4'50. En trail\, pilote à la sensation et au souffle\, pas à l'all
+ ure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2027-01-12-49@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2027-01-12-67@coach-trail
+DTSTAMP:20261111T151739Z
+DTSTART;VALUE=DATE:20270112
+DTEND;VALUE=DATE:20270113
+SUMMARY:🏃 55 min dont 3 × 12 min allure course Z3
+DESCRIPTION:POURQUOI : mémoriser l'effort du jour J.\nCOMMENT : 15 min e
+ n Z2\, puis 3 × 12 min à 5'55–6'15/km (effort 5–6/10\, phrases cour
+ tes)\, 3 min lentes entre chaque\, puis 10 min en Z1. Si possible\, sur u
+ n parcours vallonné.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'4
+ 0/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 se
+ uil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation 
+ et au souffle\, pas à l'allure.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:coach-trail-v3-2027-01-12-68@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20270112
 DTEND;VALUE=DATE:20270113
 SUMMARY:🚴 Vélo 20 km facile
-DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : c'est de l'endurance pour le c
- œur sans choc pour les jambes.
+DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : de l'endurance pour le cœur s
+ ans choc pour les jambes. Ne force pas.\n\nTes allures (sur le plat) : Z1
+  récup 7'00–7'40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'
+ 55–6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilot
+ e à la sensation et au souffle\, pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2027-01-13-50@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2027-01-13-69@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20270113
 DTEND;VALUE=DATE:20270114
-SUMMARY:🏃 55 min dont 3 × 12 min allure course
-DESCRIPTION:15 min Z2\, puis 3 × 12 min à l'allure prévue en course (e
- ffort Z3 : phrases courtes)\, 3 min lent entre chaque\, 10 min calmes. Si
-  possible sur un parcours vallonné.
+SUMMARY:💪 Renfo complet 30 min
+DESCRIPTION:POURQUOI : des cuisses et des mollets plus forts encaissent m
+ ieux les descentes et la fin de course.\n3 SÉRIES DE : step-down lent (3
+ –4 s en descente) 10 par jambe · squat bulgare 10 par jambe · fente a
+ rrière 10 par jambe · chaise contre le mur 40 s · montées sur pointes
+  jambes tendues 12 puis genoux fléchis 12 · descente lente sur 1 jambe 
+ (mollet) 10 par jambe · pont fessier sur 1 jambe 12 par jambe · planche
+  40 s.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endu
+ rance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25
+  · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation et au souffle\,
+  pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2027-01-14-51@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2027-01-14-70@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20270114
 DTEND;VALUE=DATE:20270115
-SUMMARY:🏃 30–35 min Z1 (facultatif\, si mollets OK)
-DESCRIPTION:Endurance fondamentale : tu dois pouvoir parler en phrases co
- mplètes. Allure indicative 6'30–7'00/km\, plus lent si la FC s'emballe
- . Marche si besoin.
+SUMMARY:🏃 45 min Z2 endurance
+DESCRIPTION:POURQUOI : construire le moteur aérobie. Le cœur devient pl
+ us efficace et la FC baisse à allure égale.\nCOMMENT : 6'30–7'00/km s
+ ur le plat\, effort 3–4/10. Tu dois pouvoir parler en phrases complète
+ s du début à la fin. Si la FC s'emballe\, marche 30 s puis repars plus 
+ lentement.\nÀ NOTER : ta FC moyenne (elle doit baisser de semaine en sem
+ aine).\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endu
+ rance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25
+  · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation et au souffle\,
+  pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2027-01-15-52@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2027-01-15-71@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
-SUMMARY:🏃 40 min Z2 + renfo léger
-DESCRIPTION:Endurance fondamentale : tu dois pouvoir parler en phrases co
- mplètes. Allure indicative 6'30–7'00/km\, plus lent si la FC s'emballe
- . Marche si besoin.\n\nRenfo léger 15 min : gainage (planche\, planche l
- atérale\, dead bug) + mollets. Pas de travail lourd des jambes avant la 
- sortie longue.
+SUMMARY:😴 Repos
+DESCRIPTION:Repos complet. Le corps progresse pendant la récupération\,
+  pas pendant l'effort.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'
+ 40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 s
+ euil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation
+  et au souffle\, pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2027-01-16-53@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2027-01-16-72@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20270116
 DTEND;VALUE=DATE:20270117
-SUMMARY:⛰️ Sortie longue 2 h 15 · 600 m D+
-DESCRIPTION:Sortie longue Z2 du début à la fin. Marche dans les montée
- s raides dès le début. Descentes relâchées\, pas courts. Manger dès 
- 1 h 30 de sortie (nov.–déc. : 30–40 g de glucides/h \; janv. : 50–
- 70 g/h). Note : FC moyenne\, FC dernière heure\, état des jambes en fin
-  de sortie.
+SUMMARY:⛰️ Sortie longue 2 h 15 · 600 m D+ (bloc)
+DESCRIPTION:POURQUOI : c'est la séance n°1. Les jambes apprennent à du
+ rer\, tu travailles la descente et ton estomac s'habitue à manger en cou
+ rant.\nCOMMENT : Z2 du début à la fin (6'45–7'30/km sur le plat\, eff
+ ort 3–4/10\, phrases complètes). MARCHE DANS TOUTES LES MONTÉES RAIDE
+ S dès le début. En descente : relâché\, petits pas rapides\, regard 3
+ –4 m devant.\nMANGER : dès 1 h 30 de sortie. 30–40 g de glucides par
+  heure en novembre-décembre\, 50–70 g par heure en janvier (1 gel ≈ 
+ 20–25 g\, 1 compote ≈ 15–20 g\, 1 banane ≈ 25 g).\nÀ NOTER : FC 
+ moyenne\, FC sur la dernière heure\, état des jambes dans les 30 derni
+ ères minutes.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km ·
+  Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'1
+ 0–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation et au s
+ ouffle\, pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2027-01-17-54@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2027-01-17-73@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20270117
 DTEND;VALUE=DATE:20270118
 SUMMARY:🏃 1 h Z2 (bloc)
-DESCRIPTION:Endurance fondamentale : tu dois pouvoir parler en phrases co
- mplètes. Allure indicative 6'30–7'00/km\, plus lent si la FC s'emballe
- . Marche si besoin. Objectif : courir sur des jambes fatiguées de la vei
- lle.
+DESCRIPTION:WEEK-END BLOC : tu cours sur les jambes fatiguées de la veil
+ le\, comme en fin de course.\nPOURQUOI : construire le moteur aérobie. L
+ e cœur devient plus efficace et la FC baisse à allure égale.\nCOMMENT 
+ : 6'30–7'00/km sur le plat\, effort 3–4/10. Tu dois pouvoir parler en
+  phrases complètes du début à la fin. Si la FC s'emballe\, marche 30 s
+  puis repars plus lentement.\nÀ NOTER : ta FC moyenne (elle doit baisser
+  de semaine en semaine).\n\nTes allures (sur le plat) : Z1 récup 7'00–
+ 7'40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4
+  seuil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote à la sensati
+ on et au souffle\, pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2027-01-18-55@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2027-01-18-74@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20270118
 DTEND;VALUE=DATE:20270119
 SUMMARY:🚴 Vélo 20 km + gainage léger
-DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : c'est de l'endurance pour le c
- œur sans choc pour les jambes.\n\nRenfo léger 15 min : gainage (planche
- \, planche latérale\, dead bug) + mollets. Pas de travail lourd des jamb
- es. Plus de renfo lourd des jambes dans les 10 derniers jours.
+DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : de l'endurance pour le cœur s
+ ans choc pour les jambes. Ne force pas.\n\n15 min : planche 3 × 40 s · 
+ planche latérale 3 × 30 s par côté · dead bug 3 × 10 · montées su
+ r pointes 3 × 12 · descente lente sur 1 jambe 3 × 10 par jambe.\n\nTes
+  allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endurance 6'30–
+ 7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'
+ 35–4'50. En trail\, pilote à la sensation et au souffle\, pas à l'all
+ ure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2027-01-19-56@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2027-01-19-75@coach-trail
+DTSTAMP:20261111T151739Z
+DTSTART;VALUE=DATE:20270119
+DTEND;VALUE=DATE:20270120
+SUMMARY:🏃 AFFÛTAGE 45 min dont 6 × 1 min Z4
+DESCRIPTION:AFFÛTAGE : le volume baisse\, c'est normal. 30 min en Z2\, p
+ uis 6 × 1 min à 5'10–5'25/km (effort 7/10\, pas à fond)\, 1 min de t
+ rot entre chaque\, puis 5 min en Z1.\n\nTes allures (sur le plat) : Z1 r
+ écup 7'00–7'40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'55
+ –6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote 
+ à la sensation et au souffle\, pas à l'allure.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:coach-trail-v3-2027-01-19-76@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20270119
 DTEND;VALUE=DATE:20270120
 SUMMARY:🚴 Vélo 20 km facile
-DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : c'est de l'endurance pour le c
- œur sans choc pour les jambes.
+DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : de l'endurance pour le cœur s
+ ans choc pour les jambes. Ne force pas.\n\nTes allures (sur le plat) : Z1
+  récup 7'00–7'40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'
+ 55–6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilot
+ e à la sensation et au souffle\, pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2027-01-20-57@coach-trail
-DTSTAMP:20261106T215805Z
-DTSTART;VALUE=DATE:20270120
-DTEND;VALUE=DATE:20270121
-SUMMARY:🏃 AFFÛTAGE 45 min dont 6 × 1 min vif
-DESCRIPTION:Affûtage : 45 min Z2 dont 6 × 1 min vif (pas à fond) pour 
- garder du rythme. Le volume baisse\, c'est normal.
+UID:coach-trail-v3-2027-01-21-77@coach-trail
+DTSTAMP:20261111T151739Z
+DTSTART;VALUE=DATE:20270121
+DTEND;VALUE=DATE:20270122
+SUMMARY:🏃 40 min Z2 endurance
+DESCRIPTION:POURQUOI : construire le moteur aérobie. Le cœur devient pl
+ us efficace et la FC baisse à allure égale.\nCOMMENT : 6'30–7'00/km s
+ ur le plat\, effort 3–4/10. Tu dois pouvoir parler en phrases complète
+ s du début à la fin. Si la FC s'emballe\, marche 30 s puis repars plus 
+ lentement.\nÀ NOTER : ta FC moyenne (elle doit baisser de semaine en sem
+ aine).\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endu
+ rance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25
+  · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation et au souffle\,
+  pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2027-01-22-58@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2027-01-22-78@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20270122
 DTEND;VALUE=DATE:20270123
-SUMMARY:🏃 35 min Z2 + renfo léger
-DESCRIPTION:Endurance fondamentale : tu dois pouvoir parler en phrases co
- mplètes. Allure indicative 6'30–7'00/km\, plus lent si la FC s'emballe
- . Marche si besoin.\n\nPas de renfo des jambes (affûtage).
+SUMMARY:😴 Repos
+DESCRIPTION:Repos complet. Le corps progresse pendant la récupération\,
+  pas pendant l'effort.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'
+ 40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 s
+ euil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation
+  et au souffle\, pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2027-01-23-59@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2027-01-23-79@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20270123
 DTEND;VALUE=DATE:20270124
 SUMMARY:⛰️ Sortie longue 1 h 30 · 300 m D+
-DESCRIPTION:Sortie longue Z2 du début à la fin. Marche dans les montée
- s raides dès le début. Descentes relâchées\, pas courts. Manger dès 
- 1 h 30 de sortie (nov.–déc. : 30–40 g de glucides/h \; janv. : 50–
- 70 g/h). Note : FC moyenne\, FC dernière heure\, état des jambes en fin
-  de sortie.
+DESCRIPTION:POURQUOI : c'est la séance n°1. Les jambes apprennent à du
+ rer\, tu travailles la descente et ton estomac s'habitue à manger en cou
+ rant.\nCOMMENT : Z2 du début à la fin (6'45–7'30/km sur le plat\, eff
+ ort 3–4/10\, phrases complètes). MARCHE DANS TOUTES LES MONTÉES RAIDE
+ S dès le début. En descente : relâché\, petits pas rapides\, regard 3
+ –4 m devant.\nMANGER : dès 1 h 30 de sortie. 30–40 g de glucides par
+  heure en novembre-décembre\, 50–70 g par heure en janvier (1 gel ≈ 
+ 20–25 g\, 1 compote ≈ 15–20 g\, 1 banane ≈ 25 g).\nÀ NOTER : FC 
+ moyenne\, FC sur la dernière heure\, état des jambes dans les 30 derni
+ ères minutes.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km ·
+  Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'1
+ 0–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation et au s
+ ouffle\, pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2027-01-25-60@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2027-01-25-80@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20270125
 DTEND;VALUE=DATE:20270126
 SUMMARY:🚴 Vélo 20 km + gainage léger
-DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : c'est de l'endurance pour le c
- œur sans choc pour les jambes.\n\nRenfo léger 15 min : gainage (planche
- \, planche latérale\, dead bug) + mollets. Pas de travail lourd des jamb
- es. Plus de renfo lourd des jambes dans les 10 derniers jours.
+DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : de l'endurance pour le cœur s
+ ans choc pour les jambes. Ne force pas.\n\n15 min : planche 3 × 40 s · 
+ planche latérale 3 × 30 s par côté · dead bug 3 × 10 · montées su
+ r pointes 3 × 12 · descente lente sur 1 jambe 3 × 10 par jambe.\n\nTes
+  allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endurance 6'30–
+ 7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'
+ 35–4'50. En trail\, pilote à la sensation et au souffle\, pas à l'all
+ ure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2027-01-26-61@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2027-01-26-81@coach-trail
+DTSTAMP:20261111T151739Z
+DTSTART;VALUE=DATE:20270126
+DTEND;VALUE=DATE:20270127
+SUMMARY:🏃 35 min Z2 + 4 accélérations
+DESCRIPTION:POURQUOI : construire le moteur aérobie. Le cœur devient pl
+ us efficace et la FC baisse à allure égale.\nCOMMENT : 6'30–7'00/km s
+ ur le plat\, effort 3–4/10. Tu dois pouvoir parler en phrases complète
+ s du début à la fin. Si la FC s'emballe\, marche 30 s puis repars plus 
+ lentement.\nÀ NOTER : ta FC moyenne (elle doit baisser de semaine en sem
+ aine).\nLIGNES DROITES : à la fin du footing\, 15–20 s en accélérant
+  progressivement jusqu'à ≈ 4'45/km. Ce n'est pas un sprint\, reste rel
+ âché. Récupère en marchant 1 min.\n\nTes allures (sur le plat) : Z1 r
+ écup 7'00–7'40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'55
+ –6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote 
+ à la sensation et au souffle\, pas à l'allure.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:coach-trail-v3-2027-01-26-82@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20270126
 DTEND;VALUE=DATE:20270127
 SUMMARY:🚴 Vélo 20 km facile
-DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : c'est de l'endurance pour le c
- œur sans choc pour les jambes.
+DESCRIPTION:Vélo 20 km FACILE (Z1–Z2) : de l'endurance pour le cœur s
+ ans choc pour les jambes. Ne force pas.\n\nTes allures (sur le plat) : Z1
+  récup 7'00–7'40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'
+ 55–6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilot
+ e à la sensation et au souffle\, pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2027-01-27-62@coach-trail
-DTSTAMP:20261106T215805Z
-DTSTART;VALUE=DATE:20270127
-DTEND;VALUE=DATE:20270128
-SUMMARY:🏃 35 min Z2 + 4 accélérations
-DESCRIPTION:Endurance fondamentale : tu dois pouvoir parler en phrases co
- mplètes. Allure indicative 6'30–7'00/km\, plus lent si la FC s'emballe
- . Marche si besoin. Finis par 4 accélérations progressives de 20 s.
+UID:coach-trail-v3-2027-01-28-83@coach-trail
+DTSTAMP:20261111T151739Z
+DTSTART;VALUE=DATE:20270128
+DTEND;VALUE=DATE:20270129
+SUMMARY:🏃 25 min Z1 + 3 accélérations
+DESCRIPTION:POURQUOI : relâcher les jambes après la sortie longue et aj
+ outer de la fréquence sans fatigue.\nCOMMENT : 7'00–7'40/km\, effort 2
+ /10\, plutôt sur du plat. Ça doit te paraître trop lent : c'est le but
+ .\nLIGNES DROITES : à la fin du footing\, 15–20 s en accélérant prog
+ ressivement jusqu'à ≈ 4'45/km. Ce n'est pas un sprint\, reste relâch
+ é. Récupère en marchant 1 min.\n\nTes allures (sur le plat) : Z1 récu
+ p 7'00–7'40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6
+ '15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote à l
+ a sensation et au souffle\, pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2027-01-29-63@coach-trail
-DTSTAMP:20261106T215805Z
-DTSTART;VALUE=DATE:20270129
-DTEND;VALUE=DATE:20270130
-SUMMARY:🏃 25 min très facile
-DESCRIPTION:Footing très facile pour garder les jambes en éveil. Prépa
- re ton sac et ton ravitaillement.
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:coach-trail-2027-01-30-64@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2027-01-30-84@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20270130
 DTEND;VALUE=DATE:20270131
-SUMMARY:😴 Repos (ou 15 min de marche)
+SUMMARY:😴 Repos ou 15 min de marche
 DESCRIPTION:Repos. Repas riche en glucides et pauvre en fibres. Rien de n
- ouveau. Coucher tôt.
+ ouveau (ni chaussures\, ni gels\, ni repas). Prépare ton sac. Couche-toi
+  tôt.\n\nTes allures (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endu
+ rance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25
+  · Z5 VMA 4'35–4'50. En trail\, pilote à la sensation et au souffle\,
+  pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:coach-trail-2027-01-31-65@coach-trail
-DTSTAMP:20261106T215805Z
+UID:coach-trail-v3-2027-01-31-85@coach-trail
+DTSTAMP:20261111T151739Z
 DTSTART;VALUE=DATE:20270131
 DTEND;VALUE=DATE:20270201
 SUMMARY:🏁 TRAIL 40 km · 1000 m D+
 DESCRIPTION:Objectif : finir en bon état. Estimation 5 h–6 h (réalist
- e ≈ 5 h 30).\n- Les 10 premiers km doivent paraître faciles.\n- Marche
-  toutes les montées raides dès le début.\n- Mange dès 30–45 min pui
- s toutes les 20–30 min (≈ 50–70 g de glucides/h). Bois selon la soi
- f.\n- Descentes relâchées.\n- Petit-déjeuner riche en glucides 2–3 h
-  avant le départ.\nBonne course ! 💪
+ e ≈ 5 h 30).\n- Petit-déjeuner riche en glucides 2–3 h avant le dép
+ art.\n- Les 10 premiers km doivent paraître faciles (effort 4–5/10).\n
+ - Marche toutes les montées raides dès le début.\n- Mange dès 30–45
+  min\, puis toutes les 20–30 min (≈ 50–70 g de glucides/h). Bois se
+ lon la soif.\n- Descentes relâchées : c'est là que se joue la fin de c
+ ourse.\nBonne course ! 💪\n\nTes allures (sur le plat) : Z1 récup 7'00
+ –7'40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 ·
+  Z4 seuil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote à la sens
+ ation et au souffle\, pas à l'allure.
 TRANSP:TRANSPARENT
 END:VEVENT
 END:VCALENDAR
