@@ -42,14 +42,14 @@ Estimées à partir de ton marathon (4 h 13, soit 6'00/km) et de ton footing du 
 |---|---|---|---|---|---|---|
 | 1 | 9–15 nov | (semaine en cours) | 40 min Z2 | 1 h 15 · 200 m D+ | repos | ~2 h |
 | 2 | 16–22 nov | 45 min : fartlek 6 × 1 min Z4 | 40 min Z2 | 1 h 30 · 300 m D+ | 30 min Z1 | 3 h 25 |
-| 3 | 23–29 nov | 50 min : escaliers 6 × 1 min | 45 min Z2 | 1 h 45 · 400 m D+ | 30 min Z1 | 3 h 50 |
+| 3 | 23–29 nov | 45 min : escaliers 6 × 1 min | 45 min Z2 | 1 h 45 · 400 m D+ | 30 min Z1 | 3 h 45 |
 | 4 | 30 nov–6 déc | **Récup** : 40 min Z2 + 4 lignes droites | 40 min Z2 | 1 h 15 · 250 m D+ | repos | 2 h 35 |
-| 5 | 7–13 déc | 55 min : escaliers 8 × 1 min | 45 min Z2 | 2 h · 500 m D+ | 35 min Z1 | 4 h 15 |
+| 5 | 7–13 déc | 50 min : escaliers 8 × 1 min | 45 min Z2 | 2 h · 500 m D+ | 35 min Z1 | 4 h 10 |
 | 6 | 14–20 déc | 55 min : tapis/escaliers 5 × 3 min Z4 | 45 min Z2 | **bloc** : 2 h 15 · 600 m D+ | 45 min Z2 | 4 h 40 |
 | 7 | 21–27 déc | **Fêtes** : 45 min Z2 + 6 lignes droites | jeu 24 : 30 min Z1 | sam 26 : 2 h 15 · 500 m D+ | repos | 3 h 30 |
-| 8 | 28 déc–3 janv | 1 h : escaliers 6 × 2 min | jeu 31 : 45 min Z2 | sam 2 : 2 h 45 · 700 m D+ | 35 min Z1 | 5 h 05 |
+| 8 | 28 déc–3 janv | 55 min : escaliers 6 × 2 min | jeu 31 : 45 min Z2 | sam 2 : 2 h 45 · 700 m D+ | 35 min Z1 | 5 h 00 |
 | 9 | 4–10 janv | **Pic** : 1 h, tapis/escaliers 6 × 3 min Z4 | 50 min Z2 | **3 h–3 h 15 · 900 m D+, répétition générale** | 30 min Z1 | 5 h 30 |
-| 10 | 11–17 janv | 55 min dont 3 × 12 min Z3 (allure course) | 45 min Z2 | **bloc** : 2 h 15 · 600 m D+ | 1 h Z2 | 4 h 55 |
+| 10 | 11–17 janv | 1 h dont 3 × 10 min Z3 (allure course) | 45 min Z2 | **bloc** : 2 h 15 · 600 m D+ | 1 h Z2 | 5 h 00 |
 | 11 | 18–24 janv | **Affûtage** : 45 min dont 6 × 1 min Z4 | 40 min Z2 | 1 h 30 · 300 m D+ | repos | 2 h 55 |
 | 12 | 25–31 janv | 35 min Z2 + 4 accélérations | 25 min Z1 + 3 accélérations | repos ou 15 min de marche | **🏁 COURSE** | — |
 
@@ -81,7 +81,7 @@ Semaines 4, 7 et 11 = semaines allégées, pour que le corps assimile le travail
 
 ### Allure course (semaine 10)
 - **Pourquoi :** mémoriser l'effort du jour J.
-- **Comment :** 15 min Z2, puis 3 × 12 min à 5'55–6'15/km (effort 5–6/10, phrases courtes), 3 min lentes entre chaque, puis 10 min Z1.
+- **Comment :** 15 min Z2, puis 3 × 10 min à 5'55–6'15/km (effort 5–6/10, phrases courtes), 2 min lentes entre chaque, puis 10 min Z1.
 
 ### Lignes droites / accélérations
 - **Comment :** à la fin d'un footing, 4 à 6 fois 15–20 s en accélérant progressivement jusqu'à ≈ 4'45/km. Pas un sprint, c'est relâché. Récupération en marchant 1 min.
@@ -126,4 +126,5 @@ On affinera après la répétition générale.
 - Descentes relâchées : c'est là que se joue la fin de course.
 
 ## Calendrier
+Chaque événement indique la durée, la distance estimée, le D+, le déroulé étape par étape (allure et distance de chaque partie, détail du fractionné), les repères et le pourquoi. Distances des sorties longues estimées à 8 km-effort/h (km ≈ heures × 8 − D+/100).
 Toutes les séances sont dans `sport/coach-trail/calendrier/plan-40km-31-janvier.ics`, en événements « journée entière » avec la description. Après un changement du plan, régénérer ce fichier avec `calendrier/generer_ics.py`.
