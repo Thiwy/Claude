@@ -34,7 +34,7 @@
 - FC max vue en course (fin de trail ou de marathon) : ? FC de repos (au réveil) : ? Âge : ? (nécessaires pour calculer les zones)
 - Douleurs : jambes OK. **Mollets un peu douloureux de temps en temps** (léger), à surveiller.
 - Test d'effort cardiologique : **jamais fait**, recommandé de le faire rapidement.
-- Âge / poids (optionnel) : ?
+- Âge / poids : ? (le Chef a supposé ≈ 70 kg) · Allergies / aliments mal digérés : ? (supposé : aucune)
 
 ## Journal (le coach ajoute les retours ici)
 - 2026-11-06 : création du profil. Objectif fixé : trail 40 km / 1000 D+ le 1er février 2027.
@@ -42,3 +42,4 @@
 - 2026-11-06 : course confirmée le dimanche 31 janvier 2027. Footing de 8 km en 43 min (5'22/km), FC moyenne 159, pic à 180 sur du plat. C'est plus rapide que l'allure du marathon (6'00/km), donc trop vite pour de l'endurance fondamentale. Consigne : footings vers 6'30–7'00/km, au test de la parole. Mollets parfois un peu douloureux : renfo des mollets, à surveiller. Jamais fait de test d'effort.
 - 2026-11-11 : retour sur le plan : il manquait des explications et des allures, et mer-ven-sam était trop rapproché. Plan v3 : 4 sorties (mar qualité, jeu Z2, sam SL, dim récup), renfo complet le mercredi et léger le lundi, vendredi repos. VMA estimée à ≈ 13 km/h. Allures : Z1 7'00–7'40, Z2 6'30–7'00, Z3 5'55–6'15, Z4 5'10–5'25, Z5 4'35–4'50/km.
 - 2026-11-11 : vélo une seule fois par semaine, le lundi (plus de vélo le mardi). Plan et calendrier mis à jour.
+- 2026-11-12 : menus de ravitaillement des sorties longues préparés par l'agent Chef (references/nutrition-sorties.md), validés par le coach. Le 23/01 est plafonné à 77 g au lieu de 90 g. Ajoutés au calendrier.

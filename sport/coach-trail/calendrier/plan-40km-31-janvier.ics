@@ -5,7 +5,7 @@ CALSCALE:GREGORIAN
 X-WR-CALNAME:Coach trail – 40 km du 31 janvier
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-11-11-0@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261111
 DTEND;VALUE=DATE:20261112
 SUMMARY:💪 Renfo complet 30 min
@@ -22,7 +22,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-11-12-1@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261112
 DTEND;VALUE=DATE:20261113
 SUMMARY:🏃 Footing endurance · 40 min · ≈ 5\,8 km
@@ -41,7 +41,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-11-13-2@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261113
 DTEND;VALUE=DATE:20261114
 SUMMARY:😴 Repos
@@ -51,7 +51,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-11-14-3@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261114
 DTEND;VALUE=DATE:20261115
 SUMMARY:⛰️ Sortie longue · 1 h 15 · ≈ 8\,0 km · 200 m D+
@@ -61,22 +61,32 @@ DESCRIPTION:⏱ DURÉE : 1 h 15   📏 DISTANCE : ≈ 8\,0 km   ⛰️ D+
  7'30/km si le terrain est cassant)\, effort 3–4/10\n3. Montées raides 
  (≈ 200 m de D+ au total) : en MARCHANT\, d'un pas rapide\, mains sur le
  s cuisses si c'est très raide\n4. Descentes : relâché\, petits pas rap
- ides\, regard 3–4 m devant\, sans freiner fort\n5. Manger : pas indispe
- nsable (moins de 1 h 30). Emporte de l'eau.\n6. Dernières 10 minutes : e
- n Z1 pour finir\n\nREPÈRES : phrases complètes tout du long. Note : FC 
- moyenne\, FC sur la dernière heure (dérive ?)\, état des jambes dans l
- es 30 dernières minutes. Pas de relief ? Cherche un parcours avec des mo
- ntées répétées (colline\, escaliers\, terril).\n\nPOURQUOI : c'est la
-  séance n°1 : les jambes apprennent à durer\, tu travailles la descent
- e et ton estomac s'habitue à manger en courant.\n\nTES ALLURES (sur le p
- lat) : Z1 récup 7'00–7'40/km · Z2 endurance 6'30–7'00 · Z3 allure 
- course 5'55–6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'35–4'50. En trai
- l\, pilote au souffle et à la sensation\, pas à l'allure.
+ ides\, regard 3–4 m devant\, sans freiner fort\n5. Manger : voir 🍌 R
+ AVITAILLEMENT plus bas\n6. Dernières 10 minutes : en Z1 pour finir\n\nRE
+ PÈRES : phrases complètes tout du long. Note : FC moyenne\, FC sur la d
+ ernière heure (dérive ?)\, état des jambes dans les 30 dernières minu
+ tes. Pas de relief ? Cherche un parcours avec des montées répétées (c
+ olline\, escaliers\, terril).\n\nPOURQUOI : c'est la séance n°1 : les j
+ ambes apprennent à durer\, tu travailles la descente et ton estomac s'ha
+ bitue à manger en courant.\n\nTES ALLURES (sur le plat) : Z1 récup 7'00
+ –7'40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 ·
+  Z4 seuil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote au souffle
+  et à la sensation\, pas à l'allure.\n\n🍌 RAVITAILLEMENT (menu du Ch
+ ef) — total ≈ 0–22 g\nPETIT-DÉJ (2–3 h avant\, ≈ 85 g de gluci
+ des) : 80 g de pain blanc + 20 g de confiture\, 1 banane\, 1 yaourt\, th
+ é/café + 300–500 ml d'eau.\nPENDANT : Facultatif : à 0:45\, 1 pâte 
+ de fruits (22 g) pour tester la mastication dans le froid.\nBOISSON : 500
+  ml d'eau tiède.\nAPRÈS (dans l'heure) : 250 ml de lait chocolaté + 15
+ 0 g de skyr + 1 banane (≈ 56 g de glucides / 23 g de protéines).\nFROI
+ D : gels et pâtes de fruits dans une poche intérieure (ils durcissent)\
+ , boisson tiède (35–40 °C)\, emballages pré-ouverts dans un sachet z
+ ip si tu portes des gants. Toujours de l'eau avec un gel. Après la sorti
+ e\, note ce que tu as mangé et comment ton ventre l'a supporté.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-11-16-4@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261116
 DTEND;VALUE=DATE:20261117
 SUMMARY:🚴 Vélo 20 km facile + gainage
@@ -91,7 +101,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-11-17-5@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261117
 DTEND;VALUE=DATE:20261118
 SUMMARY:🏃 Fractionné fartlek 6 × 1 min · 45 min · ≈ 6\,5 km
@@ -112,7 +122,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-11-18-6@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261119
 SUMMARY:💪 Renfo complet 30 min
@@ -129,7 +139,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-11-19-7@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261119
 DTEND;VALUE=DATE:20261120
 SUMMARY:🏃 Footing endurance · 40 min · ≈ 5\,8 km
@@ -148,7 +158,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-11-20-8@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261120
 DTEND;VALUE=DATE:20261121
 SUMMARY:😴 Repos
@@ -158,7 +168,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-11-21-9@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261121
 DTEND;VALUE=DATE:20261122
 SUMMARY:⛰️ Sortie longue · 1 h 30 · ≈ 9\,0 km · 300 m D+
@@ -168,24 +178,32 @@ DESCRIPTION:⏱ DURÉE : 1 h 30   📏 DISTANCE : ≈ 9\,0 km   ⛰️ D+
  7'30/km si le terrain est cassant)\, effort 3–4/10\n3. Montées raides 
  (≈ 300 m de D+ au total) : en MARCHANT\, d'un pas rapide\, mains sur le
  s cuisses si c'est très raide\n4. Descentes : relâché\, petits pas rap
- ides\, regard 3–4 m devant\, sans freiner fort\n5. Manger : à partir d
- e 45 min\, ≈ 35 g de glucides par heure\, soit ≈ 50 g au total (≈ 2
-  gels ou l'équivalent : compote ≈ 15–20 g\, banane ≈ 25 g\, pâte 
- de fruit ≈ 12 g). Boire selon la soif.\n6. Dernières 10 minutes : en Z
- 1 pour finir\n\nREPÈRES : phrases complètes tout du long. Note : FC moy
- enne\, FC sur la dernière heure (dérive ?)\, état des jambes dans les 
- 30 dernières minutes. Pas de relief ? Cherche un parcours avec des mont
- ées répétées (colline\, escaliers\, terril).\n\nPOURQUOI : c'est la s
- éance n°1 : les jambes apprennent à durer\, tu travailles la descente 
- et ton estomac s'habitue à manger en courant.\n\nTES ALLURES (sur le pla
- t) : Z1 récup 7'00–7'40/km · Z2 endurance 6'30–7'00 · Z3 allure co
- urse 5'55–6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\
- , pilote au souffle et à la sensation\, pas à l'allure.
+ ides\, regard 3–4 m devant\, sans freiner fort\n5. Manger : voir 🍌 R
+ AVITAILLEMENT plus bas\n6. Dernières 10 minutes : en Z1 pour finir\n\nRE
+ PÈRES : phrases complètes tout du long. Note : FC moyenne\, FC sur la d
+ ernière heure (dérive ?)\, état des jambes dans les 30 dernières minu
+ tes. Pas de relief ? Cherche un parcours avec des montées répétées (c
+ olline\, escaliers\, terril).\n\nPOURQUOI : c'est la séance n°1 : les j
+ ambes apprennent à durer\, tu travailles la descente et ton estomac s'ha
+ bitue à manger en courant.\n\nTES ALLURES (sur le plat) : Z1 récup 7'00
+ –7'40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 ·
+  Z4 seuil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote au souffle
+  et à la sensation\, pas à l'allure.\n\n🍌 RAVITAILLEMENT (menu du Ch
+ ef) — total ≈ 50 g (35 g/h)\nPETIT-DÉJ (2–3 h avant\, ≈ 85 g de 
+ glucides) : 80 g de pain blanc + 20 g de confiture\, 1 banane\, 1 yaourt\
+ , thé/café + 300–500 ml d'eau.\nPENDANT : 0:45 → 1 banane (25 g) ·
+  1:10 → 1 gel (25 g).\nBOISSON : 500 ml d'eau tiède.\nAPRÈS (dans l'h
+ eure) : 250 ml de lait chocolaté + 150 g de skyr + 1 banane (≈ 56 g de
+  glucides / 23 g de protéines).\nFROID : gels et pâtes de fruits dans u
+ ne poche intérieure (ils durcissent)\, boisson tiède (35–40 °C)\, em
+ ballages pré-ouverts dans un sachet zip si tu portes des gants. Toujours
+  de l'eau avec un gel. Après la sortie\, note ce que tu as mangé et com
+ ment ton ventre l'a supporté.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-11-22-10@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261122
 DTEND;VALUE=DATE:20261123
 SUMMARY:🏃 Footing récup · 30 min · ≈ 4\,1 km
@@ -202,7 +220,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-11-23-11@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261123
 DTEND;VALUE=DATE:20261124
 SUMMARY:🚴 Vélo 20 km facile + gainage
@@ -217,7 +235,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-11-24-12@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261124
 DTEND;VALUE=DATE:20261125
 SUMMARY:🏃 Fractionné escaliers 6 × 1 min · 45 min · ≈ 4\,4 km ·
@@ -243,7 +261,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-11-25-13@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261125
 DTEND;VALUE=DATE:20261126
 SUMMARY:💪 Renfo complet 30 min
@@ -260,7 +278,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-11-26-14@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261126
 DTEND;VALUE=DATE:20261127
 SUMMARY:🏃 Footing endurance · 45 min · ≈ 6\,5 km
@@ -279,7 +297,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-11-27-15@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20261128
 SUMMARY:😴 Repos
@@ -289,7 +307,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-11-28-16@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261129
 SUMMARY:⛰️ Sortie longue · 1 h 45 · ≈ 10\,0 km · 400 m D+
@@ -299,24 +317,33 @@ DESCRIPTION:⏱ DURÉE : 1 h 45   📏 DISTANCE : ≈ 10\,0 km   ⛰️ D
  –7'30/km si le terrain est cassant)\, effort 3–4/10\n3. Montées raid
  es (≈ 400 m de D+ au total) : en MARCHANT\, d'un pas rapide\, mains sur
   les cuisses si c'est très raide\n4. Descentes : relâché\, petits pas 
- rapides\, regard 3–4 m devant\, sans freiner fort\n5. Manger : à parti
- r de 45 min\, ≈ 35 g de glucides par heure\, soit ≈ 60 g au total (
- ≈ 3 gels ou l'équivalent : compote ≈ 15–20 g\, banane ≈ 25 g\, p
- âte de fruit ≈ 12 g). Boire selon la soif.\n6. Dernières 10 minutes :
-  en Z1 pour finir\n\nREPÈRES : phrases complètes tout du long. Note : F
- C moyenne\, FC sur la dernière heure (dérive ?)\, état des jambes dans
-  les 30 dernières minutes. Pas de relief ? Cherche un parcours avec des 
- montées répétées (colline\, escaliers\, terril).\n\nPOURQUOI : c'est 
- la séance n°1 : les jambes apprennent à durer\, tu travailles la desce
- nte et ton estomac s'habitue à manger en courant.\n\nTES ALLURES (sur le
-  plat) : Z1 récup 7'00–7'40/km · Z2 endurance 6'30–7'00 · Z3 allur
- e course 5'55–6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'35–4'50. En tr
- ail\, pilote au souffle et à la sensation\, pas à l'allure.
+ rapides\, regard 3–4 m devant\, sans freiner fort\n5. Manger : voir 
+ 🍌 RAVITAILLEMENT plus bas\n6. Dernières 10 minutes : en Z1 pour finir
+ \n\nREPÈRES : phrases complètes tout du long. Note : FC moyenne\, FC su
+ r la dernière heure (dérive ?)\, état des jambes dans les 30 dernière
+ s minutes. Pas de relief ? Cherche un parcours avec des montées répét
+ ées (colline\, escaliers\, terril).\n\nPOURQUOI : c'est la séance n°1 
+ : les jambes apprennent à durer\, tu travailles la descente et ton estom
+ ac s'habitue à manger en courant.\n\nTES ALLURES (sur le plat) : Z1 réc
+ up 7'00–7'40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'55–
+ 6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote au 
+ souffle et à la sensation\, pas à l'allure.\n\n🍌 RAVITAILLEMENT (men
+ u du Chef) — total ≈ 59 g (35 g/h)\nPETIT-DÉJ (2–3 h avant\, ≈ 8
+ 5 g de glucides) : 80 g de pain blanc + 20 g de confiture\, 1 banane\, 1 
+ yaourt\, thé/café + 300–500 ml d'eau.\nPENDANT : 0:45 → 1 boule d'
+ énergie maison (20 g\, 1er test) · 1:05 → 1 gel (25 g) · 1:25 → 1 
+ compote gourde (14 g).\nBOISSON : 500–750 ml d'eau tiède.\nAPRÈS (dan
+ s l'heure) : 250 ml de lait chocolaté + 150 g de skyr + 1 banane (≈ 56
+  g de glucides / 23 g de protéines).\nFROID : gels et pâtes de fruits d
+ ans une poche intérieure (ils durcissent)\, boisson tiède (35–40 °C)
+ \, emballages pré-ouverts dans un sachet zip si tu portes des gants. Tou
+ jours de l'eau avec un gel. Après la sortie\, note ce que tu as mangé e
+ t comment ton ventre l'a supporté.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-11-29-17@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261129
 DTEND;VALUE=DATE:20261130
 SUMMARY:🏃 Footing récup · 30 min · ≈ 4\,1 km
@@ -333,7 +360,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-11-30-18@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261130
 DTEND;VALUE=DATE:20261201
 SUMMARY:🚴 Vélo 20 km facile + gainage
@@ -348,7 +375,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-12-01-19@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20261202
 SUMMARY:🏃 Footing endurance · 40 min · ≈ 5\,8 km + 4 lignes droite
@@ -370,7 +397,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-12-02-20@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261202
 DTEND;VALUE=DATE:20261203
 SUMMARY:💪 Renfo complet 30 min
@@ -387,7 +414,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-12-03-21@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261203
 DTEND;VALUE=DATE:20261204
 SUMMARY:🏃 Footing endurance · 40 min · ≈ 5\,8 km
@@ -406,7 +433,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-12-04-22@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261204
 DTEND;VALUE=DATE:20261205
 SUMMARY:😴 Repos
@@ -416,7 +443,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-12-05-23@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261206
 SUMMARY:⛰️ Sortie longue · 1 h 15 · ≈ 7\,5 km · 250 m D+
@@ -426,22 +453,32 @@ DESCRIPTION:⏱ DURÉE : 1 h 15   📏 DISTANCE : ≈ 7\,5 km   ⛰️ D+
  7'30/km si le terrain est cassant)\, effort 3–4/10\n3. Montées raides 
  (≈ 250 m de D+ au total) : en MARCHANT\, d'un pas rapide\, mains sur le
  s cuisses si c'est très raide\n4. Descentes : relâché\, petits pas rap
- ides\, regard 3–4 m devant\, sans freiner fort\n5. Manger : pas indispe
- nsable (moins de 1 h 30). Emporte de l'eau.\n6. Dernières 10 minutes : e
- n Z1 pour finir\n\nREPÈRES : phrases complètes tout du long. Note : FC 
- moyenne\, FC sur la dernière heure (dérive ?)\, état des jambes dans l
- es 30 dernières minutes. Pas de relief ? Cherche un parcours avec des mo
- ntées répétées (colline\, escaliers\, terril).\n\nPOURQUOI : c'est la
-  séance n°1 : les jambes apprennent à durer\, tu travailles la descent
- e et ton estomac s'habitue à manger en courant.\n\nTES ALLURES (sur le p
- lat) : Z1 récup 7'00–7'40/km · Z2 endurance 6'30–7'00 · Z3 allure 
- course 5'55–6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'35–4'50. En trai
- l\, pilote au souffle et à la sensation\, pas à l'allure.
+ ides\, regard 3–4 m devant\, sans freiner fort\n5. Manger : voir 🍌 R
+ AVITAILLEMENT plus bas\n6. Dernières 10 minutes : en Z1 pour finir\n\nRE
+ PÈRES : phrases complètes tout du long. Note : FC moyenne\, FC sur la d
+ ernière heure (dérive ?)\, état des jambes dans les 30 dernières minu
+ tes. Pas de relief ? Cherche un parcours avec des montées répétées (c
+ olline\, escaliers\, terril).\n\nPOURQUOI : c'est la séance n°1 : les j
+ ambes apprennent à durer\, tu travailles la descente et ton estomac s'ha
+ bitue à manger en courant.\n\nTES ALLURES (sur le plat) : Z1 récup 7'00
+ –7'40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 ·
+  Z4 seuil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote au souffle
+  et à la sensation\, pas à l'allure.\n\n🍌 RAVITAILLEMENT (menu du Ch
+ ef) — total ≈ 0–22 g\nPETIT-DÉJ (2–3 h avant\, ≈ 85 g de gluci
+ des) : 80 g de pain blanc + 20 g de confiture\, 1 banane\, 1 yaourt\, th
+ é/café + 300–500 ml d'eau.\nPENDANT : Facultatif : à 0:45\, 1 pâte 
+ de fruits (22 g).\nBOISSON : 500 ml d'eau tiède.\nAPRÈS (dans l'heure) 
+ : 250 ml de lait chocolaté + 150 g de skyr + 1 banane (≈ 56 g de gluci
+ des / 23 g de protéines).\nFROID : gels et pâtes de fruits dans une poc
+ he intérieure (ils durcissent)\, boisson tiède (35–40 °C)\, emballag
+ es pré-ouverts dans un sachet zip si tu portes des gants. Toujours de l'
+ eau avec un gel. Après la sortie\, note ce que tu as mangé et comment t
+ on ventre l'a supporté.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-12-07-24@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261207
 DTEND;VALUE=DATE:20261208
 SUMMARY:🚴 Vélo 20 km facile + gainage
@@ -456,7 +493,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-12-08-25@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261208
 DTEND;VALUE=DATE:20261209
 SUMMARY:🏃 Fractionné escaliers 8 × 1 min · 50 min · ≈ 4\,4 km ·
@@ -482,7 +519,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-12-09-26@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261209
 DTEND;VALUE=DATE:20261210
 SUMMARY:💪 Renfo complet 30 min
@@ -499,7 +536,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-12-10-27@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261210
 DTEND;VALUE=DATE:20261211
 SUMMARY:🏃 Footing endurance · 45 min · ≈ 6\,5 km
@@ -518,7 +555,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-12-11-28@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261211
 DTEND;VALUE=DATE:20261212
 SUMMARY:😴 Repos
@@ -528,7 +565,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-12-12-29@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261212
 DTEND;VALUE=DATE:20261213
 SUMMARY:⛰️ Sortie longue · 2 h · ≈ 11\,0 km · 500 m D+
@@ -538,24 +575,34 @@ DESCRIPTION:⏱ DURÉE : 2 h   📏 DISTANCE : ≈ 11\,0 km   ⛰️ D+ :
  30/km si le terrain est cassant)\, effort 3–4/10\n3. Montées raides (
  ≈ 500 m de D+ au total) : en MARCHANT\, d'un pas rapide\, mains sur les
   cuisses si c'est très raide\n4. Descentes : relâché\, petits pas rapi
- des\, regard 3–4 m devant\, sans freiner fort\n5. Manger : à partir de
-  45 min\, ≈ 40 g de glucides par heure\, soit ≈ 80 g au total (≈ 4 
- gels ou l'équivalent : compote ≈ 15–20 g\, banane ≈ 25 g\, pâte d
- e fruit ≈ 12 g). Boire selon la soif.\n6. Dernières 10 minutes : en Z1
-  pour finir\n\nREPÈRES : phrases complètes tout du long. Note : FC moye
- nne\, FC sur la dernière heure (dérive ?)\, état des jambes dans les 3
- 0 dernières minutes. Pas de relief ? Cherche un parcours avec des monté
- es répétées (colline\, escaliers\, terril).\n\nPOURQUOI : c'est la sé
- ance n°1 : les jambes apprennent à durer\, tu travailles la descente et
-  ton estomac s'habitue à manger en courant.\n\nTES ALLURES (sur le plat)
-  : Z1 récup 7'00–7'40/km · Z2 endurance 6'30–7'00 · Z3 allure cour
- se 5'55–6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, 
- pilote au souffle et à la sensation\, pas à l'allure.
+ des\, regard 3–4 m devant\, sans freiner fort\n5. Manger : voir 🍌 RA
+ VITAILLEMENT plus bas\n6. Dernières 10 minutes : en Z1 pour finir\n\nREP
+ ÈRES : phrases complètes tout du long. Note : FC moyenne\, FC sur la de
+ rnière heure (dérive ?)\, état des jambes dans les 30 dernières minut
+ es. Pas de relief ? Cherche un parcours avec des montées répétées (co
+ lline\, escaliers\, terril).\n\nPOURQUOI : c'est la séance n°1 : les ja
+ mbes apprennent à durer\, tu travailles la descente et ton estomac s'hab
+ itue à manger en courant.\n\nTES ALLURES (sur le plat) : Z1 récup 7'00
+ –7'40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 ·
+  Z4 seuil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote au souffle
+  et à la sensation\, pas à l'allure.\n\n🍌 RAVITAILLEMENT (menu du Ch
+ ef) — total ≈ 77 g (40 g/h)\nPETIT-DÉJ (2–3 h avant\, ≈ 85 g de 
+ glucides) : 80 g de pain blanc + 20 g de confiture\, 1 banane\, 1 yaourt\
+ , thé/café + 300–500 ml d'eau.\nPENDANT : 0:45 → 1 pâte de fruits 
+ (22 g) · 1:15 → 1 gel (25 g) · 500 ml de boisson d'effort bus entre 1
+ :00 et 2:00 (30 g).\nBOISSON : 500 ml d'eau + 500 ml de boisson d'effort 
+ (maison : ≈ 400 mg de sodium).\nAPRÈS (dans l'heure) : 500 ml de lait 
+ chocolaté + 60 g de pain + 1 tranche de jambon (≈ 80 g / 30 g). Sans v
+ iande : 2 riz au lait + 150 g de skyr + 1 banane.\nFROID : gels et pâtes
+  de fruits dans une poche intérieure (ils durcissent)\, boisson tiède (
+ 35–40 °C)\, emballages pré-ouverts dans un sachet zip si tu portes de
+ s gants. Toujours de l'eau avec un gel. Après la sortie\, note ce que tu
+  as mangé et comment ton ventre l'a supporté.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-12-13-30@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261213
 DTEND;VALUE=DATE:20261214
 SUMMARY:🏃 Footing récup · 35 min · ≈ 4\,8 km
@@ -572,7 +619,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-12-14-31@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261214
 DTEND;VALUE=DATE:20261215
 SUMMARY:🚴 Vélo 20 km facile + gainage
@@ -587,7 +634,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-12-15-32@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261215
 DTEND;VALUE=DATE:20261216
 SUMMARY:🏃 Fractionné seuil 5 × 3 min · 55 min · ≈ 8\,6 km
@@ -610,7 +657,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-12-16-33@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261216
 DTEND;VALUE=DATE:20261217
 SUMMARY:💪 Renfo complet 30 min
@@ -627,7 +674,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-12-17-34@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261217
 DTEND;VALUE=DATE:20261218
 SUMMARY:🏃 Footing endurance · 45 min · ≈ 6\,5 km
@@ -646,7 +693,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-12-18-35@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261218
 DTEND;VALUE=DATE:20261219
 SUMMARY:😴 Repos
@@ -656,7 +703,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-12-19-36@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261219
 DTEND;VALUE=DATE:20261220
 SUMMARY:⛰️ Sortie longue · 2 h 15 · ≈ 12\,0 km · 600 m D+
@@ -666,26 +713,36 @@ DESCRIPTION:⏱ DURÉE : 2 h 15   📏 DISTANCE : ≈ 12\,0 km   ⛰️ D
  –7'30/km si le terrain est cassant)\, effort 3–4/10\n3. Montées raid
  es (≈ 600 m de D+ au total) : en MARCHANT\, d'un pas rapide\, mains sur
   les cuisses si c'est très raide\n4. Descentes : relâché\, petits pas 
- rapides\, regard 3–4 m devant\, sans freiner fort\n5. Manger : à parti
- r de 45 min\, ≈ 40 g de glucides par heure\, soit ≈ 90 g au total (
- ≈ 4 gels ou l'équivalent : compote ≈ 15–20 g\, banane ≈ 25 g\, p
- âte de fruit ≈ 12 g). Boire selon la soif.\n6. Dernières 10 minutes :
-  en Z1 pour finir\n\nREPÈRES : phrases complètes tout du long. Note : F
- C moyenne\, FC sur la dernière heure (dérive ?)\, état des jambes dans
-  les 30 dernières minutes. Pas de relief ? Cherche un parcours avec des 
- montées répétées (colline\, escaliers\, terril).\n\nPOURQUOI : c'est 
- la séance n°1 : les jambes apprennent à durer\, tu travailles la desce
- nte et ton estomac s'habitue à manger en courant.\n\nWEEK-END BLOC : dem
- ain\, tu recours sur les jambes fatiguées. Reste bien en Z2 aujourd'hui.
- \n\nTES ALLURES (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endurance 
- 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25 · Z5
-  VMA 4'35–4'50. En trail\, pilote au souffle et à la sensation\, pas 
- à l'allure.
+ rapides\, regard 3–4 m devant\, sans freiner fort\n5. Manger : voir 
+ 🍌 RAVITAILLEMENT plus bas\n6. Dernières 10 minutes : en Z1 pour finir
+ \n\nREPÈRES : phrases complètes tout du long. Note : FC moyenne\, FC su
+ r la dernière heure (dérive ?)\, état des jambes dans les 30 dernière
+ s minutes. Pas de relief ? Cherche un parcours avec des montées répét
+ ées (colline\, escaliers\, terril).\n\nPOURQUOI : c'est la séance n°1 
+ : les jambes apprennent à durer\, tu travailles la descente et ton estom
+ ac s'habitue à manger en courant.\n\nWEEK-END BLOC : demain\, tu recours
+  sur les jambes fatiguées. Reste bien en Z2 aujourd'hui.\n\nTES ALLURES 
+ (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endurance 6'30–7'00 · Z
+ 3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'35–4'50
+ . En trail\, pilote au souffle et à la sensation\, pas à l'allure.\n\n
+ 🍌 RAVITAILLEMENT (menu du Chef) — total ≈ 90 g (40 g/h)\nPETIT-DÉ
+ J (2–3 h avant\, ≈ 85 g de glucides) : 80 g de pain blanc + 20 g de c
+ onfiture\, 1 banane\, 1 yaourt\, thé/café + 300–500 ml d'eau.\nPENDAN
+ T : 0:45 → 1 mini-sandwich pain de mie + pâte de fruit (21 g) · 1:15 
+ → 1 gel (25 g) · 1:45 → 1 compote (14 g) · 500 ml de boisson d'effo
+ rt à partir de 1:00 (30 g).\nBOISSON : 500 ml d'eau + 500 ml de boisson 
+ d'effort.\nAPRÈS (dans l'heure) : 500 ml de lait chocolaté + 60 g de pa
+ in + 1 tranche de jambon (≈ 80 g / 30 g). Sans viande : 2 riz au lait +
+  150 g de skyr + 1 banane.\nFROID : gels et pâtes de fruits dans une poc
+ he intérieure (ils durcissent)\, boisson tiède (35–40 °C)\, emballag
+ es pré-ouverts dans un sachet zip si tu portes des gants. Toujours de l'
+ eau avec un gel. Après la sortie\, note ce que tu as mangé et comment t
+ on ventre l'a supporté.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-12-20-37@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261220
 DTEND;VALUE=DATE:20261221
 SUMMARY:🏃 Footing endurance · 45 min · ≈ 6\,5 km
@@ -704,7 +761,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-12-21-38@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261221
 DTEND;VALUE=DATE:20261222
 SUMMARY:🚴 Vélo 20 km facile + gainage
@@ -719,7 +776,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-12-22-39@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261222
 DTEND;VALUE=DATE:20261223
 SUMMARY:🏃 Footing endurance · 45 min · ≈ 6\,5 km + 6 lignes droite
@@ -741,7 +798,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-12-23-40@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261223
 DTEND;VALUE=DATE:20261224
 SUMMARY:💪 Renfo complet 30 min
@@ -758,7 +815,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-12-24-41@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261224
 DTEND;VALUE=DATE:20261225
 SUMMARY:🏃 Footing récup · 30 min · ≈ 4\,1 km
@@ -775,7 +832,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-12-25-42@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261225
 DTEND;VALUE=DATE:20261226
 SUMMARY:😴 Repos (Noël)
@@ -785,7 +842,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-12-26-43@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261226
 DTEND;VALUE=DATE:20261227
 SUMMARY:⛰️ Sortie longue · 2 h 15 · ≈ 13\,0 km · 500 m D+
@@ -795,24 +852,34 @@ DESCRIPTION:⏱ DURÉE : 2 h 15   📏 DISTANCE : ≈ 13\,0 km   ⛰️ D
  –7'30/km si le terrain est cassant)\, effort 3–4/10\n3. Montées raid
  es (≈ 500 m de D+ au total) : en MARCHANT\, d'un pas rapide\, mains sur
   les cuisses si c'est très raide\n4. Descentes : relâché\, petits pas 
- rapides\, regard 3–4 m devant\, sans freiner fort\n5. Manger : à parti
- r de 45 min\, ≈ 40 g de glucides par heure\, soit ≈ 90 g au total (
- ≈ 4 gels ou l'équivalent : compote ≈ 15–20 g\, banane ≈ 25 g\, p
- âte de fruit ≈ 12 g). Boire selon la soif.\n6. Dernières 10 minutes :
-  en Z1 pour finir\n\nREPÈRES : phrases complètes tout du long. Note : F
- C moyenne\, FC sur la dernière heure (dérive ?)\, état des jambes dans
-  les 30 dernières minutes. Pas de relief ? Cherche un parcours avec des 
- montées répétées (colline\, escaliers\, terril).\n\nPOURQUOI : c'est 
- la séance n°1 : les jambes apprennent à durer\, tu travailles la desce
- nte et ton estomac s'habitue à manger en courant.\n\nTES ALLURES (sur le
-  plat) : Z1 récup 7'00–7'40/km · Z2 endurance 6'30–7'00 · Z3 allur
- e course 5'55–6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'35–4'50. En tr
- ail\, pilote au souffle et à la sensation\, pas à l'allure.
+ rapides\, regard 3–4 m devant\, sans freiner fort\n5. Manger : voir 
+ 🍌 RAVITAILLEMENT plus bas\n6. Dernières 10 minutes : en Z1 pour finir
+ \n\nREPÈRES : phrases complètes tout du long. Note : FC moyenne\, FC su
+ r la dernière heure (dérive ?)\, état des jambes dans les 30 dernière
+ s minutes. Pas de relief ? Cherche un parcours avec des montées répét
+ ées (colline\, escaliers\, terril).\n\nPOURQUOI : c'est la séance n°1 
+ : les jambes apprennent à durer\, tu travailles la descente et ton estom
+ ac s'habitue à manger en courant.\n\nTES ALLURES (sur le plat) : Z1 réc
+ up 7'00–7'40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'55–
+ 6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote au 
+ souffle et à la sensation\, pas à l'allure.\n\n🍌 RAVITAILLEMENT (men
+ u du Chef) — total ≈ 90 g (40 g/h)\nPETIT-DÉJ (2–3 h avant\, ≈ 8
+ 5 g de glucides) : 80 g de pain blanc + 20 g de confiture\, 1 banane\, 1 
+ yaourt\, thé/café + 300–500 ml d'eau.\nPENDANT : 0:45 → 1 mini-sand
+ wich (21 g) · 1:15 → 1 gel (25 g) · 1:45 → 1 compote (14 g) · 500 
+ ml de boisson d'effort à partir de 1:00 (30 g).\nBOISSON : 500 ml d'eau 
+ + 500 ml de boisson d'effort.\nAPRÈS (dans l'heure) : 500 ml de lait cho
+ colaté + 60 g de pain + 1 tranche de jambon (≈ 80 g / 30 g). Sans vian
+ de : 2 riz au lait + 150 g de skyr + 1 banane.\nFROID : gels et pâtes de
+  fruits dans une poche intérieure (ils durcissent)\, boisson tiède (35
+ –40 °C)\, emballages pré-ouverts dans un sachet zip si tu portes des 
+ gants. Toujours de l'eau avec un gel. Après la sortie\, note ce que tu a
+ s mangé et comment ton ventre l'a supporté.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-12-28-44@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261228
 DTEND;VALUE=DATE:20261229
 SUMMARY:🚴 Vélo 20 km facile + gainage
@@ -827,7 +894,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-12-29-45@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261229
 DTEND;VALUE=DATE:20261230
 SUMMARY:🏃 Fractionné escaliers 6 × 2 min · 54 min · ≈ 4\,4 km ·
@@ -853,7 +920,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-12-30-46@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261230
 DTEND;VALUE=DATE:20261231
 SUMMARY:💪 Renfo complet 30 min
@@ -870,7 +937,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2026-12-31-47@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270101
 SUMMARY:🏃 Footing endurance · 45 min · ≈ 6\,5 km
@@ -889,17 +956,21 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2027-01-01-48@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
-SUMMARY:😴 Repos
+SUMMARY:😴 Repos + repas de la veille
 DESCRIPTION:Repos complet. Le corps progresse pendant la récupération\,
-  pas pendant l'effort. Pense à bien dormir (7–9 h).
+  pas pendant l'effort. Pense à bien dormir (7–9 h).\n\n🍝 REPAS DE L
+ A VEILLE (≈ 150 g de glucides) : 120 g de pâtes ou de riz (cru) + sauc
+ e tomate simple\, 120 g de poulet ou de poisson (ou 2 œufs)\, 60 g de pa
+ in\, 1 riz au lait ou 1 compote. Peu de fibres\, peu de gras\, rien d'ép
+ icé\, pas d'alcool. Restes au frigo dans l'heure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2027-01-02-49@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20270102
 DTEND;VALUE=DATE:20270103
 SUMMARY:⛰️ Sortie longue · 2 h 45 · ≈ 15\,0 km · 700 m D+
@@ -909,24 +980,36 @@ DESCRIPTION:⏱ DURÉE : 2 h 45   📏 DISTANCE : ≈ 15\,0 km   ⛰️ D
  –7'30/km si le terrain est cassant)\, effort 3–4/10\n3. Montées raid
  es (≈ 700 m de D+ au total) : en MARCHANT\, d'un pas rapide\, mains sur
   les cuisses si c'est très raide\n4. Descentes : relâché\, petits pas 
- rapides\, regard 3–4 m devant\, sans freiner fort\n5. Manger : à parti
- r de 45 min\, ≈ 50 g de glucides par heure\, soit ≈ 140 g au total (
- ≈ 6 gels ou l'équivalent : compote ≈ 15–20 g\, banane ≈ 25 g\, p
- âte de fruit ≈ 12 g). Boire selon la soif.\n6. Dernières 10 minutes :
-  en Z1 pour finir\n\nREPÈRES : phrases complètes tout du long. Note : F
- C moyenne\, FC sur la dernière heure (dérive ?)\, état des jambes dans
-  les 30 dernières minutes. Pas de relief ? Cherche un parcours avec des 
- montées répétées (colline\, escaliers\, terril).\n\nPOURQUOI : c'est 
- la séance n°1 : les jambes apprennent à durer\, tu travailles la desce
- nte et ton estomac s'habitue à manger en courant.\n\nTES ALLURES (sur le
-  plat) : Z1 récup 7'00–7'40/km · Z2 endurance 6'30–7'00 · Z3 allur
- e course 5'55–6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'35–4'50. En tr
- ail\, pilote au souffle et à la sensation\, pas à l'allure.
+ rapides\, regard 3–4 m devant\, sans freiner fort\n5. Manger : voir 
+ 🍌 RAVITAILLEMENT plus bas\n6. Dernières 10 minutes : en Z1 pour finir
+ \n\nREPÈRES : phrases complètes tout du long. Note : FC moyenne\, FC su
+ r la dernière heure (dérive ?)\, état des jambes dans les 30 dernière
+ s minutes. Pas de relief ? Cherche un parcours avec des montées répét
+ ées (colline\, escaliers\, terril).\n\nPOURQUOI : c'est la séance n°1 
+ : les jambes apprennent à durer\, tu travailles la descente et ton estom
+ ac s'habitue à manger en courant.\n\nTES ALLURES (sur le plat) : Z1 réc
+ up 7'00–7'40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'55–
+ 6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote au 
+ souffle et à la sensation\, pas à l'allure.\n\n🍌 RAVITAILLEMENT (men
+ u du Chef) — total ≈ 143 g (50 g/h)\nPETIT-DÉJ (2–3 h avant\, ≈ 
+ 120 g) : 100 g de baguette + 30 g de miel/confiture\, 1 banane\, 200 ml d
+ e jus de pomme\, 1 yaourt (ou porridge 70 g de flocons + 250 ml de lait +
+  25 g de miel\, déjà testé).\nPENDANT : 0:45 → pâte de fruits (22 g
+ ) · 1:10 → gel (25 g) · 1:35 → mini-sandwich (21 g) · 2:00 → bou
+ le maison (20 g) · 2:25 → gel (25 g) · 500 ml de boisson d'effort (30
+  g).\nBOISSON : 500 ml d'eau + 1 L de boisson\, avec un point de recharge
+ . Si tu transpires beaucoup : 1\,5 g de sel pour 500 ml.\nAPRÈS (dans l'
+ heure) : 500 ml de lait chocolaté + 60 g de pain + 1 tranche de jambon (
+ ≈ 80 g / 30 g). Sans viande : 2 riz au lait + 150 g de skyr + 1 banane.
+ \nFROID : gels et pâtes de fruits dans une poche intérieure (ils durcis
+ sent)\, boisson tiède (35–40 °C)\, emballages pré-ouverts dans un sa
+ chet zip si tu portes des gants. Toujours de l'eau avec un gel. Après la
+  sortie\, note ce que tu as mangé et comment ton ventre l'a supporté.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2027-01-03-50@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20270103
 DTEND;VALUE=DATE:20270104
 SUMMARY:🏃 Footing récup · 35 min · ≈ 4\,8 km
@@ -943,7 +1026,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2027-01-04-51@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20270104
 DTEND;VALUE=DATE:20270105
 SUMMARY:🚴 Vélo 20 km facile + gainage
@@ -958,7 +1041,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2027-01-05-52@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20270105
 DTEND;VALUE=DATE:20270106
 SUMMARY:🏃 Fractionné seuil 6 × 3 min · 1 h · ≈ 9\,4 km
@@ -981,7 +1064,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2027-01-06-53@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20270106
 DTEND;VALUE=DATE:20270107
 SUMMARY:💪 Renfo complet 30 min
@@ -998,7 +1081,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2027-01-07-54@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20270107
 DTEND;VALUE=DATE:20270108
 SUMMARY:🏃 Footing endurance · 50 min · ≈ 7\,3 km
@@ -1017,17 +1100,21 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2027-01-08-55@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20270108
 DTEND;VALUE=DATE:20270109
-SUMMARY:😴 Repos
+SUMMARY:😴 Repos + repas de la veille
 DESCRIPTION:Repos complet. Le corps progresse pendant la récupération\,
-  pas pendant l'effort. Pense à bien dormir (7–9 h).
+  pas pendant l'effort. Pense à bien dormir (7–9 h).\n\n🍝 REPAS DE L
+ A VEILLE (≈ 150 g de glucides) : 120 g de pâtes ou de riz (cru) + sauc
+ e tomate simple\, 120 g de poulet ou de poisson (ou 2 œufs)\, 60 g de pa
+ in\, 1 riz au lait ou 1 compote. Peu de fibres\, peu de gras\, rien d'ép
+ icé\, pas d'alcool. Restes au frigo dans l'heure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2027-01-09-56@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20270109
 DTEND;VALUE=DATE:20270110
 SUMMARY:⛰️ Sortie longue · 3 h 15 · ≈ 17\,0 km · 900 m D+ · RÉ
@@ -1038,27 +1125,42 @@ DESCRIPTION:⏱ DURÉE : 3 h 15   📏 DISTANCE : ≈ 17\,0 km   ⛰️ D
  –7'30/km si le terrain est cassant)\, effort 3–4/10\n3. Montées raid
  es (≈ 900 m de D+ au total) : en MARCHANT\, d'un pas rapide\, mains sur
   les cuisses si c'est très raide\n4. Descentes : relâché\, petits pas 
- rapides\, regard 3–4 m devant\, sans freiner fort\n5. Manger : à parti
- r de 45 min\, ≈ 60 g de glucides par heure\, soit ≈ 195 g au total (
- ≈ 9 gels ou l'équivalent : compote ≈ 15–20 g\, banane ≈ 25 g\, p
- âte de fruit ≈ 12 g). Boire selon la soif.\n6. Dernières 10 minutes :
-  en Z1 pour finir\n\nREPÈRES : phrases complètes tout du long. Note : F
- C moyenne\, FC sur la dernière heure (dérive ?)\, état des jambes dans
-  les 30 dernières minutes. Pas de relief ? Cherche un parcours avec des 
- montées répétées (colline\, escaliers\, terril).\n\nPOURQUOI : c'est 
- la séance n°1 : les jambes apprennent à durer\, tu travailles la desce
- nte et ton estomac s'habitue à manger en courant.\n\nRÉPÉTITION GÉNÉ
- RALE : fais tout comme le jour J (chaussures\, sac\, tenue\, petit-déjeu
- ner\, ravitaillement\, allure prudente). Après la sortie\, note ce qui a
-  marché ou non.\n\nTES ALLURES (sur le plat) : Z1 récup 7'00–7'40/km 
- · Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5
- '10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote au souffle et à la s
- ensation\, pas à l'allure.
+ rapides\, regard 3–4 m devant\, sans freiner fort\n5. Manger : voir 
+ 🍌 RAVITAILLEMENT plus bas\n6. Dernières 10 minutes : en Z1 pour finir
+ \n\nREPÈRES : phrases complètes tout du long. Note : FC moyenne\, FC su
+ r la dernière heure (dérive ?)\, état des jambes dans les 30 dernière
+ s minutes. Pas de relief ? Cherche un parcours avec des montées répét
+ ées (colline\, escaliers\, terril).\n\nPOURQUOI : c'est la séance n°1 
+ : les jambes apprennent à durer\, tu travailles la descente et ton estom
+ ac s'habitue à manger en courant.\n\nRÉPÉTITION GÉNÉRALE : fais tout
+  comme le jour J (chaussures\, sac\, tenue\, petit-déjeuner\, ravitaille
+ ment\, allure prudente). Après la sortie\, note ce qui a marché ou non.
+ \n\nTES ALLURES (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endurance 
+ 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25 · Z5
+  VMA 4'35–4'50. En trail\, pilote au souffle et à la sensation\, pas 
+ à l'allure.\n\n🍌 RAVITAILLEMENT (menu du Chef) — total ≈ 198 g (6
+ 0 g/h)\nPETIT-DÉJ (2–3 h avant\, ≈ 120 g) : 100 g de baguette + 30 g
+  de miel/confiture\, 1 banane\, 200 ml de jus de pomme\, 1 yaourt (ou por
+ ridge 70 g de flocons + 250 ml de lait + 25 g de miel\, déjà testé).\n
+ PENDANT : SCHÉMA COURSE\, chaque heure à partir de 0:45 : xx:45 = 1 gel
+  (25 g) avec 100–150 ml d'eau \; xx:05 = 1 solide ≈ 21 g (boule maiso
+ n\, pâte de fruits\, mini-sandwich ou ½ banane) \; ≈ 330 ml de boisso
+ n d'effort répartis sur l'heure (≈ 20 g). Concrètement : 0:45 gel · 
+ 1:05 mini-sandwich · 1:45 gel · 2:05 boule · 2:45 gel · 3:05 pâte de
+  fruits + 1 L de boisson (version poudre : 30 g de sucre + 1 g de sel pou
+ r 500 ml).\nBOISSON : 500 ml d'eau + 1 L de boisson\, avec un point de re
+ charge ou une poche à eau de 1\,5 L.\nAPRÈS (dans l'heure) : 500 ml de 
+ lait chocolaté + 60 g de pain + 1 tranche de jambon (≈ 80 g / 30 g). S
+ ans viande : 2 riz au lait + 150 g de skyr + 1 banane.\nFROID : gels et p
+ âtes de fruits dans une poche intérieure (ils durcissent)\, boisson ti
+ ède (35–40 °C)\, emballages pré-ouverts dans un sachet zip si tu por
+ tes des gants. Toujours de l'eau avec un gel. Après la sortie\, note ce 
+ que tu as mangé et comment ton ventre l'a supporté.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2027-01-10-57@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20270110
 DTEND;VALUE=DATE:20270111
 SUMMARY:🏃 Footing récup · 30 min · ≈ 4\,1 km
@@ -1075,7 +1177,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2027-01-11-58@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20270111
 DTEND;VALUE=DATE:20270112
 SUMMARY:🚴 Vélo 20 km facile + gainage
@@ -1090,7 +1192,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2027-01-12-59@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20270112
 DTEND;VALUE=DATE:20270113
 SUMMARY:🏃 Allure course 3 × 10 min · 1 h 01 · ≈ 9\,3 km
@@ -1109,7 +1211,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2027-01-13-60@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20270113
 DTEND;VALUE=DATE:20270114
 SUMMARY:💪 Renfo complet 30 min
@@ -1126,7 +1228,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2027-01-14-61@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20270114
 DTEND;VALUE=DATE:20270115
 SUMMARY:🏃 Footing endurance · 45 min · ≈ 6\,5 km
@@ -1145,7 +1247,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2027-01-15-62@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
 SUMMARY:😴 Repos
@@ -1155,7 +1257,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2027-01-16-63@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20270116
 DTEND;VALUE=DATE:20270117
 SUMMARY:⛰️ Sortie longue · 2 h 15 · ≈ 12\,0 km · 600 m D+
@@ -1165,26 +1267,36 @@ DESCRIPTION:⏱ DURÉE : 2 h 15   📏 DISTANCE : ≈ 12\,0 km   ⛰️ D
  –7'30/km si le terrain est cassant)\, effort 3–4/10\n3. Montées raid
  es (≈ 600 m de D+ au total) : en MARCHANT\, d'un pas rapide\, mains sur
   les cuisses si c'est très raide\n4. Descentes : relâché\, petits pas 
- rapides\, regard 3–4 m devant\, sans freiner fort\n5. Manger : à parti
- r de 45 min\, ≈ 60 g de glucides par heure\, soit ≈ 135 g au total (
- ≈ 6 gels ou l'équivalent : compote ≈ 15–20 g\, banane ≈ 25 g\, p
- âte de fruit ≈ 12 g). Boire selon la soif.\n6. Dernières 10 minutes :
-  en Z1 pour finir\n\nREPÈRES : phrases complètes tout du long. Note : F
- C moyenne\, FC sur la dernière heure (dérive ?)\, état des jambes dans
-  les 30 dernières minutes. Pas de relief ? Cherche un parcours avec des 
- montées répétées (colline\, escaliers\, terril).\n\nPOURQUOI : c'est 
- la séance n°1 : les jambes apprennent à durer\, tu travailles la desce
- nte et ton estomac s'habitue à manger en courant.\n\nWEEK-END BLOC : dem
- ain\, tu recours sur les jambes fatiguées. Reste bien en Z2 aujourd'hui.
- \n\nTES ALLURES (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endurance 
- 6'30–7'00 · Z3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25 · Z5
-  VMA 4'35–4'50. En trail\, pilote au souffle et à la sensation\, pas 
- à l'allure.
+ rapides\, regard 3–4 m devant\, sans freiner fort\n5. Manger : voir 
+ 🍌 RAVITAILLEMENT plus bas\n6. Dernières 10 minutes : en Z1 pour finir
+ \n\nREPÈRES : phrases complètes tout du long. Note : FC moyenne\, FC su
+ r la dernière heure (dérive ?)\, état des jambes dans les 30 dernière
+ s minutes. Pas de relief ? Cherche un parcours avec des montées répét
+ ées (colline\, escaliers\, terril).\n\nPOURQUOI : c'est la séance n°1 
+ : les jambes apprennent à durer\, tu travailles la descente et ton estom
+ ac s'habitue à manger en courant.\n\nWEEK-END BLOC : demain\, tu recours
+  sur les jambes fatiguées. Reste bien en Z2 aujourd'hui.\n\nTES ALLURES 
+ (sur le plat) : Z1 récup 7'00–7'40/km · Z2 endurance 6'30–7'00 · Z
+ 3 allure course 5'55–6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'35–4'50
+ . En trail\, pilote au souffle et à la sensation\, pas à l'allure.\n\n
+ 🍌 RAVITAILLEMENT (menu du Chef) — total ≈ 137 g (60 g/h)\nPETIT-D
+ ÉJ (2–3 h avant\, ≈ 120 g) : 100 g de baguette + 30 g de miel/confit
+ ure\, 1 banane\, 200 ml de jus de pomme\, 1 yaourt (ou porridge 70 g de f
+ locons + 250 ml de lait + 25 g de miel\, déjà testé).\nPENDANT : 0:45 
+ → gel (25 g) · 1:05 → boule (20 g) · 1:45 → gel (25 g) · 2:05 
+ → pâte de fruits (22 g) · 750 ml de boisson (45 g).\nBOISSON : 500 ml
+  d'eau + 750 ml de boisson d'effort.\nAPRÈS (dans l'heure) : 500 ml de l
+ ait chocolaté + 60 g de pain + 1 tranche de jambon (≈ 80 g / 30 g). Sa
+ ns viande : 2 riz au lait + 150 g de skyr + 1 banane.\nFROID : gels et p
+ âtes de fruits dans une poche intérieure (ils durcissent)\, boisson ti
+ ède (35–40 °C)\, emballages pré-ouverts dans un sachet zip si tu por
+ tes des gants. Toujours de l'eau avec un gel. Après la sortie\, note ce 
+ que tu as mangé et comment ton ventre l'a supporté.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2027-01-17-64@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20270117
 DTEND;VALUE=DATE:20270118
 SUMMARY:🏃 Footing endurance · 1 h · ≈ 8\,8 km
@@ -1203,7 +1315,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2027-01-18-65@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20270118
 DTEND;VALUE=DATE:20270119
 SUMMARY:🚴 Vélo 20 km facile + gainage
@@ -1218,7 +1330,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2027-01-19-66@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20270119
 DTEND;VALUE=DATE:20270120
 SUMMARY:🏃 Affûtage 6 × 1 min · 45 min · ≈ 6\,7 km
@@ -1239,7 +1351,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2027-01-21-67@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20270121
 DTEND;VALUE=DATE:20270122
 SUMMARY:🏃 Footing endurance · 40 min · ≈ 5\,8 km
@@ -1258,7 +1370,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2027-01-22-68@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20270122
 DTEND;VALUE=DATE:20270123
 SUMMARY:😴 Repos
@@ -1268,7 +1380,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2027-01-23-69@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20270123
 DTEND;VALUE=DATE:20270124
 SUMMARY:⛰️ Sortie longue · 1 h 30 · ≈ 9\,0 km · 300 m D+
@@ -1278,24 +1390,34 @@ DESCRIPTION:⏱ DURÉE : 1 h 30   📏 DISTANCE : ≈ 9\,0 km   ⛰️ D+
  7'30/km si le terrain est cassant)\, effort 3–4/10\n3. Montées raides 
  (≈ 300 m de D+ au total) : en MARCHANT\, d'un pas rapide\, mains sur le
  s cuisses si c'est très raide\n4. Descentes : relâché\, petits pas rap
- ides\, regard 3–4 m devant\, sans freiner fort\n5. Manger : à partir d
- e 45 min\, ≈ 60 g de glucides par heure\, soit ≈ 90 g au total (≈ 4
-  gels ou l'équivalent : compote ≈ 15–20 g\, banane ≈ 25 g\, pâte 
- de fruit ≈ 12 g). Boire selon la soif.\n6. Dernières 10 minutes : en Z
- 1 pour finir\n\nREPÈRES : phrases complètes tout du long. Note : FC moy
- enne\, FC sur la dernière heure (dérive ?)\, état des jambes dans les 
- 30 dernières minutes. Pas de relief ? Cherche un parcours avec des mont
- ées répétées (colline\, escaliers\, terril).\n\nPOURQUOI : c'est la s
- éance n°1 : les jambes apprennent à durer\, tu travailles la descente 
- et ton estomac s'habitue à manger en courant.\n\nTES ALLURES (sur le pla
- t) : Z1 récup 7'00–7'40/km · Z2 endurance 6'30–7'00 · Z3 allure co
- urse 5'55–6'15 · Z4 seuil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\
- , pilote au souffle et à la sensation\, pas à l'allure.
+ ides\, regard 3–4 m devant\, sans freiner fort\n5. Manger : voir 🍌 R
+ AVITAILLEMENT plus bas\n6. Dernières 10 minutes : en Z1 pour finir\n\nRE
+ PÈRES : phrases complètes tout du long. Note : FC moyenne\, FC sur la d
+ ernière heure (dérive ?)\, état des jambes dans les 30 dernières minu
+ tes. Pas de relief ? Cherche un parcours avec des montées répétées (c
+ olline\, escaliers\, terril).\n\nPOURQUOI : c'est la séance n°1 : les j
+ ambes apprennent à durer\, tu travailles la descente et ton estomac s'ha
+ bitue à manger en courant.\n\nTES ALLURES (sur le plat) : Z1 récup 7'00
+ –7'40/km · Z2 endurance 6'30–7'00 · Z3 allure course 5'55–6'15 ·
+  Z4 seuil 5'10–5'25 · Z5 VMA 4'35–4'50. En trail\, pilote au souffle
+  et à la sensation\, pas à l'allure.\n\n🍌 RAVITAILLEMENT (menu du Ch
+ ef) — total ≈ 77 g (plafonné : 90 g en 45 min\, c'est trop pour l'es
+ tomac)\nPETIT-DÉJ (2–3 h avant\, ≈ 120 g) : 100 g de baguette + 30 g
+  de miel/confiture\, 1 banane\, 200 ml de jus de pomme\, 1 yaourt (ou por
+ ridge 70 g de flocons + 250 ml de lait + 25 g de miel\, déjà testé).\n
+ PENDANT : 0:45 → gel (25 g) · 1:05 → pâte de fruits (22 g) · 500 m
+ l de boisson entre 0:45 et 1:30 (30 g).\nBOISSON : 500 ml d'eau + 500 ml 
+ de boisson.\nAPRÈS (dans l'heure) : 250 ml de lait chocolaté + 150 g de
+  skyr + 1 banane (≈ 56 g de glucides / 23 g de protéines).\nFROID : ge
+ ls et pâtes de fruits dans une poche intérieure (ils durcissent)\, bois
+ son tiède (35–40 °C)\, emballages pré-ouverts dans un sachet zip si 
+ tu portes des gants. Toujours de l'eau avec un gel. Après la sortie\, no
+ te ce que tu as mangé et comment ton ventre l'a supporté.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2027-01-25-70@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20270125
 DTEND;VALUE=DATE:20270126
 SUMMARY:🚴 Vélo 20 km facile + gainage
@@ -1310,7 +1432,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2027-01-26-71@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20270126
 DTEND;VALUE=DATE:20270127
 SUMMARY:🏃 Footing endurance · 35 min · ≈ 5\,1 km + 4 lignes droite
@@ -1332,7 +1454,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2027-01-28-72@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20270128
 DTEND;VALUE=DATE:20270129
 SUMMARY:🏃 Footing récup · 25 min · ≈ 3\,4 km
@@ -1349,7 +1471,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2027-01-29-73@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20270129
 DTEND;VALUE=DATE:20270130
 SUMMARY:😴 Repos · prépare ton sac
@@ -1359,17 +1481,21 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2027-01-30-74@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20270130
 DTEND;VALUE=DATE:20270131
-SUMMARY:😴 Repos (ou 15 min de marche)
+SUMMARY:😴 Repos + repas de la veille
 DESCRIPTION:Repos. Repas riche en glucides et pauvre en fibres. Rien de n
- ouveau (ni chaussures\, ni gels\, ni repas). Couche-toi tôt.
+ ouveau (ni chaussures\, ni gels\, ni repas). Couche-toi tôt.\n\n🍝 REP
+ AS DE LA VEILLE (≈ 150 g de glucides) : 120 g de pâtes ou de riz (cru)
+  + sauce tomate simple\, 120 g de poulet ou de poisson (ou 2 œufs)\, 60 
+ g de pain\, 1 riz au lait ou 1 compote. Peu de fibres\, peu de gras\, rie
+ n d'épicé\, pas d'alcool. Restes au frigo dans l'heure.
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coach-trail-v3b-2027-01-31-75@coach-trail
-DTSTAMP:20261111T154720Z
+DTSTAMP:20261112T184414Z
 DTSTART;VALUE=DATE:20270131
 DTEND;VALUE=DATE:20270201
 SUMMARY:🏁 TRAIL 40 km · 1000 m D+
@@ -1381,7 +1507,22 @@ DESCRIPTION:⏱ OBJECTIF : 5 h–6 h (réaliste ≈ 5 h 30)   📏 40 km
   de glucides/h\, soit ≈ 300–350 g au total (≈ 12–15 gels ou l'éq
  uivalent). Bois selon la soif\n5. Descentes relâchées : c'est là que s
  e joue la fin de course\n6. Après 30 km : si tu te sens bien\, relance d
- oucement\n\nBonne course ! 💪
+ oucement\n\nBonne course ! 💪\n\n🍌 RAVITAILLEMENT (menu du Chef) —
+  ≈ 290 g (5 h) à 335 g (6 h)\nPETIT-DÉJ (2–3 h avant\, ≈ 120 g) :
+  100 g de baguette + 30 g de miel/confiture\, 1 banane\, 200 ml de jus de
+  pomme\, 1 yaourt (ou porridge 70 g de flocons + 250 ml de lait + 25 g de
+  miel\, déjà testé).\nSCHÉMA COURSE\, chaque heure à partir de 0:45 
+ : xx:45 = 1 gel (25 g) avec 100–150 ml d'eau \; xx:05 = 1 solide ≈ 21
+  g (boule maison\, pâte de fruits\, mini-sandwich ou ½ banane) \; ≈ 3
+ 30 ml de boisson d'effort répartis sur l'heure (≈ 20 g).\nSAC : 6 gels
+  (dont 1 de secours)\, 5 aliments solides\, 3–4 sachets de boisson en p
+ oudre (30 g de sucre + 1 g de sel pour 500 ml). Vérifie les ravitailleme
+ nts de l'organisateur.\nBOISSON : 400–800 ml/h au total\, 300–1000 mg
+  de sodium/h selon la transpiration.\nAPRÈS (dans l'heure) : 500 ml de l
+ ait chocolaté + 60 g de pain + 1 tranche de jambon (≈ 80 g / 30 g). Sa
+ ns viande : 2 riz au lait + 150 g de skyr + 1 banane. Puis un vrai repas 
+ dans les 2–3 h.\nRIEN DE NOUVEAU LE JOUR J : tout a été testé le 09/
+ 01.
 TRANSP:TRANSPARENT
 END:VEVENT
 END:VCALENDAR

@@ -89,7 +89,8 @@ Semaines 4, 7 et 11 = semaines allégées, pour que le corps assimile le travail
 ### Sortie longue (samedi)
 - **Pourquoi :** c'est la séance la plus importante. Elle habitue les jambes à durer, apprend la descente et entraîne l'estomac à manger en courant.
 - **Comment :** Z2 du début à la fin (6'45–7'30/km sur le plat). **Marche dans toutes les montées raides dès le début**, même si tu te sens bien : c'est ce que tu feras le jour J. En descente, relâché, petits pas rapides, regard 3–4 m devant.
-- **Manger :** à partir de 1 h 30 de sortie. 30–40 g de glucides par heure en novembre-décembre, 50–70 g par heure en janvier (1 gel ≈ 20–25 g, 1 compote ≈ 15–20 g, 1 banane ≈ 25 g).
+- **Manger :** dès 0:45, par prises de 20–25 g. Cibles : 35–40 g/h en novembre-décembre, 50 g/h le 02/01, 60 g/h en janvier.
+  **Le menu de chaque sortie (petit-déj, ravitaillement minuté, boisson, récupération, recettes maison) est dans `nutrition-sorties.md`**, préparé par l'agent Chef.
 - **À noter :** FC moyenne, FC sur la dernière heure, état des jambes dans les 30 dernières minutes.
 
 ### Week-end « bloc » (semaines 6 et 10)
@@ -108,6 +109,20 @@ Semaines 4, 7 et 11 = semaines allégées, pour que le corps assimile le travail
   - Planche, 40 s.
 - **Lundi, léger (15 min) :** gainage (planche, planche latérale, dead bug) + mollets.
 - **Semaines 11–12 :** plus de renfo des jambes, gainage léger seulement.
+
+## Ravitaillement des sorties longues (résumé, détail dans `nutrition-sorties.md`)
+| Date | Durée | Pendant la sortie | Total |
+|---|---|---|---|
+| 14/11 · 05/12 | 1 h 15 | facultatif : 1 pâte de fruits | 0–22 g |
+| 21/11 | 1 h 30 | banane · gel | 50 g |
+| 28/11 | 1 h 45 | boule maison · gel · compote | 59 g |
+| 12/12 | 2 h | pâte de fruits · gel · 500 ml de boisson | 77 g |
+| 19/12 · 26/12 | 2 h 15 | mini-sandwich · gel · compote · 500 ml de boisson | 90 g |
+| 02/01 | 2 h 45 | pâte de fruits · gel · mini-sandwich · boule · gel · 500 ml de boisson | 143 g |
+| 09/01 | 3 h 15 | schéma course : 3 gels · 3 solides · 1 L de boisson | 198 g |
+| 16/01 | 2 h 15 | gel · boule · gel · pâte de fruits · 750 ml de boisson | 137 g |
+| 23/01 | 1 h 30 | gel · pâte de fruits · 500 ml de boisson | 77 g |
+| 31/01 | course | schéma course jusqu'à l'arrivée | ≈ 290–335 g |
 
 ## Répétition générale (samedi 9 janvier)
 3 h–3 h 15 avec environ 900 m de D+, faite **comme le jour J** : chaussures, sac, tenue, petit-déjeuner, ravitaillement (50–70 g/h), allure prudente.

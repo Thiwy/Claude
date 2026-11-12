@@ -263,6 +263,71 @@ ev.append((D(2027, 1, 31), "🏁 TRAIL 40 km · 1000 m D+",
            "5. Descentes relâchées : c'est là que se joue la fin de course\n"
            "6. Après 30 km : si tu te sens bien, relance doucement\n\nBonne course ! 💪"))
 
+# --- Ravitaillement (menus de l'agent Chef, voir references/nutrition-sorties.md) ---
+PDJ_A = ("PETIT-DÉJ (2–3 h avant, ≈ 85 g de glucides) : 80 g de pain blanc + 20 g de confiture, 1 banane, 1 yaourt, "
+         "thé/café + 300–500 ml d'eau.")
+PDJ_B = ("PETIT-DÉJ (2–3 h avant, ≈ 120 g) : 100 g de baguette + 30 g de miel/confiture, 1 banane, 200 ml de jus de pomme, "
+         "1 yaourt (ou porridge 70 g de flocons + 250 ml de lait + 25 g de miel, déjà testé).")
+VEILLE = ("REPAS DE LA VEILLE (≈ 150 g de glucides) : 120 g de pâtes ou de riz (cru) + sauce tomate simple, 120 g de poulet "
+          "ou de poisson (ou 2 œufs), 60 g de pain, 1 riz au lait ou 1 compote. Peu de fibres, peu de gras, rien d'épicé, pas d'alcool. "
+          "Restes au frigo dans l'heure.")
+APRES_COURT = "APRÈS (dans l'heure) : 250 ml de lait chocolaté + 150 g de skyr + 1 banane (≈ 56 g de glucides / 23 g de protéines)."
+APRES_LONG = ("APRÈS (dans l'heure) : 500 ml de lait chocolaté + 60 g de pain + 1 tranche de jambon (≈ 80 g / 30 g). "
+              "Sans viande : 2 riz au lait + 150 g de skyr + 1 banane.")
+SCHEMA = ("SCHÉMA COURSE, chaque heure à partir de 0:45 : xx:45 = 1 gel (25 g) avec 100–150 ml d'eau ; xx:05 = 1 solide ≈ 21 g "
+          "(boule maison, pâte de fruits, mini-sandwich ou ½ banane) ; ≈ 330 ml de boisson d'effort répartis sur l'heure (≈ 20 g).")
+MENUS = {
+    D(2026, 11, 14): (PDJ_A, "Facultatif : à 0:45, 1 pâte de fruits (22 g) pour tester la mastication dans le froid.", "0–22 g",
+                      "500 ml d'eau tiède.", APRES_COURT),
+    D(2026, 11, 21): (PDJ_A, "0:45 → 1 banane (25 g) · 1:10 → 1 gel (25 g).", "50 g (35 g/h)", "500 ml d'eau tiède.", APRES_COURT),
+    D(2026, 11, 28): (PDJ_A, "0:45 → 1 boule d'énergie maison (20 g, 1er test) · 1:05 → 1 gel (25 g) · 1:25 → 1 compote gourde (14 g).",
+                      "59 g (35 g/h)", "500–750 ml d'eau tiède.", APRES_COURT),
+    D(2026, 12, 5): (PDJ_A, "Facultatif : à 0:45, 1 pâte de fruits (22 g).", "0–22 g", "500 ml d'eau tiède.", APRES_COURT),
+    D(2026, 12, 12): (PDJ_A, "0:45 → 1 pâte de fruits (22 g) · 1:15 → 1 gel (25 g) · 500 ml de boisson d'effort bus entre 1:00 et 2:00 (30 g).",
+                      "77 g (40 g/h)", "500 ml d'eau + 500 ml de boisson d'effort (maison : ≈ 400 mg de sodium).", APRES_LONG),
+    D(2026, 12, 19): (PDJ_A, "0:45 → 1 mini-sandwich pain de mie + pâte de fruit (21 g) · 1:15 → 1 gel (25 g) · 1:45 → 1 compote (14 g) · "
+                      "500 ml de boisson d'effort à partir de 1:00 (30 g).", "90 g (40 g/h)", "500 ml d'eau + 500 ml de boisson d'effort.", APRES_LONG),
+    D(2026, 12, 26): (PDJ_A, "0:45 → 1 mini-sandwich (21 g) · 1:15 → 1 gel (25 g) · 1:45 → 1 compote (14 g) · "
+                      "500 ml de boisson d'effort à partir de 1:00 (30 g).", "90 g (40 g/h)", "500 ml d'eau + 500 ml de boisson d'effort.", APRES_LONG),
+    D(2027, 1, 2): (PDJ_B, "0:45 → pâte de fruits (22 g) · 1:10 → gel (25 g) · 1:35 → mini-sandwich (21 g) · 2:00 → boule maison (20 g) · "
+                    "2:25 → gel (25 g) · 500 ml de boisson d'effort (30 g).", "143 g (50 g/h)",
+                    "500 ml d'eau + 1 L de boisson, avec un point de recharge. Si tu transpires beaucoup : 1,5 g de sel pour 500 ml.", APRES_LONG),
+    D(2027, 1, 9): (PDJ_B, SCHEMA + " Concrètement : 0:45 gel · 1:05 mini-sandwich · 1:45 gel · 2:05 boule · 2:45 gel · 3:05 pâte de fruits "
+                    "+ 1 L de boisson (version poudre : 30 g de sucre + 1 g de sel pour 500 ml).", "198 g (60 g/h)",
+                    "500 ml d'eau + 1 L de boisson, avec un point de recharge ou une poche à eau de 1,5 L.", APRES_LONG),
+    D(2027, 1, 16): (PDJ_B, "0:45 → gel (25 g) · 1:05 → boule (20 g) · 1:45 → gel (25 g) · 2:05 → pâte de fruits (22 g) · 750 ml de boisson (45 g).",
+                     "137 g (60 g/h)", "500 ml d'eau + 750 ml de boisson d'effort.", APRES_LONG),
+    D(2027, 1, 23): (PDJ_B, "0:45 → gel (25 g) · 1:05 → pâte de fruits (22 g) · 500 ml de boisson entre 0:45 et 1:30 (30 g).",
+                     "77 g (plafonné : 90 g en 45 min, c'est trop pour l'estomac)", "500 ml d'eau + 500 ml de boisson.", APRES_COURT),
+}
+FROID = ("FROID : gels et pâtes de fruits dans une poche intérieure (ils durcissent), boisson tiède (35–40 °C), emballages "
+         "pré-ouverts dans un sachet zip si tu portes des gants. Toujours de l'eau avec un gel. Après la sortie, note ce que tu as mangé "
+         "et comment ton ventre l'a supporté.")
+
+
+def ravito(d):
+    pdj, pendant, total, boisson, apres = MENUS[d]
+    return (f"\n\n🍌 RAVITAILLEMENT (menu du Chef) — total ≈ {total}\n{pdj}\nPENDANT : {pendant}\nBOISSON : {boisson}\n{apres}\n{FROID}")
+
+
+import re  # noqa: E402
+
+for i, (d, t, de) in enumerate(ev):
+    if d in MENUS:
+        de = re.sub(r"\n(\d)\. Manger : [^\n]*", r"\n\1. Manger : voir 🍌 RAVITAILLEMENT plus bas", de)
+        ev[i] = (d, t, de + ravito(d))
+VEILLES = {D(2027, 1, 1): "😴 Repos + repas de la veille", D(2027, 1, 8): "😴 Repos + repas de la veille",
+           D(2027, 1, 30): "😴 Repos + repas de la veille"}
+for i, (d, t, de) in enumerate(ev):
+    if d in VEILLES:
+        ev[i] = (d, VEILLES[d], de + "\n\n🍝 " + VEILLE)
+for i, (d, t, de) in enumerate(ev):
+    if d == D(2027, 1, 31):
+        ev[i] = (d, t, de + "\n\n🍌 RAVITAILLEMENT (menu du Chef) — ≈ 290 g (5 h) à 335 g (6 h)\n" + PDJ_B + "\n" + SCHEMA +
+                 "\nSAC : 6 gels (dont 1 de secours), 5 aliments solides, 3–4 sachets de boisson en poudre (30 g de sucre + 1 g de sel pour 500 ml). "
+                 "Vérifie les ravitaillements de l'organisateur.\nBOISSON : 400–800 ml/h au total, 300–1000 mg de sodium/h selon la transpiration.\n"
+                 + APRES_LONG + " Puis un vrai repas dans les 2–3 h.\nRIEN DE NOUVEAU LE JOUR J : tout a été testé le 09/01.")
+
 # --- Écriture ICS ------------------------------------------------------------
 
 
